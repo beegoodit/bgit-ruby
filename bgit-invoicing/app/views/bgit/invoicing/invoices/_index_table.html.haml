@@ -1,0 +1,15 @@
+= table.id sort: true
+= table.association :owner, label_method: :human
+= table.column :uuid, sort: true
+= table.column :year, sort: true
+= table.column :month, sort: true
+= table.money :total_price, sort: { column_name: :total_price_cents }
+= table.timestamps sort: true
+= table.aasm_state :billing
+= table.aasm_actions :billing
+- if Object.const_defined?("Bgit::Lexoffice")
+  = table.attachment :lexoffice_document, title: false
+  = table.column :lexoffice_actions do |resource|
+    - if resource.lexoffice_invoice.present?
+      - link_to(bgit_lexoffice.polymorphic_url([:new, Bgit::Lexoffice::Invoice::Document::ReadService], invoice_id: resource.id), class: "btn btn-xs btn-primary") do
+        = Bgit::Lexoffice::Invoice::Document::ReadService.model_name.human

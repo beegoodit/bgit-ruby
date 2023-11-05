@@ -1,0 +1,11 @@
+= table.id
+= table.row :uuid
+= table.association :owner, label_method: :human
+= table.row :year
+= table.row :month
+= table.money :total_price
+= table.timestamps
+= table.aasm_state :billing
+= table.aasm_actions :billing
+- if Object.const_defined?("Bgit::Lexoffice")
+  = table.attachment :lexoffice_document, title: false

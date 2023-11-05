@@ -1,0 +1,16 @@
+  
+%ul.navbar-nav
+  %li.nav-item.dropdown
+    %a#dropdown02.nav-link.dropdown-toggle{ href: '#', 'data-toggle': 'dropdown', role: 'button', 'aria-has-popup': true, 'aria-expanded': false, data: { 'bs-toggle' => 'dropdown' } }
+      -if frontend_auth_user_signed_in?
+        = current_user.email
+      - else
+        = t('.not_signed_in')
+    .dropdown-menu{"aria-labelledby" => "dropdown02"}
+      - if frontend_auth_user_signed_in?
+        = link_to t('.show'), bgit_frontend_auth_frontend.user_path, class: 'dropdown-item'
+        = link_to t('.sign_out'), bgit_frontend_auth_frontend.user_session_path, class: 'dropdown-item', method: :delete
+      - else
+        = link_to t('.sign_in'), bgit_frontend_auth_frontend.new_user_session_path, class: 'dropdown-item'
+        - if Bgit::FrontendAuth::Frontend::Configuration.enable_registrations
+          = link_to t('.new'), bgit_frontend_auth_frontend.new_user_path, class: 'dropdown-item'

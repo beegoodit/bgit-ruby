@@ -1,0 +1,5 @@
+.row
+  .col-8.offset-2
+    = turbo_frame_tag "invoice-document-read-services-result" do
+      .embed-responsive{ style: "aspect-ratio: 21 /29;" }
+        %embed.embed-responsive-item{ src: "data:application/pdf;base64,#{Base64.encode64(@result.lexoffice_document.blob)}" }

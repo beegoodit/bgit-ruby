@@ -1,0 +1,6 @@
+%h1= @resource.email
+
+= resource_table(resource: @resource) do |t|
+  = render 'show_table', table: t
+  
+= render 'show_actions', resource: @resource

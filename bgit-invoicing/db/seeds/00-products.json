@@ -1,0 +1,20 @@
+{
+  "product": [
+    {
+      "uuid": "0c5a517d-9c8c-4d39-a9cc-79e12952d5f3",
+      "identifier": "cell"
+    },
+    {
+      "uuid": "203d26a2-a4ad-48bf-aca7-7468cfad9776",
+      "identifier": "mariadb"
+    },
+    {
+      "uuid": "dc366dda-5612-4b6f-99c6-bd889eb42f3f",
+      "identifier": "postgres"
+    },
+    {
+      "uuid": "a78d99be-8c19-443f-827c-bd55829c7745",
+      "identifier": "redis"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+de:
+  authlogic:
+    attributes:
+      bgit/frontend_auth/frontend/user_session:
+        email: E-Mail
+        password: Passwort
+  classes:
+    bgit/frontend_auth/frontend/engine: Authentifizierung
+  flash:
+    bgit:
+      frontend_auth:
+        frontend:
+          password_reset_requests:
+            create:
+              notice: "Eine E-Mail mit Anweisungen zum Erstellen eines neuen Passwort wurde an Sie gesendet."
+          password_resets:
+            edit:
+              alert:
+                perishable_token_invalid: "Es konnte kein Benutzer mit dem eingegebenen Token gefunden werden oder ihr Token ist zu alt."
+            update:
+              notice: "Ihr Passwort wurde aktualisiert."
+  helpers:
+    submit:
+      user_session:
+        create: "Einloggen"
+  routes:
+    bgit_frontend_auth_frontend_engine: "auth"
+    user: "benutzer"
+    user_session: "session"
+  bgit:
+    frontend_auth:
+      frontend:
+        application_view_helper:
+          bootstrap_4:
+            render:
+              new: Registrieren
+              sign_out: Ausloggen
+              sign_in: Einloggen
+              show: Profil
+            render_dropdown:
+              new: Registrieren
+              sign_out: Ausloggen
+              sign_in: Einloggen
+              show: Profil
+        controller:
+          current_user_concern:
+            authentication_failed: "Sie müssen sich anmelden oder registrieren, bevor Sie fortfahren können."
+        password_reset_requests:
+          new:
+            back: "Zurück"
+            submit: "Neues Passwort erstellen"
+            title: "Passwort vergessen?"
+        password_resets:
+          edit:
+            back: "Zurück"
+            submit: "Neues Passwort speichern"
+            title: "Passwort zurücksetzen"
+        user_sessions:
+          create:
+            signed_in: "Erfolgreich angemeldet."
+            signed_out: "Erfolgreich abgemeldet."
+          destroy:
+            signed_in: "Erfolgreich angemeldet."
+            signed_out: "Erfolgreich abgemeldet."
+          new:
+            back: "Zurück"
+            new_password_reset_request: Passwort vergessen?
+            sign_up: "Registrieren"
+            title: "Einloggen"
+        users:
+          edit:
+            back: "Zurück"
+            show: Anzeigen
+          new:
+            title: "Registrieren"
+          show_actions:
+            back: "Zurück"
+            edit: "Bearbeiten"
+            sign_out: Ausloggen

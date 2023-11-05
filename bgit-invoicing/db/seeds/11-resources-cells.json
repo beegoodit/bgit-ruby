@@ -1,0 +1,159 @@
+{
+  "resource": [
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "blog-robotex-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "old-app"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "production-artdergestaltung-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-con42-backend"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-con42-backend-rails"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-dokku-api"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-eu-tatoru-node"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "production-frauennotruf-wetterau-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-hosting-beegoodit-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "DECHEMA e.V.",
+      "identifier": "production-ptx-pa-backend"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-robotex-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-tatoru-control-center"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "1. TFC Frankfurt",
+      "identifier": "production-tfc-frankfurt-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "production-villa-sedonia-com"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "DVVF e.V.",
+      "identifier": "production-vovinam-dvvf-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "production-zeitfuersbett-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "staging-artdergestaltung-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-con42-backend"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-con42-backend-rails"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-dokku-api"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-eu-tatoru-node"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "staging-frauennotruf-wetterau-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-hosting-beegoodit-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "DECHEMA e.V.",
+      "identifier": "staging-ptx-pa-backend"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "DECHEMA e.V.",
+      "identifier": "staging-ptx-pa-frontend"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-robotex-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-tatoru-control-center"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "1. TFC Frankfurt",
+      "identifier": "staging-tfc-frankfurt-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "staging-villa-sedonia-com"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "DVVF e.V.",
+      "identifier": "staging-vovinam-dvvf-de"
+    },
+    {
+      "product.identifier": "cell",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "staging-zeitfuersbett-de"
+    }
+  ]
+}

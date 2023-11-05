@@ -1,0 +1,123 @@
+de:
+  activemodel:
+    errors:
+      models:
+        bgit/invoicing/billing_run_service:
+          attributes:
+            base:
+              failed_to_generate_invoice_for_owner: "Die Rechnung für %{owner} konnte nicht erstellt werden: %{errors}"
+        bgit/invoicing/generate_invoice_for_owner_service:
+          attributes:
+            base:
+              overlapping_invoice: "Es existiert bereits eine Rechnung für den Zeitraum"
+    models:
+      bgit/invoicing/billing_run_service:
+        one: "Abrechnungen erstellen"
+        other: "Abrechnungen erstellen"
+      bgit/invoicing/generate_invoice_for_owner_service:
+        one: "Rechnung für Besitzer erstellen"
+        other: "Rechnung für Besitzer erstellen"
+    attributes:
+      bgit/invoicing/billing_run_service:
+        month: "Monat"
+        owners: "Besitzer"
+        year: "Jahr"
+      bgit/invoicing/billing_run_service/result:
+        invoices_count: "Rechnungen"
+        total_price: "Gesamtpreis"
+      bgit/invoicing/generate_invoice_for_owner_service:
+        from: "Von"
+        to: "Bis"
+        month: "Monat"
+        year: "Jahr"
+        owner: "Besitzer"
+        owner_id: "Besitzer"
+        owner_type: "Besitzertyp"
+  activerecord:
+    models:
+      bgit/invoicing/line_item:
+        one: "Abrechnungsposten"
+        other: "Abrechnungsposten"
+      bgit/invoicing/invoice:
+        one: "Rechnung"
+        other: "Rechnungen"
+      bgit/invoicing/product:
+        one: "Produkt"
+        other: "Produkte"
+      bgit/invoicing/resource:
+        one: "Ressource"
+        other: "Ressourcen"
+      bgit/invoicing/subscription:
+        one: "Abonnement"
+        other: "Abonnements"
+      bgit/invoicing/tier:
+        one: "Stufe"
+        other: "Stufen"
+    attributes:
+      defaults: &defaults
+        id: ID
+        identifier: "Bezeichner"
+        uuid: "UUID"
+        created_at: "Erstellt am"
+        updated_at: "Aktualisiert am"
+      bgit/invoicing/invoice:
+        <<: *defaults
+        billing_actions: "Abrechnungsaktionen"
+        billing_state: "Abrechnungsstatus"
+        from: "Von"
+        line_items_count: "Anzahl"
+        month: "Monat"
+        owner: "Besitzer"
+        owner_id: "Besitzer"
+        owner_type: "Besitzertyp"
+        to: "Bis"
+        total_price: "Gesamtpreis"
+        total_price_cents: "Gesamtpreis (Cent)"
+        year: "Jahr"
+      bgit/invoicing/line_item:
+        <<: *defaults
+        invoice: "Rechnung"
+        invoice_id: "Rechnung"
+        owner: "Besitzer"
+        price: "Preis"
+        price_cents: "Preis (Cent)"
+        resource: "Ressource"
+        seconds: "Sekunden"
+        subscription: "Abonnement"
+        subscription_id: "Abonnement"
+        tier: "Stufe"
+      bgit/invoicing/product:
+        <<: *defaults
+      bgit/invoicing/resource:
+        <<: *defaults
+        owner: "Besitzer"
+        owner_id: "Besitzer"
+        owner_type: "Besitzertyp"
+        product: "Produkt"
+        product_id: "Produkt"
+      bgit/invoicing/subscription:
+        <<: *defaults
+        active_from: "Aktiv von"
+        active_to: "Aktiv bis"
+        tier_id: "Stufe"
+        tier: "Stufe"
+        resource: "Ressource"
+        resource_id: "Ressource"
+      bgit/invoicing/tier:
+        <<: *defaults
+        available: "Verfügbar"
+        available_from: "Verfügbar von"
+        available_to: "Verfügbar bis"
+        position: "Position"
+        price_per_month_cents: "Preis pro Monat"
+        product: "Produkt"
+        product_id: "Produkt"
+  bgit:
+    invoicing:
+      invoices:
+        after_show_table:
+          lexoffice_invoice_not_associated: "Es ist noch kein Lexoffice Rechnungsdatensatz verknüpft."
+  classes:
+    bgit/invoicing/engine: "Preise"
+  routes:
+    bgit-invoicing-engine: "preise"

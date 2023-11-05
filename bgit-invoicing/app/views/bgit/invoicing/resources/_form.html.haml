@@ -1,0 +1,3 @@
+= form.association :product, label_method: :human
+= form.input :owner, as: :polymorphic_association, classes: instance_exec(&Bgit::Invoicing::Configuration.resource_owner_autocomplete_classes)
+= form.input :identifier

@@ -1,0 +1,7 @@
+module Bgit
+  module Invoicing
+    class BillingMeta < Cmor::Core::ActiveCollection::Base
+      self.attribute_names = %w[id owner from to month total_price item_count]
+    end
+  end
+end

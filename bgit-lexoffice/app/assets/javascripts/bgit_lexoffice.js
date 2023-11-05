@@ -1,0 +1,1 @@
+//= require bgit/lexoffice/application

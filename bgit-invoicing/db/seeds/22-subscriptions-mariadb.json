@@ -1,0 +1,16 @@
+{
+  "subscription": [
+    {
+      "tier.uuid": "a10e8f1f-9e91-4afa-b6ff-7e9b56bd9d41",
+      "resource.identifier": "production-con42-backend-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "431df1e0-89fc-41c8-b188-457fabfffdc2",
+      "resource.identifier": "staging-con42-backend-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    }
+  ]
+}

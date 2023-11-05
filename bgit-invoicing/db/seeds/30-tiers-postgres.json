@@ -1,0 +1,28 @@
+{
+  "tier": [
+    {
+      "product.identifier": "postgres",
+      "uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "identifier": "free",
+      "price_per_month": 0,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "product.identifier": "postgres",
+      "uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "identifier": "base",
+      "price_per_month": 7,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "product.identifier": "postgres",
+      "uuid": "61f893a7-9965-4de7-8128-ce313138b895",
+      "identifier": "performance",
+      "price_per_month": 14,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    }
+  ]
+}

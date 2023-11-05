@@ -1,0 +1,16 @@
+en:
+  bgit:
+    invoicing:
+      frontend:
+        home:
+          index:
+            title: "Dashboard"
+        invoices:
+          index:
+            back: "Back"
+          show:
+            back: "Back"
+  classes:
+    bgit/invoicing/frontend/engine: "Pricin Frontend"
+  routes:
+    bgit_invoicing_frontend_engine: "invoicing"

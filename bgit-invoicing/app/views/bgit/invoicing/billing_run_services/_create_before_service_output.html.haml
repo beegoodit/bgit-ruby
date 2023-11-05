@@ -1,0 +1,14 @@
+= resource_table(resource: @result) do |table|
+  = table.row :invoices_count
+  = table.money :total_price
+
+%h2= Bgit::Invoicing::Invoice.model_name.human(count: :other)
+
+= collection_table(collection: @result.invoices) do |table|
+  = table.column :id
+  = table.association :owner, label_method: :name
+  = table.column :month do |resource|
+    - I18n.t("date.month_names")[resource.month.to_i]
+  = table.column :year
+  = table.column :line_items_count
+  = table.money :total_price

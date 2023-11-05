@@ -1,0 +1,10 @@
+%ul.navbar-nav
+  - if frontend_auth_user_signed_in?
+    .btn-group
+      = link_to t('.show'), bgit_frontend_auth_frontend.user_path, class: 'btn btn-secondary'
+      = link_to t('.sign_out'), bgit_frontend_auth_frontend.user_session_path, class: 'btn btn-primary', method: :delete
+  - else
+    .btn-group
+      = link_to t('.sign_in'), bgit_frontend_auth_frontend.new_user_session_path, class: 'btn btn-primary'
+      - if Bgit::FrontendAuth::Frontend::Configuration.enable_registrations
+        = link_to t('.new'), bgit_frontend_auth_frontend.new_user_path, class: 'btn btn-secondary'

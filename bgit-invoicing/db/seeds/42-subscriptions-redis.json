@@ -1,0 +1,28 @@
+{
+  "subscription": [
+    {
+      "tier.uuid": "c424c3f6-7002-4f6d-93df-db5e7ac4f3f3",
+      "resource.identifier": "production-con42-backend-rails-redis",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "c424c3f6-7002-4f6d-93df-db5e7ac4f3f3",
+      "resource.identifier": "production-hosting-beegoodit-de-redis",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "486ac491-fc8d-4610-b765-48fee7968dd4",
+      "resource.identifier": "staging-con42-backend-rails-redis",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "486ac491-fc8d-4610-b765-48fee7968dd4",
+      "resource.identifier": "staging-hosting-beegoodit-de-redis",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    }
+  ]
+}

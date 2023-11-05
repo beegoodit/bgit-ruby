@@ -1,0 +1,7 @@
+= table.id sort: true
+= table.association :invoice, sort: true, label_method: :human
+= table.association :subscription, sort: true, label_method: :human
+= table.column :uuid, sort: true
+= table.column :seconds, sort: true
+= table.money :price, sort: { column_name: :price_cents }
+= table.timestamps sort: true

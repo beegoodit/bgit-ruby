@@ -1,0 +1,5 @@
+
+
+  localized do
+    mount Bgit::Lexoffice::Engine, at: '/backend/bgit-lexoffice-engine'
+  end

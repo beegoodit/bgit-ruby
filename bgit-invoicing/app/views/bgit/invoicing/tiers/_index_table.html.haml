@@ -1,0 +1,9 @@
+= table.acts_as_list_actions
+= table.id sort: true
+= table.column :uuid
+= table.association :product, sort: true, label_method: :human
+= table.column :identifier
+= table.timestamp :available_from
+= table.timestamp :available_to
+= table.money :price_per_month
+= table.timestamps

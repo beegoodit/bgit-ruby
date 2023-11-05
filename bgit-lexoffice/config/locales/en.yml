@@ -1,0 +1,48 @@
+en:
+  activerecord:
+    models:
+      bgit/lexoffice/contact:
+        one: "Contact"
+        other: "Contacts"
+      bgit/lexoffice/invoice:
+        one: "Invoice"
+        other: "Invoices"
+    attributes:
+      shared: &shared
+        id: ID
+        lexoffice_id: "Lexoffice ID"
+        lexoffice_resource_uri: "Lexoffice Resource URL"
+        lexoffice_created_at: "Lexoffice Created at"
+        lexoffice_updated_at: "Lexoffice Updated at"
+        lexoffice_version: "Lexoffice Version"
+        name: Name
+        created_at: Created at
+        updated_at: Updated at
+      bgit/lexoffice/contact:
+        <<: *shared
+        contactable: "Contact"
+        contactable_id: "Contact"
+        contactable_type: "Contact Typ"
+      bgit/lexoffice/invoice:
+        <<: *shared
+        invoiceable: "Object"
+        invoiceable_id: "Object"
+        invoiceable_type: "Object Type"
+  bgit:
+    lexoffice:
+      contacts:
+        after_show_table:
+          fetch: "Fetch"
+      invoices:
+        after_show_table:
+          fetch: "Fetch"
+  classes:
+    bgit/lexoffice/engine: Lexoffice
+  rao:
+    component:
+      collection_table:
+        open: "Öffnen"
+      resource_table:
+        open: "Öffnen"
+  routes:
+    bgit-lexoffice-engine: lexoffice

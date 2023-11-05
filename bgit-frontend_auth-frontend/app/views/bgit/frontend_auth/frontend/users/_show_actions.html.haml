@@ -1,0 +1,11 @@
+.well.well-sm
+  .btn-group
+    = link_to(bgit_frontend_auth_frontend.user_session_path, class: 'btn btn-warning btn-responsive', method: :delete) do
+      %span.glyphicon.glyphicon-pencil
+      %span.btn-text= t('.sign_out')
+    = link_to(bgit_frontend_auth_frontend.edit_user_path, class: 'btn btn-primary btn-responsive') do
+      %span.glyphicon.glyphicon-pencil
+      %span.btn-text= t('.edit')
+  = link_to main_app.root_path, class: 'btn btn-default btn-responsive pull-right' do
+    %span.glyphicon.glyphicon-arrow-left
+    %span.btn-text= t('.back')

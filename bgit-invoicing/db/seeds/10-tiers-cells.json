@@ -1,0 +1,28 @@
+{
+  "tier": [
+    {
+      "product.identifier": "cell",
+      "uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "identifier": "free",
+      "price_per_month": 0,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "product.identifier": "cell",
+      "uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "identifier": "base",
+      "price_per_month": 7,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "product.identifier": "cell",
+      "uuid": "dd54ab5f-222a-4864-9b26-81103368b16b",
+      "identifier": "performance",
+      "price_per_month": 14,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    }
+  ]
+}

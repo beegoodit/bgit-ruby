@@ -1,0 +1,21 @@
+.row
+  .col-12
+    %h3= LexofficeClient::Document.model_name.human
+
+    .card
+      .card-body
+        %div{ "data-turbo": "true" }
+          = turbo_frame_tag "invoice-document-read-services-result" do
+            = link_to(invoice_document_read_services_path(@resource.id), class: "btn btn-primary", data: { turbo_method: :post, turbo_frame: "lexoffice_client_document" }) do
+              = t(".fetch")
+
+  .col-12
+    %h3= LexofficeClient::Invoice.model_name.human
+
+
+    .card
+      .card-body
+        %div{ "data-turbo": "true" }
+          = turbo_frame_tag "invoice-read-services-result" do
+            = link_to(invoice_read_services_path(invoice_read_service: { invoice_id: @resource.lexoffice_id }), class: "btn btn-primary", data: { turbo_method: :post, turbo_frame: "lexoffice_client_invoice" }) do
+              = t(".fetch")

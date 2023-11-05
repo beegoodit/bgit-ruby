@@ -1,0 +1,28 @@
+{
+  "tier": [
+    {
+      "product.identifier": "redis",
+      "uuid": "486ac491-fc8d-4610-b765-48fee7968dd4",
+      "identifier": "free",
+      "price_per_month": 0,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "product.identifier": "redis",
+      "uuid": "c424c3f6-7002-4f6d-93df-db5e7ac4f3f3",
+      "identifier": "base",
+      "price_per_month": 7,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "product.identifier": "redis",
+      "uuid": "15a3a916-ade8-4645-b28c-043015d9ab24",
+      "identifier": "performance",
+      "price_per_month": 14,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    }
+  ]
+}

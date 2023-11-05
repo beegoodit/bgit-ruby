@@ -1,0 +1,24 @@
+{
+  "contact": [
+    {
+      "polymorphic:contact:contactable:team.name": "BeeGood IT",
+      "lexoffice_id": "901e2da9-7753-46c9-8921-b3d463e04857"
+    },
+    {
+      "polymorphic:contact:contactable:team.name": "Art der Gestaltung",
+      "lexoffice_id": "f46f7930-53df-48b0-b2cc-39a9f7ad6c7f"
+    },
+    {
+      "polymorphic:contact:contactable:team.name": "1. TFC Frankfurt",
+      "lexoffice_id": "fbe18a87-4a96-47f5-ae13-ccc0355b9b60"
+    },
+    {
+      "polymorphic:contact:contactable:team.name": "DECHEMA e.V.",
+      "lexoffice_id": "a91289ef-731b-4014-98a1-34f10a46ae95"
+    },
+    {
+      "polymorphic:contact:contactable:team.name": "DVVF e.V.",
+      "lexoffice_id": "43ba059f-af2f-4043-938c-f0ae6ea8988a"
+    }
+  ]
+}

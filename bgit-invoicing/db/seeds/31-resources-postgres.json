@@ -1,0 +1,124 @@
+{
+  "resource": [
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "production-artdergestaltung-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-con42-backend-rails-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-eu-tatoru-node-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "production-frauennotruf-wetterau-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-hosting-beegoodit-de"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "DECHEMA e.V.",
+      "identifier": "production-ptx-pa-backend-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-robotex-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-tatoru-control-center-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "1. TFC Frankfurt",
+      "identifier": "production-tfc-frankfurt-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "production-villa-sedonia-com-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "DVVF e.V.",
+      "identifier": "production-vovinam-dvvf-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "production-zeitfuersbett-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "staging-artdergestaltung-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-con42-backend-rails-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-eu-tatoru-node-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "staging-frauennotruf-wetterau-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-hosting-beegoodit-de"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "DECHEMA e.V.",
+      "identifier": "staging-ptx-pa-backend-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-robotex-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-tatoru-control-center-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "1. TFC Frankfurt",
+      "identifier": "staging-tfc-frankfurt-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "staging-villa-sedonia-com-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "DVVF e.V.",
+      "identifier": "staging-vovinam-dvvf-de-database"
+    },
+    {
+      "product.identifier": "postgres",
+      "polymorphic:resource:owner:team.name": "Art der Gestaltung",
+      "identifier": "staging-zeitfuersbett-de-database"
+    }
+  ]
+}

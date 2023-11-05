@@ -1,0 +1,148 @@
+{
+  "subscription": [
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-artdergestaltung-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-con42-backend-rails-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-eu-tatoru-node-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-frauennotruf-wetterau-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-hosting-beegoodit-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-ptx-pa-backend-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-robotex-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-tatoru-control-center-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-tfc-frankfurt-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-villa-sedonia-com-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-vovinam-dvvf-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "production-zeitfuersbett-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-artdergestaltung-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-con42-backend-rails-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-eu-tatoru-node-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-frauennotruf-wetterau-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-hosting-beegoodit-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cf4260e-0768-4b93-a406-fb2eb188a7d9",
+      "resource.identifier": "staging-ptx-pa-backend-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-robotex-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-tatoru-control-center-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-tfc-frankfurt-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-villa-sedonia-com-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-vovinam-dvvf-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6cd28bdf-1078-430e-b29d-7340e69df8f5",
+      "resource.identifier": "staging-zeitfuersbett-de-database",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    }
+  ]
+}

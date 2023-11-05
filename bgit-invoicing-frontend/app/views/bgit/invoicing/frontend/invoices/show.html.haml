@@ -1,0 +1,36 @@
+.row
+  .col
+    %h1= @resource.human
+
+.row
+  .col
+    = resource_table(resource: @resource) do |table|
+      = table.id
+      = table.association :owner, label_method: :human
+      = table.row :uuid
+      = table.row :year
+      = table.row :month
+      = table.money :total_price
+      = table.timestamps
+      - if Object.const_defined?("Bgit::Lexoffice")
+        = table.attachment :lexoffice_document, title: false
+
+.row
+  .col
+    %h2
+      = Bgit::Invoicing::LineItem.model_name.human(count: :other)
+      %span.badge.bg-secondary
+        = @resource.line_items.count
+
+.row
+  .col
+    = collection_table(collection: add_order_scope(@resource.line_items)) do |table|
+      = table.id sort: true
+      = table.association :subscription, label_method: :human
+      = table.column :uuid, sort: true
+      = table.column :seconds, sort: true
+      = table.money :price, sort: { column_name: :price_cents }
+
+.row
+  .col
+    = link_to(t(".back"), bgit_invoicing_frontend.invoices_path, class: "btn btn-primary text-white")

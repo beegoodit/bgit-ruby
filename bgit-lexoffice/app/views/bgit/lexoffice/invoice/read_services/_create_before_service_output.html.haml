@@ -1,0 +1,41 @@
+= turbo_frame_tag "invoice-read-services-result" do
+  = resource_table(resource: @result.invoice) do |table|
+    = table.row :id
+    = table.row :organization_id
+    = table.row :created_date
+    = table.row :updated_date
+    = table.row :version
+    = table.row :language
+    = table.row :archived
+    = table.row :voucher_status
+    = table.row :voucher_number
+    = table.timestamp :voucher_date
+    = table.timestamp :due_date
+    = table.row :address
+    = table.row :total_price
+    = table.row :tax_amounts
+    = table.row :tax_conditions
+    = table.row :payment_conditions
+    = table.row :shipping_conditions
+    = table.boolean :closing_invoice
+    = table.row :related_vouchers
+    = table.row :introduction
+    = table.row :remark
+    = table.row :title
+    = table.row :files
+
+  = collection_table(collection: @result.invoice.line_items) do |table|
+    = table.column :id
+    = table.column :type
+    = table.column :name
+    = table.column :description
+    = table.column :quantity
+    = table.column :unit_name
+    = table.column :unit_price_net_amount, title: LexofficeClient::UnitPrice.human_attribute_name(:net_amount) do |resource|
+      - "#{resource.unit_price_net_amount} #{resource.unit_price_currency}"
+    = table.column :unit_price_gross_amount, title: LexofficeClient::UnitPrice.human_attribute_name(:gross_amount) do |resource|
+      - "#{resource.unit_price_gross_amount} #{resource.unit_price_currency}"
+    = table.column :unit_price_tax_rate, title: LexofficeClient::UnitPrice.human_attribute_name(:tax_rate) do |resource|
+      - "#{resource.unit_price_tax_rate_percentage}%"
+    = table.column :discount_percentage
+    = table.column :line_item_amount

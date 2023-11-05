@@ -1,0 +1,4 @@
+de:
+  errors:
+    messages:
+      not_an_identifier: "ist kein gültiger Bezeichner"

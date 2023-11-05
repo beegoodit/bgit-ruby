@@ -1,0 +1,43 @@
+%h2= Bgit::Invoicing::LineItem.model_name.human(count: :other)
+
+= collection_table(collection: @resource.line_items) do |table|
+  = table.id sort: true
+  = table.association :subscription, sort: true, label_method: :human
+  = table.column :uuid, sort: true
+  = table.column :seconds, sort: true
+  = table.money :price, sort: { column_name: :price_cents }
+
+- if Object.const_defined?("Bgit::Lexoffice")
+  - if @resource.lexoffice_invoice.present?
+    %h3= Bgit::Lexoffice::Invoice.model_name.human
+
+    = resource_table(resource: @resource.lexoffice_invoice) do |table|
+      = table.id
+      = table.association :invoiceable, label_method: :human
+      = table.row :lexoffice_id
+      = table.row :external_link do |resource|
+        - link_to("https://app.lexoffice.de/vouchers#!/VoucherView/Invoice/#{@resource.lexoffice_invoice.lexoffice_id}", target: "_blank", class: "btn btn-primary btn-xs") do
+          %i.fas.fa-external-link-alt
+          %span.btn-text= t(".open")
+
+    .card
+      .card-body
+        %div{ "data-turbo": "true" }
+          = turbo_frame_tag "invoice-read-services-result" do
+            = link_to(bgit_lexoffice.invoice_read_services_path(invoice_read_service: { invoice_id: @resource.lexoffice_invoice.lexoffice_id }), class: "btn btn-primary", data: { turbo_method: :post, turbo_frame: "lexoffice_client_invoice" }) do
+              = t(".fetch")
+
+    %h3= LexofficeClient::Document.model_name.human
+
+    .card
+      .card-body
+        %div{ "data-turbo": "true" }
+          = turbo_frame_tag "invoice-document-read-services-result" do
+            = link_to(bgit_lexoffice.invoice_document_read_services_path(@resource.lexoffice_invoice.id, document_read_service: { invoice_id: @resource.lexoffice_invoice.lexoffice_id }), class: "btn btn-primary", data: { turbo_method: :post, turbo_frame: "lexoffice_client_invoice" }) do
+              = t(".fetch")
+  - else
+    %h3= Bgit::Lexoffice::Invoice.model_name.human
+
+    .card
+      .card-body
+        = t(".lexoffice_invoice_not_associated")

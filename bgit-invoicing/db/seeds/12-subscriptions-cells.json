@@ -1,0 +1,190 @@
+{
+  "subscription": [
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "blog-robotex-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "old-app",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-artdergestaltung-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-con42-backend",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-con42-backend-rails",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-dokku-api",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-eu-tatoru-node",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-frauennotruf-wetterau-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-hosting-beegoodit-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-ptx-pa-backend",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-robotex-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-tatoru-control-center",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-tfc-frankfurt-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-villa-sedonia-com",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-vovinam-dvvf-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "production-zeitfuersbett-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-artdergestaltung-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-con42-backend",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-con42-backend-rails",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-dokku-api",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-eu-tatoru-node",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-frauennotruf-wetterau-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-hosting-beegoodit-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "staging-ptx-pa-backend",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "6f9d3d37-85fd-401d-840e-76e0a8315dcb",
+      "resource.identifier": "staging-ptx-pa-frontend",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-robotex-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-tatoru-control-center",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-tfc-frankfurt-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-villa-sedonia-com",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-vovinam-dvvf-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "tier.uuid": "dfba1baa-4d74-4692-a283-ac23653f436c",
+      "resource.identifier": "staging-zeitfuersbett-de",
+      "active_from": "2022-10-01T00:00:00Z",
+      "active_to": "9999-12-31T00:00:00Z"
+    }
+  ]
+}

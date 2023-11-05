@@ -1,0 +1,8 @@
+%h3= LexofficeClient::Contact.model_name.human
+
+.card
+  .card-body
+    %div{ "data-turbo": "true" }
+      = turbo_frame_tag "result" do
+        = link_to(contact_read_services_path(contact_read_service: { contact_id: @resource.lexoffice_id}), class: "btn btn-primary", data: { turbo_method: :post, turbo_frame: "lexoffice_client_contact" }) do
+          = t(".fetch")

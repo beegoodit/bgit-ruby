@@ -1,0 +1,28 @@
+{
+  "tier": [
+    {
+      "product.identifier": "mariadb",
+      "uuid": "431df1e0-89fc-41c8-b188-457fabfffdc2",
+      "identifier": "free",
+      "price_per_month": 0,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "product.identifier": "mariadb",
+      "uuid": "a10e8f1f-9e91-4afa-b6ff-7e9b56bd9d41",
+      "identifier": "base",
+      "price_per_month": 7,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    },
+    {
+      "product.identifier": "mariadb",
+      "uuid": "9f181f91-2798-49d6-94e3-c2feb898647c",
+      "identifier": "performance",
+      "price_per_month": 14,
+      "available_from": "2022-10-01T00:00:00Z",
+      "available_to": "9999-12-31T00:00:00Z"
+    }
+  ]
+}

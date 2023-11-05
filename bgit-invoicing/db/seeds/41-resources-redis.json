@@ -1,0 +1,25 @@
+
+{
+  "resource": [
+    {
+      "product.identifier": "redis",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-con42-backend-rails-redis"
+    },
+    {
+      "product.identifier": "redis",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-hosting-beegoodit-de-redis"
+    },
+    {
+      "product.identifier": "redis",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-con42-backend-rails-redis"
+    },
+    {
+      "product.identifier": "redis",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-hosting-beegoodit-de-redis"
+    }
+  ]
+}

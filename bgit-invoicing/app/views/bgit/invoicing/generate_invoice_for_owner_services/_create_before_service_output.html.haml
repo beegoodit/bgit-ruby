@@ -1,0 +1,25 @@
+%h2= Bgit::Invoicing::Invoice.model_name.human
+
+= resource_table(resource: @result.invoice) do |table|
+  = table.row :id
+  = table.association :owner, label_method: :name
+  = table.row :month
+  = table.row :year
+  = table.row :line_items_count
+  = table.row :total_price do |resource|
+    - humanized_money_with_symbol(resource.total_price)
+
+%h2= Bgit::Invoicing::LineItem.model_name.human(count: :other)
+
+= collection_table(collection: @result.line_items) do |table|
+  /=# table.id
+  = table.association :owner, label_method: :name
+  = table.association :subscription, label_method: :human
+  /=# table.association :tier, label_method: :human
+  /=# table.association :resource, label_method: :human
+  /=# table.association :product, label_method: :human
+  /=# table.column :seconds
+  = table.column :price do |resource|
+    - humanized_money_with_symbol(resource.price)
+
+%hr

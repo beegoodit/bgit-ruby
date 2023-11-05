@@ -1,0 +1,123 @@
+en:
+  activemodel:
+    errors:
+      models:
+        bgit/invoicing/billing_run_service:
+          attributes:
+            base:
+              failed_to_generate_invoice_for_owner: "Failed to generate invoice for %{owner}: %{errors}"
+        bgit/invoicing/generate_invoice_for_owner_service:
+          attributes:
+            base:
+              overlapping_invoice: "There is already an invoice for the period"
+    models:
+      bgit/invoicing/billing_run_service:
+        one: "Billing run service"
+        other: "Billing run services"
+      bgit/invoicing/generate_invoice_for_owner_service:
+        one: "Generate invoice for owner"
+        other: "Generate invoice for owner"
+    attributes:
+      bgit/invoicing/billing_run_service:
+        month: "Month"
+        owners: "Owners"
+        year: "Year"
+      bgit/invoicing/billing_run_service/result:
+        invoices_count: "Invoices"
+        total_price: "Total price"
+      bgit/invoicing/generate_invoice_for_owner_service:
+        from: "From"
+        to: "To"
+        month: "Month"
+        year: "Year"
+        owner: "Owner"
+        owner_id: "Owner"
+        owner_type: "Owner type"
+  activerecord:
+    models:
+      bgit/invoicing/line_item:
+        one: "Line item"
+        other: "Line items"
+      bgit/invoicing/invoice:
+        one: "Invoice"
+        other: "Invoices"
+      bgit/invoicing/product:
+        one: "Product"
+        other: "Products"
+      bgit/invoicing/resource:
+        one: "Resource"
+        other: "Resources"
+      bgit/invoicing/subscription:
+        one: "Subscription"
+        other: "Subscriptions"
+      bgit/invoicing/tier:
+        one: "Tier"
+        other: "Tiers"
+    attributes:
+      defaults: &defaults
+        id: ID
+        identifier: "Identifier"
+        uuid: "UUID"
+        created_at: "Created at"
+        updated_at: "Updated at"
+      bgit/invoicing/invoice:
+        <<: *defaults
+        billing_actions: "Billing actions"
+        billing_state: "Billing state"
+        from: "From"
+        line_items_count: "Item count"
+        month: "Month"
+        owner: "Owner"
+        owner_id: "Owner"
+        owner_type: "Owner type"
+        to: "To"
+        total_price: "Total price"
+        total_price_cents: "Total price (cents)"
+        year: "Year"
+      bgit/invoicing/line_item:
+        <<: *defaults
+        invoice: "Invoice"
+        invoice_id: "Invoice"
+        owner: "Owner"
+        price: "Price"
+        price_cents: "Price (cents)"
+        resource: "Resource"
+        seconds: "Seconds"
+        subscription: "Subscription"
+        subscription_id: "Subscription"
+        tier: "Tier"
+      bgit/invoicing/product:
+        <<: *defaults
+      bgit/invoicing/resource:
+        <<: *defaults
+        owner: "Owner"
+        owner_id: "Owner"
+        owner_type: "Owner type"
+        product: "Product"
+        product_id: "Product"
+      bgit/invoicing/subscription:
+        <<: *defaults
+        active_from: "Aktiv von"
+        active_to: "Aktiv bis"
+        tier_id: "Tier"
+        tier: "Tier"
+        resource: "Resource"
+        resource_id: "Resource"
+      bgit/invoicing/tier:
+        <<: *defaults
+        available: "Available"
+        available_from: "Available from"
+        available_to: "Available to"
+        position: "Position"
+        price_per_month_cents: "Price per month"
+        product: "Product"
+        product_id: "Product"
+  bgit:
+    invoicing:
+      invoices:
+        after_show_table:
+          lexoffice_invoice_not_associated: "Lexoffice invoice not associated."
+  classes:
+    bgit/invoicing/engine: "Invoicing"
+  routes:
+    bgit-invoicing-engine: "invoicing"

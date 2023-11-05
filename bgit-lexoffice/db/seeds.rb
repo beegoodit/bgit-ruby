@@ -1,0 +1,1 @@
+Bgit::Lexoffice::SeedService.call!

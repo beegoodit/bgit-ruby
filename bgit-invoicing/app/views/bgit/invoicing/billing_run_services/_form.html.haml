@@ -1,0 +1,2 @@
+= form.input :year, as: :select, collection: ((Time.zone.now.year - 10)..(Time.zone.now.year + 1)).to_a, selected: Time.zone.now.year
+= form.input :month, as: :select, collection: (1..12).map { |m| [I18n.t("date.month_names")[m], m] }, selected: Time.zone.now.month - 1

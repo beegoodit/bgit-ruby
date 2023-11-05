@@ -1,0 +1,7 @@
+%h1= t(".title")
+
+%ul.list-group
+  %li.list-group-item
+    = link_to(Bgit::Invoicing::Invoice.model_name.human(count: :other), bgit_invoicing_frontend.invoices_path)
+    %span.badge.bg-primary.float-end
+      = current_frontend_auth_user.invoices.count

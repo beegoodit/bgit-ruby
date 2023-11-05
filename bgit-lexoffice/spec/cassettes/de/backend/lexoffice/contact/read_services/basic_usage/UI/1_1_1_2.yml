@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.lexoffice.io/v1/contacts/f46f7930-53df-48b0-b2cc-39a9f7ad6c7f
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 21 Sep 2023 06:08:06 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '386'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 1d51b407-e0f3-41d8-9e37-4dae1fa60af2
+      X-Amz-Apigw-Id:
+      - Ll-XHFirFiAFRSQ=
+      X-Amzn-Trace-Id:
+      - Root=1-650bddc6-577ec43257d2f2a5310ec112
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImY0NmY3OTMwLTUzZGYtNDhiMC1iMmNjLTM5YTlmN2FkNmM3ZiIsIm9yZ2FuaXphdGlvbklkIjoiMDY5NzNiNmUtODkwOS00MmM3LWJmMWMtZDI5MTNhYWJkZTkxIiwidmVyc2lvbiI6MSwicm9sZXMiOnsiY3VzdG9tZXIiOnsibnVtYmVyIjoxMDAwMn19LCJjb21wYW55Ijp7Im5hbWUiOiJBcnQgZGVyIEdlc3RhbHR1bmcgR2JSIiwiYWxsb3dUYXhGcmVlSW52b2ljZXMiOmZhbHNlfSwiYWRkcmVzc2VzIjp7ImJpbGxpbmciOlt7InN1cHBsZW1lbnQiOiJjL28gQ2hyaXN0b3BoIELDtm5uaW5nIiwic3RyZWV0IjoiUGFya3N0cmHDn2UgMTciLCJ6aXAiOiI2MTExOCIsImNpdHkiOiJCYWQgVmlsYmVsIiwiY291bnRyeUNvZGUiOiJERSJ9XX0sImFyY2hpdmVkIjpmYWxzZX0=
+  recorded_at: Thu, 21 Sep 2023 06:08:06 GMT
+recorded_with: VCR 6.2.0

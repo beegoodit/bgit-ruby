@@ -1,0 +1,5 @@
+= form.association :product, label_method: :human
+= form.input :identifier
+= form.input :available_from, as: :date_time_picker, side_by_side: true
+= form.input :available_to, as: :date_time_picker, side_by_side: true
+= form.input :price_per_month

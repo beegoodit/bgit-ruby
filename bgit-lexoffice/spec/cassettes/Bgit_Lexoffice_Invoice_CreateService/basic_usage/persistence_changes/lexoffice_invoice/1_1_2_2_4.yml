@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.lexoffice.io/v1/invoices
+    body:
+      encoding: UTF-8
+      string: '{"id":null,"organizationId":null,"createdDate":null,"updatedDate":null,"version":null,"language":null,"archived":null,"voucherStatus":null,"voucherNumber":null,"voucherDate":"2023-09-30T22:00:00.000Z","dueDate":null,"address":{"name":null,"supplement":null,"street":null,"city":null,"zip":null,"countryCode":null,"contactId":"901e2da9-7753-46c9-8921-b3d463e04857"},"lineItems":[{"id":null,"type":"custom","name":"product-43
+        - tier-22","description":"resource-22","quantity":1,"unitName":"Stück","unitPrice":{"currency":"EUR","netAmount":0.01,"grossAmount":0.01,"taxRatePercentage":19},"discountPercentage":0,"lineItemAmount":100.0},{"id":null,"type":"custom","name":"product-45
+        - tier-23","description":"resource-23","quantity":1,"unitName":"Stück","unitPrice":{"currency":"EUR","netAmount":0.01,"grossAmount":0.01,"taxRatePercentage":19},"discountPercentage":0,"lineItemAmount":100.0},{"id":null,"type":"custom","name":"product-47
+        - tier-24","description":"resource-24","quantity":1,"unitName":"Stück","unitPrice":{"currency":"EUR","netAmount":0.01,"grossAmount":0.01,"taxRatePercentage":19},"discountPercentage":0,"lineItemAmount":100.0}],"totalPrice":{"currency":"EUR","totalNetAmount":null,"totalGrossAmount":null,"totalTaxAmount":null,"taxRatePercentage":null,"totalDiscountAbsolute":null,"totalDiscountPercentage":null},"taxAmounts":null,"taxConditions":{"taxType":"net"},"paymentConditions":null,"shippingConditions":{"shippingDate":"2023-08-31T22:00:00.000Z","shippingEndDate":"2023-09-30T21:59:59.999Z","shippingType":"serviceperiod"},"closingInvoice":null,"relatedVouchers":null,"introduction":null,"remark":null,"title":null,"files":null}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 21 Sep 2023 07:59:52 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '251'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 78b517ad-305a-4ba2-8e7a-997ef14c405b
+      X-Amz-Apigw-Id:
+      - LmOu0GmgFiAFXyA=
+      X-Amzn-Trace-Id:
+      - Root=1-650bf7f8-45891c0168ee8f7d5c644ebc
+    body:
+      encoding: UTF-8
+      string: '{ "id" : "3a32a3b8-972c-414d-9c56-900051fbe01a", "resourceUri": "https://api.lexoffice.io/v1/invoices/3a32a3b8-972c-414d-9c56-900051fbe01a",
+        "createdDate": "2023-09-21T09:59:52.538+02:00", "updatedDate": "2023-09-21T09:59:52.540+02:00",
+        "version": 1 }'
+  recorded_at: Sat, 30 Sep 2023 22:00:00 GMT
+recorded_with: VCR 6.2.0

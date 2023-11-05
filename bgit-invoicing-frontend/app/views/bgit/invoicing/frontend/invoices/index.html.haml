@@ -1,0 +1,26 @@
+.row
+  .col
+    %h1
+      = resource_class.model_name.human(count: :other)
+      %span.badge.bg-primary
+        = @collection.count
+
+.row
+  .col
+    .table.table-responsive
+      = collection_table(collection: @collection, resource_class: resource_class) do |table|
+        = table.id sort: true
+        = table.association :owner, label_method: :human
+        = table.column :year, sort: true
+        = table.column :month, sort: true
+        = table.money :total_price, sort: true
+        = table.aasm_state :billing, sort: true do |resource|
+          - capture_haml do
+            %span.badge.bg-primary= resource.aasm(:billing).human_state
+        - if Object.const_defined?("Bgit::Lexoffice")
+          = table.attachment :lexoffice_document, title: false
+        = render partial: "bgit/invoicing/frontend/collection_table/default_actions", locals: { table: table }
+
+.row
+  .col
+    = link_to(t(".back"), bgit_invoicing_frontend.root_path, class: "btn btn-primary text-white")

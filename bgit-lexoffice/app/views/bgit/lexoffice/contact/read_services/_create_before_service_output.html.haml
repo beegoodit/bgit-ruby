@@ -1,0 +1,29 @@
+= turbo_frame_tag "result" do
+  = resource_table(resource: @result.contact) do |table|
+    - (LexofficeClient::Contact.attribute_names - %i(roles company addresses)).each do |attribute|
+      = table.row attribute.to_sym
+
+  %h2= LexofficeClient::Role.model_name.human(count: :other)
+  
+  - @result.contact.roles.each do |identifier, role|
+    %h3= identifier
+
+    = resource_table(resource: role) do |table|
+      - LexofficeClient::Role.attribute_names.each do |attribute|
+        = table.row attribute.to_sym
+
+  %h2= LexofficeClient::Company.model_name.human(count: :other)
+
+  = resource_table(resource: @result.contact.company) do |table|
+    - LexofficeClient::Company.attribute_names.each do |attribute|
+      = table.row attribute.to_sym
+
+  %h2= LexofficeClient::Address.model_name.human(count: :other)
+
+  - @result.contact.addresses.each do |identifier, addresses|
+    %h3= identifier
+    - addresses.each do |address|
+      = resource_table(resource: address) do |table|
+        - LexofficeClient::Address.attribute_names.each do |attribute|
+          = table.row attribute.to_sym
+      %hr

@@ -1,0 +1,1 @@
+Bgit::Invoicing::SeedService.call!

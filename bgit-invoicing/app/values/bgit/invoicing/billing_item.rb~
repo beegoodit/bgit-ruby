@@ -1,0 +1,7 @@
+module Bgit
+  module Invoicing
+    class BillingItem < Cmor::Core::ActiveCollection::Base
+      self.attribute_names = %w[id seconds tier resource product owner price subscription]
+    end
+  end
+end

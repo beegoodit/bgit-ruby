@@ -1,0 +1,55 @@
+de:
+  activerecord:
+    models:
+      bgit/frontend_auth/password_reset_request:
+        one: Passwort Reset
+        other: Passwort Resets
+      bgit/frontend_auth/user:
+        one: Benutzer
+        other: Benutzer
+    attributes:
+      bgit/frontend_auth/password_reset_request:
+        email: E-Mail
+      bgit/frontend_auth/user:
+        id: ID
+        active: Aktiv
+        approved: Genehmigt
+        confirmed: Bestätigt
+        crypted_password: Verschlüsseltes Passwort
+        current_login_at: Aktueller Login am
+        current_login_ip: Aktuelle IP Adresse
+        email: E-Mail
+        failed_login_count: Fehlgeschlagene Logins
+        last_login_at: Zuletzt eingeloggt am
+        last_login_ip: Letzte IP Adresse
+        last_request_at: Letzte Anfrage am
+        login: Login
+        login_count: Logins
+        otp_backup_codes: 2FA Backup Codes
+        otp_secret_key: 2FA Schlüssel
+        password: Passwort
+        password_confirmation: Passwort wiederholen
+        password_salt: Passwort Salt
+        perishable_token: Vergänglicher Token
+        persistence_token: Persistenztoken
+        single_access_token: One-Time Token
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+  authlogic:
+    models:
+      bgit/frontend_auth/user_session:
+        one: "Sitzung"
+        other: "Sitzungen"
+  classes:
+    bgit/frontend_auth/engine: "Frontend Auth"
+  bgit:
+    frontend_auth:
+      frontend:
+        application_view_helper:
+          bootstrap_4:
+            render_dropdown:
+              not_signed_in: "Nicht eingeloggt"
+  routes:
+    bgit-frontend-auth-engine: "frontend-auth"
+    user: "benutzer"
+    user_session: "session"

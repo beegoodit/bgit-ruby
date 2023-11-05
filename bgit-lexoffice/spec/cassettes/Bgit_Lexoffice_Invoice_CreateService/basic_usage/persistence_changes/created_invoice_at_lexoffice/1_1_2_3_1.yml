@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.lexoffice.io/v1/invoices
+    body:
+      encoding: UTF-8
+      string: '{"id":null,"organizationId":null,"createdDate":null,"updatedDate":null,"version":null,"language":null,"archived":null,"voucherStatus":null,"voucherNumber":null,"voucherDate":"2023-09-30T22:00:00.000Z","dueDate":null,"address":{"name":null,"supplement":null,"street":null,"city":null,"zip":null,"countryCode":null,"contactId":"901e2da9-7753-46c9-8921-b3d463e04857"},"lineItems":[{"id":null,"type":"custom","name":"product-49
+        - tier-25","description":"resource-25","quantity":1,"unitName":"Stück","unitPrice":{"currency":"EUR","netAmount":0.01,"grossAmount":0.01,"taxRatePercentage":19},"discountPercentage":0,"lineItemAmount":100.0},{"id":null,"type":"custom","name":"product-51
+        - tier-26","description":"resource-26","quantity":1,"unitName":"Stück","unitPrice":{"currency":"EUR","netAmount":0.01,"grossAmount":0.01,"taxRatePercentage":19},"discountPercentage":0,"lineItemAmount":100.0},{"id":null,"type":"custom","name":"product-53
+        - tier-27","description":"resource-27","quantity":1,"unitName":"Stück","unitPrice":{"currency":"EUR","netAmount":0.01,"grossAmount":0.01,"taxRatePercentage":19},"discountPercentage":0,"lineItemAmount":100.0}],"totalPrice":{"currency":"EUR","totalNetAmount":null,"totalGrossAmount":null,"totalTaxAmount":null,"taxRatePercentage":null,"totalDiscountAbsolute":null,"totalDiscountPercentage":null},"taxAmounts":null,"taxConditions":{"taxType":"net"},"paymentConditions":null,"shippingConditions":{"shippingDate":"2023-08-31T22:00:00.000Z","shippingEndDate":"2023-09-30T21:59:59.999Z","shippingType":"serviceperiod"},"closingInvoice":null,"relatedVouchers":null,"introduction":null,"remark":null,"title":null,"files":null}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 21 Sep 2023 07:59:53 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '251'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 54963596-adde-4dda-994f-8b898919b16d
+      X-Amz-Apigw-Id:
+      - LmOu6Ea9FiAFtUw=
+      X-Amzn-Trace-Id:
+      - Root=1-650bf7f8-6901d24c4709fdd81f6292ee
+    body:
+      encoding: UTF-8
+      string: '{ "id" : "a4f3c265-663b-458f-afe2-fa6675cb7d5c", "resourceUri": "https://api.lexoffice.io/v1/invoices/a4f3c265-663b-458f-afe2-fa6675cb7d5c",
+        "createdDate": "2023-09-21T09:59:53.156+02:00", "updatedDate": "2023-09-21T09:59:53.158+02:00",
+        "version": 1 }'
+  recorded_at: Sat, 30 Sep 2023 22:00:00 GMT
+- request:
+    method: get
+    uri: https://api.lexoffice.io/v1/invoices/a4f3c265-663b-458f-afe2-fa6675cb7d5c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 21 Sep 2023 07:59:53 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1978'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 5d81c919-c09c-4d73-b0cc-dbdf30e5cbb0
+      X-Amz-Apigw-Id:
+      - LmOvAGanliAFckA=
+      X-Amzn-Trace-Id:
+      - Root=1-650bf7f9-0c7647535695b96f0e897410
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImE0ZjNjMjY1LTY2M2ItNDU4Zi1hZmUyLWZhNjY3NWNiN2Q1YyIsIm9yZ2FuaXphdGlvbklkIjoiMDY5NzNiNmUtODkwOS00MmM3LWJmMWMtZDI5MTNhYWJkZTkxIiwiY3JlYXRlZERhdGUiOiIyMDIzLTA5LTIxVDA5OjU5OjUzLjE1NiswMjowMCIsInVwZGF0ZWREYXRlIjoiMjAyMy0wOS0yMVQwOTo1OTo1My4xNTgrMDI6MDAiLCJ2ZXJzaW9uIjoxLCJsYW5ndWFnZSI6ImRlIiwiYXJjaGl2ZWQiOmZhbHNlLCJ2b3VjaGVyU3RhdHVzIjoiZHJhZnQiLCJ2b3VjaGVyTnVtYmVyIjoiUkUwMjEwIiwidm91Y2hlckRhdGUiOiIyMDIzLTEwLTAxVDAwOjAwOjAwLjAwMCswMjowMCIsImFkZHJlc3MiOnsiY29udGFjdElkIjoiOTAxZTJkYTktNzc1My00NmM5LTg5MjEtYjNkNDYzZTA0ODU3IiwibmFtZSI6IkJlZUdvb2QgSVQgR2JSIiwic3RyZWV0IjoiRG9taXRpYW5zdHIuIDE2IiwiY2l0eSI6IkZyYW5rZnVydCBhbSBNYWluIiwiemlwIjoiNjA0MzkiLCJjb3VudHJ5Q29kZSI6IkRFIn0sImxpbmVJdGVtcyI6W3sidHlwZSI6ImN1c3RvbSIsIm5hbWUiOiJwcm9kdWN0LTQ5IC0gdGllci0yNSIsImRlc2NyaXB0aW9uIjoicmVzb3VyY2UtMjUiLCJxdWFudGl0eSI6MSwidW5pdE5hbWUiOiJTdMO8Y2siLCJ1bml0UHJpY2UiOnsiY3VycmVuY3kiOiJFVVIiLCJuZXRBbW91bnQiOjAuMDEsImdyb3NzQW1vdW50IjowLjAxLCJ0YXhSYXRlUGVyY2VudGFnZSI6MTkuMDB9LCJkaXNjb3VudFBlcmNlbnRhZ2UiOjAsImxpbmVJdGVtQW1vdW50IjowLjAxfSx7InR5cGUiOiJjdXN0b20iLCJuYW1lIjoicHJvZHVjdC01MSAtIHRpZXItMjYiLCJkZXNjcmlwdGlvbiI6InJlc291cmNlLTI2IiwicXVhbnRpdHkiOjEsInVuaXROYW1lIjoiU3TDvGNrIiwidW5pdFByaWNlIjp7ImN1cnJlbmN5IjoiRVVSIiwibmV0QW1vdW50IjowLjAxLCJncm9zc0Ftb3VudCI6MC4wMSwidGF4UmF0ZVBlcmNlbnRhZ2UiOjE5LjAwfSwiZGlzY291bnRQZXJjZW50YWdlIjowLCJsaW5lSXRlbUFtb3VudCI6MC4wMX0seyJ0eXBlIjoiY3VzdG9tIiwibmFtZSI6InByb2R1Y3QtNTMgLSB0aWVyLTI3IiwiZGVzY3JpcHRpb24iOiJyZXNvdXJjZS0yNyIsInF1YW50aXR5IjoxLCJ1bml0TmFtZSI6IlN0w7xjayIsInVuaXRQcmljZSI6eyJjdXJyZW5jeSI6IkVVUiIsIm5ldEFtb3VudCI6MC4wMSwiZ3Jvc3NBbW91bnQiOjAuMDEsInRheFJhdGVQZXJjZW50YWdlIjoxOS4wMH0sImRpc2NvdW50UGVyY2VudGFnZSI6MCwibGluZUl0ZW1BbW91bnQiOjAuMDF9XSwidG90YWxQcmljZSI6eyJjdXJyZW5jeSI6IkVVUiIsInRvdGFsTmV0QW1vdW50IjowLjAzLCJ0b3RhbEdyb3NzQW1vdW50IjowLjA0LCJ0b3RhbFRheEFtb3VudCI6MC4wMX0sInRheEFtb3VudHMiOlt7InRheFJhdGVQZXJjZW50YWdlIjoxOS4wMCwidGF4QW1vdW50IjowLjAxLCJuZXRBbW91bnQiOjAuMDN9XSwidGF4Q29uZGl0aW9ucyI6eyJ0YXhUeXBlIjoibmV0In0sInBheW1lbnRDb25kaXRpb25zIjp7InBheW1lbnRUZXJtTGFiZWwiOiJaYWhsYmFyIHNvZm9ydCwgcmVpbiBuZXR0byIsInBheW1lbnRUZXJtTGFiZWxUZW1wbGF0ZSI6IlphaGxiYXIgc29mb3J0LCByZWluIG5ldHRvIiwicGF5bWVudFRlcm1EdXJhdGlvbiI6MH0sInNoaXBwaW5nQ29uZGl0aW9ucyI6eyJzaGlwcGluZ0RhdGUiOiIyMDIzLTA5LTAxVDAwOjAwOjAwLjAwMCswMjowMCIsInNoaXBwaW5nRW5kRGF0ZSI6IjIwMjMtMDktMzBUMjM6NTk6NTkuOTk5KzAyOjAwIiwic2hpcHBpbmdUeXBlIjoic2VydmljZXBlcmlvZCJ9LCJjbG9zaW5nSW52b2ljZSI6ZmFsc2UsInJlbGF0ZWRWb3VjaGVycyI6W10sImludHJvZHVjdGlvbiI6IlVuc2VyZSBMaWVmZXJ1bmdlbi9MZWlzdHVuZ2VuIHN0ZWxsZW4gd2lyIElobmVuIHdpZSBmb2xndCBpbiBSZWNobnVuZy4iLCJyZW1hcmsiOiJWaWVsZW4gRGFuayBmw7xyIGRpZSBndXRlIFp1c2FtbWVuYXJiZWl0LiIsInRpdGxlIjoiUmVjaG51bmcifQ==
+  recorded_at: Sat, 30 Sep 2023 22:00:00 GMT
+recorded_with: VCR 6.2.0

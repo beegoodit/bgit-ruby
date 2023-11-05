@@ -1,0 +1,14 @@
+{
+  "resource": [
+    {
+      "product.identifier": "mariadb",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "production-con42-backend-database"
+    },
+    {
+      "product.identifier": "mariadb",
+      "polymorphic:resource:owner:team.name": "BeeGood IT",
+      "identifier": "staging-con42-backend-database"
+    }
+  ]
+}
