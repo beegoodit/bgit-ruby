@@ -1,0 +1,14 @@
+.row
+  .col
+    %h1= Bgit::Organisations::TeamMembership.model_name.human(count: :other)
+
+= turbo_frame_tag "team-memberships" do
+  .row
+    .col
+      = collection_table(collection: @collection) do |table|
+        = table.id
+        = table.association :member, label_method: :human
+
+.row
+  .col
+    = link_to(t(".back"), @current_team, class: "btn btn-primary text-white")

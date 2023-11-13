@@ -1,0 +1,3 @@
+
+
+  mount Bgit::Organisations::Frontend::Engine, at: "/"

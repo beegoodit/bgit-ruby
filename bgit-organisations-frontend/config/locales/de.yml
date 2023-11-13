@@ -1,0 +1,15 @@
+de:
+  bgit:
+    organisations:
+      frontend:
+        home:
+          index:
+            title: "Dashboard"
+        teams:
+          team_memberships:
+            index:
+              back: "Zurück"
+  classes:
+    bgit/organisations/frontend/engine: "Organisationen"
+  routes:
+    bgit_organisations_frontend_engine: "organisationen"

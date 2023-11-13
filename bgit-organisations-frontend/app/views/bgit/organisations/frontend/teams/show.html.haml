@@ -1,0 +1,13 @@
+%h1= @resource.human
+
+%ul#myTab.nav.nav-tabs{role: "tablist"}
+  %li.nav-item{role: "presentation"}
+    %button#profile-tab.nav-link.active{"aria-controls" => "team-memberships-tab-pane", "aria-selected" => "false", "data-bs-target" => "#team-memberships-tab-pane", "data-bs-toggle" => "tab", role: "tab", type: "button"}
+      = Bgit::Organisations::TeamMembership.model_name.human(count: :other)
+      %span.badge.bg-primary= @resource.team_memberships.count
+  = render partial: "show_tab_extras"
+
+#myTabContent.tab-content
+  #team-memberships-tab-pane.tab-pane.active{"aria-labelledby" => "profile-tab", role: "tabpanel", tabindex: "0"}
+    = turbo_frame_tag("team-memberships", src: team_team_memberships_path(@resource))
+  = render partial: "show_tab_content_extras"

@@ -1,0 +1,11 @@
+%h1= t(".title")
+
+%ul.list-group
+  %li.list-group-item
+    = link_to(Bgit::FrontendAuth::User.model_name.human, bgit_frontend_auth_frontend.user_path)
+    %span.badge.bg-primary.float-end
+      = current_frontend_auth_user.human
+  %li.list-group-item
+    = link_to(Bgit::Organisations::Team.model_name.human(count: :other), bgit_organisations_frontend.teams_path)
+    %span.badge.bg-primary.float-end
+      = current_frontend_auth_user.teams.count
