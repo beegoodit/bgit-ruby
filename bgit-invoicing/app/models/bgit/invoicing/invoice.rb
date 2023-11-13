@@ -1,5 +1,5 @@
 module Bgit::Invoicing
-  # This class represents an invoice. It is used to bill resources to an owner
+  # This class represents an invoice. It is used to bill things to an owner
   # for a specific month.
   class Invoice < ApplicationRecord
     include SimpleFormPolymorphicAssociations::Model::AutocompleteConcern
@@ -16,12 +16,12 @@ module Bgit::Invoicing
     end
 
     register_currency Bgit::Invoicing::Configuration.default_currency
-    monetize :total_price_cents
+    monetize :total_net_amount_cents
 
     validates :year, presence: true
     validates :month, presence: true
-    validates :total_price_cents, presence: true
-    validates :month, uniqueness: {scope: [:owner_id, :owner_type, :year]}
+    validates :total_net_amount_cents, presence: true
+    validates :month, uniqueness: {scope: [:owner_id, :owner_type, :year]}, if: -> { Cmor::Core::Settings.get(:bgit_invoicing, :enforce_unique_invoices_per_owner_and_month) }
 
     scope :owned_by_any, ->(*owners) { where(owner: owners.flatten) }
 
@@ -79,5 +79,21 @@ module Bgit::Invoicing
 
       true
     end
+
+    module LineItemCalculationsConcern
+      extend ActiveSupport::Concern
+
+      included do
+        before_validation :set_total_net_amount
+      end
+
+      private
+
+      def set_total_net_amount
+        self.total_net_amount_cents = line_items.sum(&:net_amount_cents)
+      end
+    end
+
+    include LineItemCalculationsConcern
   end
 end

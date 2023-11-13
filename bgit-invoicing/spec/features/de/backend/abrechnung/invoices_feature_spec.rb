@@ -1,9 +1,9 @@
 require "rails_helper"
 
-RSpec.describe "/de/backend/preise/line_items", type: :feature do
-  let(:resource_class) { Bgit::Invoicing::LineItem }
-  let(:resource) { create(:bgit_invoicing_line_item) }
-  let(:resources) { create_list(:bgit_invoicing_line_item, 3) }
+RSpec.describe "/de/backend/abrechnung/invoices", type: :feature do
+  let(:resource_class) { Bgit::Invoicing::Invoice }
+  let(:resource) { create(:bgit_invoicing_invoice) }
+  let(:resources) { create_list(:bgit_invoicing_invoice, 3) }
 
   let(:product) { create(:bgit_invoicing_product) }
 

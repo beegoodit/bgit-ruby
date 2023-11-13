@@ -2,10 +2,18 @@
 
 = collection_table(collection: @resource.line_items) do |table|
   = table.id sort: true
-  = table.association :subscription, sort: true, label_method: :human
+  /=# table.association :subscription, sort: true, label_method: :human
   = table.column :uuid, sort: true
-  = table.column :seconds, sort: true
-  = table.money :price, sort: { column_name: :price_cents }
+  = table.column :name, sort: true
+  = table.column :description, sort: true do |resource|
+    - capture_haml do
+      %span{ title: resource.description }= resource.description&.truncate(32)
+  = table.column :quantity
+  = table.money :unit_net_amount, sort: { column_name: :net_amount_cents }
+  = table.column :tax_rate_percentage
+  = table.money :tax_amount
+  = table.money :net_amount
+  = table.money :gross_amount
 
 - if Object.const_defined?("Bgit::Lexoffice")
   - if @resource.lexoffice_invoice.present?

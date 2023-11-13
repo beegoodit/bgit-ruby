@@ -1,7 +1,14 @@
 = table.id sort: true
 = table.association :invoice, sort: true, label_method: :human
-= table.association :subscription, sort: true, label_method: :human
+= table.association :subscription, sort: true, label_method: :human if Object.const_defined?("Bgit::Pricing")
 = table.column :uuid, sort: true
-= table.column :seconds, sort: true
-= table.money :price, sort: { column_name: :price_cents }
+= table.column :name, sort: true
+= table.column :description, sort: true
+= table.column :quantity
+= table.column :unit_name
+= table.money :unit_net_amount, sort: { column_name: :unit_net_amount_cents }
+= table.column :tax_rate_percentage
+= table.money :tax_amount
+= table.money :net_amount
+= table.money :gross_amount
 = table.timestamps sort: true

@@ -1,0 +1,9 @@
+.row
+  .col-12.col-md-6
+    = form.input :year_eq
+  .col-12.col-md-6
+    = form.input :month_eq
+  .col-12.col-md-6
+    = form.input :total_net_amount_cents_gt
+  .col-12.col-md-6
+    = form.input :billing_state_eq, as: :select, collection: resource_class.aasm(:billing).states_for_select, include_blank: true

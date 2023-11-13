@@ -12,6 +12,11 @@ GIT
   revision: bb0fb401ff0b86bc94ca34c959838d258376e3ae
   specs:
     cmor (0.0.61.pre)
+    cmor-core-settings (0.0.61.pre)
+      cmor-core (= 0.0.61.pre)
+      cmor-core-backend (= 0.0.61.pre)
+      rails (>= 7.0)
+      rao-active_collection (>= 0.0.51.pre)
 
 GIT
   remote: https://github.com/content-management-on-rails/cmor.git
@@ -102,6 +107,7 @@ PATH
       after_commit_everywhere
       bgit-frontend_auth
       cmor-core-backend (>= 0.0.60.pre)
+      cmor-core-settings
       json_seeds-rails
       lexoffice_client
       money-rails
@@ -441,6 +447,9 @@ GEM
     rainbow (3.1.1)
     rake (13.1.0)
     rao (0.0.51.pre)
+    rao-active_collection (0.0.51.pre)
+      rails (>= 6.1)
+      rao
     rao-query (0.0.51.pre)
       rails (>= 6.1)
       rao

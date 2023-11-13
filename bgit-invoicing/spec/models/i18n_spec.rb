@@ -3,11 +3,7 @@ require "rails_helper"
 RSpec.describe "Translations", type: :model do
   {
     Bgit::Invoicing::Invoice => {},
-    Bgit::Invoicing::LineItem => {},
-    Bgit::Invoicing::Product => {},
-    Bgit::Invoicing::Resource => {},
-    Bgit::Invoicing::Subscription => {},
-    Bgit::Invoicing::Tier => {}
+    Bgit::Invoicing::LineItem => {}
   }.each do |model, options|
     I18n.available_locales.each do |locale|
       I18n.locale = locale

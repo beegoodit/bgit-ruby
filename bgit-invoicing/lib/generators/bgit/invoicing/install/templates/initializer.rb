@@ -2,20 +2,12 @@ Bgit::Invoicing.configure do |config|
   # Set the resources, that will be shown in the backend menu.
   #
   # Default: config.resources_controllers = -> {[
-  #            Bgit::Invoicing::ProductsController,
-  #            Bgit::Invoicing::ResourcesController,
-  #            Bgit::Invoicing::SubscriptionsController,
-  #            Bgit::Invoicing::TiersController,
   #            Bgit::Invoicing::InvoicesController,
   #            Bgit::Invoicing::LineItemsController
   #          ]}
   #
   config.resources_controllers = -> {
     [
-      Bgit::Invoicing::ProductsController,
-      Bgit::Invoicing::ResourcesController,
-      Bgit::Invoicing::SubscriptionsController,
-      Bgit::Invoicing::TiersController,
       Bgit::Invoicing::InvoicesController,
       Bgit::Invoicing::LineItemsController
     ]
@@ -33,14 +25,10 @@ Bgit::Invoicing.configure do |config|
   # Set the services, that will be shown in the backend menu.
   #
   # Default: config.service_controllers = -> {[
-  #            Bgit::Invoicing::BillingRunServicesController,
-  #            Bgit::Invoicing::GenerateInvoiceForOwnerServicesController
   #          ]}
   #
   config.service_controllers = -> {
     [
-      Bgit::Invoicing::BillingRunServicesController,
-      Bgit::Invoicing::GenerateInvoiceForOwnerServicesController
     ]
   }
 
@@ -70,6 +58,12 @@ Bgit::Invoicing.configure do |config|
   # Default: config.resource_owner_factory_name = :<%= resource_owner_factory_name %>
   #
   config.resource_owner_factory_name = :<%= resource_owner_factory_name %>
+
+  # Set the factory name for the line item inovicable.
+  #
+  # Default: config.line_item_invoiceable_factory_name = :<%= line_item_invoiceable_factory_name %>
+  #
+  config.line_item_invoiceable_factory_name = :<%= line_item_invoiceable_factory_name %>
 
   # Set the default currency.
   #

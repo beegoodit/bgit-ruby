@@ -3,6 +3,6 @@ FactoryBot.define do
     association(:owner, factory: Bgit::Invoicing::Configuration.invoice_owner_factory_name)
     year { 1.month.ago.year }
     month { 1.month.ago.month }
-    total_price_cents { 1 }
+    total_net_amount_cents { 100 }
   end
 end

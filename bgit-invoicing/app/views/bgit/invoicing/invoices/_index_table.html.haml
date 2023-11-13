@@ -3,7 +3,8 @@
 = table.column :uuid, sort: true
 = table.column :year, sort: true
 = table.column :month, sort: true
-= table.money :total_price, sort: { column_name: :total_price_cents }
+= table.column :line_items_count
+= table.money :total_net_amount, sort: { column_name: :total_net_amount_cents }
 = table.timestamps sort: true
 = table.aasm_state :billing
 = table.aasm_actions :billing

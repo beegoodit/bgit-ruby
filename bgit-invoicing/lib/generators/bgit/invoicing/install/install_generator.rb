@@ -6,12 +6,13 @@ module Bgit
 
         source_root File.expand_path("../templates", __FILE__)
 
-        attr_accessor :resource_owner_factory_name, :invoice_owner_factory_name
+        attr_accessor :resource_owner_factory_name, :invoice_owner_factory_name, :line_item_invoiceable_factory_name
 
         def initialize(*args)
           super
           @resource_owner_factory_name = ENV.fetch("BGIT_INVOICING_RESOURCE_OWNER_FACTORY_NAME", "user")
           @invoice_owner_factory_name = ENV.fetch("BGIT_INVOICING_INVOICE_OWNER_FACTORY_NAME", "user")
+          @line_item_invoiceable_factory_name = ENV.fetch("BGIT_INVOICING_LINE_ITEM_INVOICEABLE_FACTORY_NAME", "invoiceable_item")
         end
 
         def generate_initializer

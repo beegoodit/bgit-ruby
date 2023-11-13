@@ -16,6 +16,14 @@ module Bgit
             @values[key] = value
           end
         end
+
+        def cmor
+          Cmor
+        end
+
+        def settings
+          Cmor::Core::Settings
+        end
       end
 
       @values = {}
@@ -40,6 +48,7 @@ module Bgit
       define_option :sidebar_controllers, default: -> { [] }
       define_option :resource_owner_factory_name, default: :user
       define_option :invoice_owner_factory_name, default: :user
+      define_option :line_item_invoiceable_factory_name, default: :invoiceable_item
       define_option :resource_owner_autocomplete_classes, default: -> { {} }
       define_option :default_currency, default: :eur
       define_option :accounting_services_classes, default: {

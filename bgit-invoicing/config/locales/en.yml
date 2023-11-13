@@ -55,8 +55,10 @@ en:
         other: "Tiers"
     attributes:
       defaults: &defaults
+        description: "Description"
         id: ID
         identifier: "Identifier"
+        name: "Name"
         uuid: "UUID"
         created_at: "Created at"
         updated_at: "Updated at"
@@ -71,21 +73,29 @@ en:
         owner_id: "Owner"
         owner_type: "Owner type"
         to: "To"
-        total_price: "Total price"
-        total_price_cents: "Total price (cents)"
+        total_net_amount_cents: "Total net amount (cents)"
+        total_net_amount: "Total net amount"
         year: "Year"
       bgit/invoicing/line_item:
         <<: *defaults
-        invoice: "Invoice"
         invoice_id: "Invoice"
+        invoice: "Invoice"
+        invoiceable: "Invoiceable"
+        invoiceable_id: "Invoiceable"
+        invoiceable_type: "Invoiceable type"
         owner: "Owner"
-        price: "Price"
         price_cents: "Price (cents)"
+        price: "Price"
+        quantity: "Quantity"
         resource: "Resource"
         seconds: "Seconds"
-        subscription: "Subscription"
         subscription_id: "Subscription"
+        subscription: "Subscription"
+        tax_rate_percentage: "Tax rate (%)"
         tier: "Tier"
+        unit_name: "Unit name"
+        unit_net_amount_cents: "Unit net amount (cents)"
+        unit_net_amount: "Unit net amount"
       bgit/invoicing/product:
         <<: *defaults
       bgit/invoicing/resource:

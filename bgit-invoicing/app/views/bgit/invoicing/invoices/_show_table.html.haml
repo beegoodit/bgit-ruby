@@ -1,9 +1,18 @@
 = table.id
 = table.row :uuid
 = table.association :owner, label_method: :human
+- if Object.const_defined?("Bgit::Lexoffice")
+  = table.row :owner_lexoffice_contact do |resource|
+    - capture_haml do
+      - if resource.owner.lexoffice_contact.present?
+        = link_to(bgit_lexoffice.contact_path(resource.owner.lexoffice_contact), target: "_blank") do
+          = resource.owner.lexoffice_contact.human
+      - else
+        = link_to(bgit_lexoffice.new_contact_path(contact: { contactable_type: resource.owner.class, contactable_id: resource.owner.id }), target: "_blank", class: "btn btn-primary btn-xs") do
+          = t(".create_lexoffice_contact")
 = table.row :year
 = table.row :month
-= table.money :total_price
+= table.money :total_net_amount
 = table.timestamps
 = table.aasm_state :billing
 = table.aasm_actions :billing

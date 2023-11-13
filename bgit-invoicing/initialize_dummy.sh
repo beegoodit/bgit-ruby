@@ -51,10 +51,14 @@ echo "end" >> config/initializers/route_translator.rb
 # Setup administrador
 rails generate administrador:install
 
-# Setup cmor_core
+# Setup cmor-core
 rails generate cmor:core:install
 
-# Setup cmor_core_backend
+# Setup cmor-core-settings
+rails cmor_core_settings:install:migrations
+rails generate cmor:core:settings:install
+
+# Setup cmor-core-backend
 rails generate cmor:core:backend:install
 
 # Setup bgit-frontend_auth
@@ -62,6 +66,9 @@ rails bgit_frontend_auth:install:migrations
 rails generate bgit:frontend_auth:install
 
 # Setup dummy app
+rails generate model InvoiceableItem name
+sed -i "2i\  has_one :line_item, as: :invoiceable, dependent: :destroy, inverse_of: :invoiceable" app/models/invoiceable_item.rb
+
 rails generate model Team name
 sed -i "2i\  include SimpleFormPolymorphicAssociations::Model::AutocompleteConcern" app/models/team.rb
 sed -i "3i\  autocomplete scope: ->(matcher) { where(\"teams.name LIKE :term\", term: \"%#{matcher.downcase}%\") }, id_method: :id, text_method: :name" app/models/team.rb

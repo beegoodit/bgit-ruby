@@ -1,6 +1,7 @@
 require "aasm"
 require "after_commit_everywhere"
 require "bgit-frontend_auth"
+require "cmor-core-settings"
 require "json_seeds-rails"
 require "lexoffice_client"
 require "money-rails"

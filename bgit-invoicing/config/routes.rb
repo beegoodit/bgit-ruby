@@ -4,15 +4,9 @@ Bgit::Invoicing::Engine.routes.draw do
     get :autocomplete, on: :collection
   end
   resources :line_items, only: [:index, :show, :destroy]
-  resources :products
-  resources :resources
-  resources :subscriptions
-  resources :tiers do
-    post :reposition, on: :member
-  end
 
-  resource :billing_run_services, only: [:new, :create]
-  resource :generate_invoice_for_owner_services, only: [:new, :create]
+  # resource :billing_run_services, only: [:new, :create]
+  # resource :generate_invoice_for_owner_services, only: [:new, :create]
 
   root to: "home#index"
 end

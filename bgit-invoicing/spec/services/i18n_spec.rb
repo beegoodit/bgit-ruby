@@ -4,8 +4,8 @@ require "rails_helper"
 
 RSpec.describe "Translations", type: :model do
   {
-    Bgit::Invoicing::BillingRunService => {},
-    Bgit::Invoicing::GenerateInvoiceForOwnerService => {}
+    # Bgit::Invoicing::BillingRunService => {}
+    # Bgit::Invoicing::GenerateInvoiceForOwnerService => {}
   }.each do |model, options|
     options[:locales] ||= I18n.available_locales
     options[:locales].each do |locale|

@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "administrador", ">= 0.0.30.pre"
   spec.add_dependency "after_commit_everywhere"
   spec.add_dependency "cmor-core-backend", ">= 0.0.60.pre"
+  spec.add_dependency "cmor-core-settings"
   spec.add_dependency "bgit-frontend_auth"
   spec.add_dependency "json_seeds-rails"
   spec.add_dependency "money-rails"

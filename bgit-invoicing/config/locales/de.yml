@@ -55,8 +55,10 @@ de:
         other: "Stufen"
     attributes:
       defaults: &defaults
+        description: "Beschreibung"
         id: ID
         identifier: "Bezeichner"
+        name: "Name"
         uuid: "UUID"
         created_at: "Erstellt am"
         updated_at: "Aktualisiert am"
@@ -71,21 +73,27 @@ de:
         owner_id: "Besitzer"
         owner_type: "Besitzertyp"
         to: "Bis"
-        total_price: "Gesamtpreis"
-        total_price_cents: "Gesamtpreis (Cent)"
+        total_net_amount_cents: "Netto-Gesamtpreis (Cent)"
+        total_net_amount: "Netto-Gesamtpreis"
         year: "Jahr"
       bgit/invoicing/line_item:
         <<: *defaults
-        invoice: "Rechnung"
         invoice_id: "Rechnung"
+        invoice: "Rechnung"
+        invoiceable: "Abrechnungsobjekt"
+        invoiceable_id: "Abrechnungsobjekt"
+        invoiceable_type: "Abrechnungsobjekttyp"
         owner: "Besitzer"
-        price: "Preis"
         price_cents: "Preis (Cent)"
+        price: "Preis"
+        quantity: "Menge"
         resource: "Ressource"
         seconds: "Sekunden"
-        subscription: "Abonnement"
-        subscription_id: "Abonnement"
+        tax_rate_percentage: "Steuersatz (%)"
         tier: "Stufe"
+        unit_name: "Einheit"
+        unit_net_amount_cents: "Netto-Einheitspreis (Cent)"
+        unit_net_amount: "Netto-Einheitspreis"
       bgit/invoicing/product:
         <<: *defaults
       bgit/invoicing/resource:
@@ -118,6 +126,6 @@ de:
         after_show_table:
           lexoffice_invoice_not_associated: "Es ist noch kein Lexoffice Rechnungsdatensatz verknüpft."
   classes:
-    bgit/invoicing/engine: "Preise"
+    bgit/invoicing/engine: "Abrechnung"
   routes:
-    bgit-invoicing-engine: "preise"
+    bgit-invoicing-engine: "abrechnung"
