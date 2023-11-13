@@ -43,3 +43,4 @@ module Bgit
       end
     end
   end
+end
