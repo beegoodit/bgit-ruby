@@ -25,7 +25,7 @@ module Bgit
       def save
         return unless valid?
         user.reset_perishable_token
-        user.save
+        user.save!
         Bgit::FrontendAuth::Frontend::UserMailer.password_reset_email(user, host).deliver_later
       end
 
