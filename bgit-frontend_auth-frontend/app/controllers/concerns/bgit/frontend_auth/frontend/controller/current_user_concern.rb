@@ -2,6 +2,15 @@ module Bgit
   module FrontendAuth
     module Frontend
       module Controller
+        # Usage:
+        #
+        #    # app/controllers/frontend/application_controller.rb
+        #    module Frontend
+        #      class ApplicationController < ApplicationController
+        #        include Bgit::FrontendAuth::Frontend::Controller::CurrentUserConcern
+        #      end
+        #    end
+        #
         module CurrentUserConcern
           extend ActiveSupport::Concern
 
@@ -35,7 +44,7 @@ module Bgit
 
           def handle_frontend_authentication_failure
             respond_to do |format|
-              format.html { redirect_to(frontend_authentication_failed_path, notice: t("frontend_auth.frontend.controller.current_user_concern.authentication_failed")) }
+              format.html { redirect_to(frontend_authentication_failed_path, notice: t("bgit.frontend_auth.frontend.controller.current_user_concern.authentication_failed")) }
             end
           end
 

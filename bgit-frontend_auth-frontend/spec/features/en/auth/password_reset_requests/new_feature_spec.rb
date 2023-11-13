@@ -34,9 +34,14 @@ RSpec.describe "/en/auth/password_reset_request/new", type: :feature do
     end
 
     describe 'Mail delivery' do
-      before(:each) { ActionMailer::Base.deliveries = [] }
+      let(:host) { "www.example.com" }
 
-      it { expect { submit_button.click }.to change { ActionMailer::Base.deliveries.count }.from(0).to(1) }
+      before(:each) do
+        expect(Bgit::FrontendAuth::Frontend::UserMailer).to receive(:password_reset_email).with(user, host)
+          .and_return(double("MailMessage", deliver_later: true))
+      end
+
+      it { submit_button.click }
     end
   end
 end
