@@ -1,0 +1,27 @@
+en:
+  activerecord:
+    models:
+      bgit/organisations/team:
+        one: Team
+        other: Teams
+      bgit/organisations/team_membership:
+        one: Team Membership
+        other: Team Memberships
+    attributes:
+      shared: &shared
+        id: ID
+        name: Name
+        created_at: Created at
+        updated_at: Updated at
+      bgit/organisations/team:
+        <<: *shared
+      bgit/organisations/team_membership:
+        <<: *shared
+        team: Team
+        team_id: Team
+        member: Member
+        member_id: Member
+  classes:
+    bgit/organisations/engine: "Organisations"
+  routes:
+    bgit-organisations-engine: "organisations"

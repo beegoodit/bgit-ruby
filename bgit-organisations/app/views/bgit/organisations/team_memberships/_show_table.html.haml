@@ -1,0 +1,4 @@
+= table.id
+= table.association :team, label_method: :human, link_to: ->(r) { url_for(r.team) }
+= table.association :member, label_method: :human
+= table.timestamps

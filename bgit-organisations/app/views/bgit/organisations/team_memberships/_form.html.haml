@@ -1,0 +1,2 @@
+= form.association :team, collection: Bgit::Organisations::Team.all.collect { |t| [administrador_helper(self).label_for(t), t.id] }
+= form.association :member, collection: Bgit::Organisations::Configuration.team_member_class_name.constantize.all.collect { |m| [administrador_helper(self).label_for(m), m.id] }
