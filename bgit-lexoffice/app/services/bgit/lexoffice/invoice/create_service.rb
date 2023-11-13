@@ -95,33 +95,29 @@ module Bgit
       def line_item_as_lexoffice_line_item(line_item)
         LexofficeClient::LineItem.new(
           type: "custom",
-          name: "#{line_item.subscription.tier.product.identifier} - #{line_item.subscription.tier.identifier}",
-          description: line_item.subscription.resource.identifier,
-          quantity: 1,
-          unit_name: "Stück",
+          # name: "#{line_item.subscription.tier.product.identifier} - #{line_item.subscription.tier.identifier}",
+          name: line_item.name,
+          # description: line_item.subscription.resource.identifier,
+          description: line_item.description,
+          # quantity: 1,
+          quantity: line_item.quantity,
+          # unit_name: "Stück",
+          unit_name: line_item.unit_name,
           unit_price: LexofficeClient::UnitPrice.new(
-            currency: "EUR",
-            net_amount: line_item.price.to_f,
-            gross_amount: (line_item.price.to_f * 1.19).round(2),
-            tax_rate_percentage: 19
+            currency: line_item.net_amount.currency.to_s,
+            net_amount: line_item.unit_net_amount.to_f,
+            # gross_amount: line_item.unit_gross_amount.to_f,
+            tax_rate_percentage: line_item.tax_rate_percentage
           ),
+          # unit_price: LexofficeClient::UnitPrice.new(
+          #   currency: "EUR",
+          #   net_amount: line_item.price.to_f,
+          #   gross_amount: (line_item.price.to_f * 1.19).round(2),
+          #   tax_rate_percentage: 19
+          # ),
           discount_percentage: 0,
-          line_item_amount: 100.0
+          # line_item_amount: 100.0
         )
-
-        # LexofficeClient::LineItem.new(
-        #  type: "service",
-        #  name: line_item.subscription.human,
-        #  description: line_item.subscription.resource.human,
-        #  quantity: 1,
-        #  unit_name: "Stück",
-        #  unit_price: LexofficeClient::UnitPrice.new(
-        #    currency: "EUR",
-        #    net_amount: line_item.price.to_f,
-        #    gross_amount: line_item.price * 1.19,
-        #    tax_rate_percentage: 19
-        #  )
-        # )
       end
     end
   end

@@ -1,2 +1,2 @@
-= form.input :contactable, as: :polymorphic_association, classes: instance_exec(&Bgit::Lexoffice::Configuration.contact_contactable_autocomplete_classes)
+= form.input :contactable, as: :polymorphic_association, classes: instance_exec(&Bgit::Lexoffice::Configuration.contact_contactable_autocomplete_classes), instance_label_method: :human
 = form.input :lexoffice_id
