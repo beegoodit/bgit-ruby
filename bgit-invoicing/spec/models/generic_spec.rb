@@ -12,6 +12,7 @@ RSpec.describe "ActiveRecord::Base models", type: :model do
   # rubocop:enable Lint/ConstantDefinitionInBlock
 
   {
+    Bgit::Invoicing::BilledItem => {},
     Bgit::Invoicing::Invoice => {},
     Bgit::Invoicing::LineItem => {}
   }.each do |model, options|

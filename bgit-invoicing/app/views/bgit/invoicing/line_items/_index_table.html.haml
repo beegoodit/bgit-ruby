@@ -1,6 +1,7 @@
 = table.id sort: true
 = table.association :invoice, sort: true, label_method: :human
-= table.association :subscription, sort: true, label_method: :human if Object.const_defined?("Bgit::Pricing")
+/=# table.association :subscription, sort: true, label_method: :human if Object.const_defined?("Bgit::Pricing")
+= table.column :billed_items_count
 = table.column :uuid, sort: true
 = table.column :name, sort: true
 = table.column :description, sort: true
@@ -11,4 +12,5 @@
 = table.money :tax_amount
 = table.money :net_amount
 = table.money :gross_amount
+= table.column :billed_items_count
 = table.timestamps sort: true

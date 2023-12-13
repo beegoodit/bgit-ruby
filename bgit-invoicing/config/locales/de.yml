@@ -35,21 +35,15 @@ de:
         owner_type: "Besitzertyp"
   activerecord:
     models:
+      bgit/invoicing/billed_item:
+        one: "Abgerechnetes Objekt"
+        other: "Abgerechnete Objekte"
       bgit/invoicing/line_item:
         one: "Abrechnungsposten"
         other: "Abrechnungsposten"
       bgit/invoicing/invoice:
         one: "Rechnung"
         other: "Rechnungen"
-      bgit/invoicing/product:
-        one: "Produkt"
-        other: "Produkte"
-      bgit/invoicing/resource:
-        one: "Ressource"
-        other: "Ressourcen"
-      bgit/invoicing/subscription:
-        one: "Abonnement"
-        other: "Abonnements"
       bgit/invoicing/tier:
         one: "Stufe"
         other: "Stufen"
@@ -62,12 +56,18 @@ de:
         uuid: "UUID"
         created_at: "Erstellt am"
         updated_at: "Aktualisiert am"
+      bgit/invoicing/billed_item:
+        line_item: "Abrechnungsposten"
+        line_item_id: "Abrechnungsposten"
+        billable: "Abgerechnetes Objekt"
+        billable_id: "Abgerechnetes Objekt"
+        billable_type: "Abgerechnetes Objekttyp"
       bgit/invoicing/invoice:
         <<: *defaults
         billing_actions: "Abrechnungsaktionen"
         billing_state: "Abrechnungsstatus"
         from: "Von"
-        line_items_count: "Anzahl"
+        line_items_count: "Posten"
         month: "Monat"
         owner: "Besitzer"
         owner_id: "Besitzer"
@@ -78,53 +78,38 @@ de:
         year: "Jahr"
       bgit/invoicing/line_item:
         <<: *defaults
+        billed_items_count: "Abgerechnete Objekte"
+        gross_amount_cents: "Bruttopreis (Cent)"
+        gross_amount: "Bruttopreis"
         invoice_id: "Rechnung"
         invoice: "Rechnung"
-        invoiceable: "Abrechnungsobjekt"
         invoiceable_id: "Abrechnungsobjekt"
         invoiceable_type: "Abrechnungsobjekttyp"
+        invoiceable: "Abrechnungsobjekt"
+        net_amount_cents: "Nettopreis (Cent)"
+        net_amount: "Nettopreis"
         owner: "Besitzer"
         price_cents: "Preis (Cent)"
         price: "Preis"
         quantity: "Menge"
         resource: "Ressource"
-        seconds: "Sekunden"
+        tax_amount_cents: "Steuern (Cent)"
+        tax_amount: "Steuern"
         tax_rate_percentage: "Steuersatz (%)"
         tier: "Stufe"
         unit_name: "Einheit"
         unit_net_amount_cents: "Netto-Einheitspreis (Cent)"
         unit_net_amount: "Netto-Einheitspreis"
-      bgit/invoicing/product:
-        <<: *defaults
-      bgit/invoicing/resource:
-        <<: *defaults
-        owner: "Besitzer"
-        owner_id: "Besitzer"
-        owner_type: "Besitzertyp"
-        product: "Produkt"
-        product_id: "Produkt"
-      bgit/invoicing/subscription:
-        <<: *defaults
-        active_from: "Aktiv von"
-        active_to: "Aktiv bis"
-        tier_id: "Stufe"
-        tier: "Stufe"
-        resource: "Ressource"
-        resource_id: "Ressource"
-      bgit/invoicing/tier:
-        <<: *defaults
-        available: "Verfügbar"
-        available_from: "Verfügbar von"
-        available_to: "Verfügbar bis"
-        position: "Position"
-        price_per_month_cents: "Preis pro Monat"
-        product: "Produkt"
-        product_id: "Produkt"
   bgit:
     invoicing:
       invoices:
         after_show_table:
           lexoffice_invoice_not_associated: "Es ist noch kein Lexoffice Rechnungsdatensatz verknüpft."
+      line_items:
+        billed_item_fields:
+          remove_button_label: "Entfernen"
+        form:
+          add_billed_item_button_label: "Abgerechnetes Objekt hinzufügen"
   classes:
     bgit/invoicing/engine: "Abrechnung"
   routes:

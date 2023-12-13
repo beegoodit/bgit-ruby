@@ -30,26 +30,18 @@ module Bgit
 
       define_option :resources_controllers, default: -> {
                                                        [
-                                                         Bgit::Invoicing::ProductsController,
-                                                         Bgit::Invoicing::ResourcesController,
-                                                         Bgit::Invoicing::SubscriptionsController,
-                                                         Bgit::Invoicing::TiersController,
                                                          Bgit::Invoicing::InvoicesController,
                                                          Bgit::Invoicing::LineItemsController
                                                        ]
                                                      }
       define_option :resource_controllers, default: -> { [] }
-      define_option :service_controllers, default: -> {
-                                                     [
-                                                       Bgit::Invoicing::BillingRunServicesController,
-                                                       Bgit::Invoicing::GenerateInvoiceForOwnerServicesController
-                                                     ]
-                                                   }
+      define_option :service_controllers, default: -> { [] }
       define_option :sidebar_controllers, default: -> { [] }
       define_option :resource_owner_factory_name, default: :user
       define_option :invoice_owner_factory_name, default: :user
-      define_option :line_item_invoiceable_factory_name, default: :invoiceable_item
+      define_option :billed_item_billable_factory_name, default: :billable_item
       define_option :resource_owner_autocomplete_classes, default: -> { {} }
+      define_option :billed_item_billable_autocomplete_classes, default: -> { {} }
       define_option :default_currency, default: :eur
       define_option :accounting_services_classes, default: {
         invoices: {

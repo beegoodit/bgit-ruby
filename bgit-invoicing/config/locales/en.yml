@@ -35,24 +35,15 @@ en:
         owner_type: "Owner type"
   activerecord:
     models:
+      bgit/invoicing/billed_item:
+        one: "Billed item"
+        other: "Billed items"
       bgit/invoicing/line_item:
         one: "Line item"
         other: "Line items"
       bgit/invoicing/invoice:
         one: "Invoice"
         other: "Invoices"
-      bgit/invoicing/product:
-        one: "Product"
-        other: "Products"
-      bgit/invoicing/resource:
-        one: "Resource"
-        other: "Resources"
-      bgit/invoicing/subscription:
-        one: "Subscription"
-        other: "Subscriptions"
-      bgit/invoicing/tier:
-        one: "Tier"
-        other: "Tiers"
     attributes:
       defaults: &defaults
         description: "Description"
@@ -62,6 +53,12 @@ en:
         uuid: "UUID"
         created_at: "Created at"
         updated_at: "Updated at"
+      bgit/invoicing/billed_item:
+        line_item: "Line item"
+        line_item_id: "Line item"
+        billable: "Billable item"
+        billable_id: "Billable item"
+        billable_type: "Billable item type"
       bgit/invoicing/invoice:
         <<: *defaults
         billing_actions: "Billing actions"
@@ -78,55 +75,38 @@ en:
         year: "Year"
       bgit/invoicing/line_item:
         <<: *defaults
+        billed_items_count: "Billed items"
+        gross_amount_cents: "Gross amount (cents)"
+        gross_amount: "Gross amount"
         invoice_id: "Invoice"
         invoice: "Invoice"
-        invoiceable: "Invoiceable"
         invoiceable_id: "Invoiceable"
         invoiceable_type: "Invoiceable type"
+        invoiceable: "Invoiceable"
+        net_amount_cents: "Net amount (cents)"
+        net_amount: "Net amount"
         owner: "Owner"
         price_cents: "Price (cents)"
         price: "Price"
         quantity: "Quantity"
         resource: "Resource"
-        seconds: "Seconds"
-        subscription_id: "Subscription"
-        subscription: "Subscription"
+        tax_amount_cents: "Tax (cents)"
+        tax_amount: "Tax"
         tax_rate_percentage: "Tax rate (%)"
         tier: "Tier"
         unit_name: "Unit name"
         unit_net_amount_cents: "Unit net amount (cents)"
         unit_net_amount: "Unit net amount"
-      bgit/invoicing/product:
-        <<: *defaults
-      bgit/invoicing/resource:
-        <<: *defaults
-        owner: "Owner"
-        owner_id: "Owner"
-        owner_type: "Owner type"
-        product: "Product"
-        product_id: "Product"
-      bgit/invoicing/subscription:
-        <<: *defaults
-        active_from: "Aktiv von"
-        active_to: "Aktiv bis"
-        tier_id: "Tier"
-        tier: "Tier"
-        resource: "Resource"
-        resource_id: "Resource"
-      bgit/invoicing/tier:
-        <<: *defaults
-        available: "Available"
-        available_from: "Available from"
-        available_to: "Available to"
-        position: "Position"
-        price_per_month_cents: "Price per month"
-        product: "Product"
-        product_id: "Product"
   bgit:
     invoicing:
       invoices:
         after_show_table:
           lexoffice_invoice_not_associated: "Lexoffice invoice not associated."
+      line_items:
+        billed_item_fields:
+          remove_button_label: "Remove"
+        form:
+          add_billed_item_button_label: "Add billed item"
   classes:
     bgit/invoicing/engine: "Invoicing"
   routes:

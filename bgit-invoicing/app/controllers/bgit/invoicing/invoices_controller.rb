@@ -7,8 +7,14 @@ module Bgit
         Bgit::Invoicing::Invoice
       end
 
-      def self.available_rest_actions
-        super - %i[new create edit update]
+      # def self.available_rest_actions
+      #   super - %i[new create edit update]
+      # end
+
+      private
+
+      def permitted_params
+        params.require(:invoice).permit(:owner_type, :owner_id, :year, :month)
       end
     end
   end

@@ -59,11 +59,17 @@ Bgit::Invoicing.configure do |config|
   #
   config.resource_owner_factory_name = :<%= resource_owner_factory_name %>
 
-  # Set the factory name for the line item inovicable.
+  # Set the factory name for the billed item billable.
   #
-  # Default: config.line_item_invoiceable_factory_name = :<%= line_item_invoiceable_factory_name %>
+  # Default: config.billed_item_billable_factory_name = :<%= billed_item_billable_factory_name %>
   #
-  config.line_item_invoiceable_factory_name = :<%= line_item_invoiceable_factory_name %>
+  config.billed_item_billable_factory_name = :<%= billed_item_billable_factory_name %>
+
+  # Set the resource billed item billable autocomplete options.
+  #
+  # Default: config.billed_item_billable_autocomplete_classes = -> { {} }
+  #
+  config.billed_item_billable_autocomplete_classes = -> { {} }
 
   # Set the default currency.
   #

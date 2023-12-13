@@ -1,7 +1,6 @@
 FactoryBot.define do
   factory :bgit_invoicing_line_item, class: Bgit::Invoicing::LineItem do
     association(:invoice, factory: :bgit_invoicing_invoice)
-    association(:invoiceable, factory: Bgit::Invoicing::Configuration.line_item_invoiceable_factory_name)
     name { "Service usage" }
     # This line item represents 1 minunte of usage billed at 0.1 cents per second.
     quantity { 60 }

@@ -1,0 +1,28 @@
+.row
+  .col
+    = form.association :invoice, label_method: :human
+
+.row
+  .col-12.col-xl
+    = form.input :name
+  .col-12.col-md
+    = form.input :quantity
+  .col-12.col-md
+    = form.input :unit_name
+  .col-12.col-md
+    = form.input :unit_net_amount
+  .col-12.col-md
+    = form.input :tax_rate_percentage
+
+.row
+  .col
+    = form.input :description
+
+.row.mb-4
+  .col
+    %h3= Bgit::Invoicing::BilledItem.model_name.human(count: :other)
+    #billed_items
+      = form.simple_fields_for :billed_items do |billed_item|
+        = render 'billed_item_fields', f: billed_item
+      .links
+        = link_to_add_association t(".add_billed_item_button_label"), form, :billed_items, class: "btn btn-primary"

@@ -1,6 +1,6 @@
 %h2= Bgit::Invoicing::LineItem.model_name.human(count: :other)
 
-= collection_table(collection: @resource.line_items) do |table|
+= collection_table(collection: @resource.line_items, resource_class: Bgit::Invoicing::LineItem) do |table|
   = table.id sort: true
   /=# table.association :subscription, sort: true, label_method: :human
   = table.column :uuid, sort: true
@@ -14,6 +14,9 @@
   = table.money :tax_amount
   = table.money :net_amount
   = table.money :gross_amount
+  = table.column :billed_items_count
+  - capture_haml do
+    = render partial: 'administrador/resources_controller/base/index_table_actions', locals: { table: table }
 
 - if Object.const_defined?("Bgit::Lexoffice")
   - if @resource.lexoffice_invoice.present?

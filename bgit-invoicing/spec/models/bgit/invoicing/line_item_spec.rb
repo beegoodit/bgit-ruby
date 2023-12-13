@@ -4,7 +4,8 @@ module Bgit::Invoicing
   RSpec.describe LineItem, type: :model do
     describe "associations" do
       it { expect(subject).to belong_to(:invoice) }
-      it { expect(subject).to belong_to(:subscription) } if Object.const_defined?("Bgit::Pricing")
+      # it { expect(subject).to belong_to(:subscription) } if Object.const_defined?("Bgit::Pricing")
+      it { expect(subject).to have_many(:billed_items) }
     end
 
     describe "validations" do

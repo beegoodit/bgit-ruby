@@ -7,7 +7,7 @@ module Bgit::Invoicing
     # autocomplete scope: ->(matcher) { where("lower(bgit_invoicing_invoices.name) LIKE :term", term: "%#{matcher.downcase}%") }, id_method: :id, text_method: :human
 
     belongs_to :owner, polymorphic: true
-    has_many :line_items, dependent: :destroy
+    has_many :line_items, inverse_of: :invoice, dependent: :destroy
 
     if Object.const_defined?("Bgit::Lexoffice")
       has_one :lexoffice_invoice, as: :invoiceable, class_name: "Bgit::Lexoffice::Invoice", dependent: :restrict_with_error

@@ -66,8 +66,8 @@ rails bgit_frontend_auth:install:migrations
 rails generate bgit:frontend_auth:install
 
 # Setup dummy app
-rails generate model InvoiceableItem name
-sed -i "2i\  has_one :line_item, as: :invoiceable, dependent: :destroy, inverse_of: :invoiceable" app/models/invoiceable_item.rb
+rails generate model BillableItem name
+sed -i "2i\  has_one :billed_item, as: :billable, dependent: :destroy, inverse_of: :billable" app/models/billable_item.rb
 
 rails generate model Team name
 sed -i "2i\  include SimpleFormPolymorphicAssociations::Model::AutocompleteConcern" app/models/team.rb

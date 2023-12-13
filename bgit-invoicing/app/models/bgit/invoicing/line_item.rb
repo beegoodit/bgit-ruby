@@ -1,12 +1,10 @@
 module Bgit::Invoicing
   class LineItem < ApplicationRecord
-    belongs_to :invoice
-    belongs_to :invoiceable, polymorphic: true
-    if Object.const_defined?("Bgit::Pricing")
-      # TODO: Change this to a polymorphic association named billable.
-      belongs_to :subscription, class_name: "Bgit::Pricing::Subscription"
-      validates :subscription, uniqueness: {scope: :invoice_id}
-    end
+    belongs_to :invoice, inverse_of: :line_items
+    has_one :owner, through: :invoice, source: :owner
+    has_many :billed_items, inverse_of: :line_item, dependent: :destroy
+
+    accepts_nested_attributes_for :billed_items, allow_destroy: true, reject_if: :all_blank
 
     register_currency Bgit::Invoicing::Configuration.default_currency
     monetize :unit_net_amount_cents
@@ -16,13 +14,13 @@ module Bgit::Invoicing
 
     validates :quantity, presence: true, numericality: {greater_than: 0}
     validates :unit_name, presence: true
-    validates :unit_net_amount_cents, presence: true, numericality: {greater_than: 0}
+    validates :unit_net_amount_cents, presence: true, numericality: true
     validates :tax_rate_percentage, presence: true, numericality: {greater_or_equal_than: 0, less_than_or_equal_to: 100}
 
     validates :name, presence: true
 
-    def owner
-      subscription.owner
+    def billed_items_count
+      billed_items.count
     end
 
     def net_amount_cents

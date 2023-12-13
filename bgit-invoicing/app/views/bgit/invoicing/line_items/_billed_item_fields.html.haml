@@ -1,0 +1,14 @@
+- component_id = "billed_item-#{SecureRandom.uuid}"
+.nested-fields{ id: component_id }
+  = f.input :billable, as: :polymorphic_association, classes: instance_exec(&Bgit::Invoicing::Configuration.billed_item_billable_autocomplete_classes), label_method: :human
+  = link_to_remove_association t(".remove_button_label"), f, class: "btn btn-danger"
+
+%hr
+
+:javascript
+  var resourceSelect = $("##{component_id}").find(".polymorphic-association-resource-select")
+  if (window.SimpleFormPolymorphicAssociations) {
+    new window.SimpleFormPolymorphicAssociations.Autocomplete(resourceSelect);
+  } else {
+    console.error('window.SimpleFormPolymorphicAssociations.Autocomplete is not defined');
+  }
