@@ -1,0 +1,7 @@
+%h3= Bgit::Invoicing::BilledItem.model_name.human(count: :other)
+
+= collection_table(collection: @resource.billed_items, resource_class: Bgit::Invoicing::BilledItem) do |table|
+  = table.id
+  = table.column :billable_type do |resource|
+    - resource.billable_type.constantize.model_name.human
+  = table.association :billable, label_method: :human

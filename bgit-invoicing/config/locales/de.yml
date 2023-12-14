@@ -61,7 +61,7 @@ de:
         line_item_id: "Abrechnungsposten"
         billable: "Abgerechnetes Objekt"
         billable_id: "Abgerechnetes Objekt"
-        billable_type: "Abgerechnetes Objekttyp"
+        billable_type: "Abgerechneter Objekttyp"
       bgit/invoicing/invoice:
         <<: *defaults
         billing_actions: "Abrechnungsaktionen"
