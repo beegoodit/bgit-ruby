@@ -3,8 +3,8 @@
 = resource_table(resource: @result.invoice) do |table|
   = table.row :id
   = table.association :owner, label_method: :name
-  = table.row :month
-  = table.row :year
+  = table.row :shipping_date
+  = table.row :shipping_end_date
   = table.row :line_items_count
   = table.row :total_price do |resource|
     - humanized_money_with_symbol(resource.total_price)

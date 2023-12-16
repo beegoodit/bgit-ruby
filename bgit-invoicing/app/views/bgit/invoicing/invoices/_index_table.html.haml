@@ -1,8 +1,8 @@
 = table.id sort: true
 = table.association :owner, label_method: :human
 = table.column :uuid, sort: true
-= table.column :year, sort: true
-= table.column :month, sort: true
+= table.column :shipping_date, sort: true
+= table.column :shipping_end_date, sort: true
 = table.column :line_items_count
 = table.money :total_net_amount, sort: { column_name: :total_net_amount_cents }
 = table.timestamps sort: true

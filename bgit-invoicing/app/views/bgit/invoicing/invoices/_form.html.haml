@@ -1,3 +1,3 @@
 = form.input :owner, as: :polymorphic_association, classes: instance_exec(&Bgit::Invoicing::Configuration.resource_owner_autocomplete_classes)
-= form.input :year
-= form.input :month
+= form.input :shipping_date, as: :date_picker
+= form.input :shipping_end_date, as: :date_picker

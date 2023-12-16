@@ -68,14 +68,14 @@ de:
         billing_state: "Abrechnungsstatus"
         from: "Von"
         line_items_count: "Posten"
-        month: "Monat"
         owner: "Besitzer"
         owner_id: "Besitzer"
         owner_type: "Besitzertyp"
+        shipping_date: "Lieferdatum"
+        shipping_end_date: "Liefer-Enddatum"
         to: "Bis"
         total_net_amount_cents: "Netto-Gesamtpreis (Cent)"
         total_net_amount: "Netto-Gesamtpreis"
-        year: "Jahr"
       bgit/invoicing/line_item:
         <<: *defaults
         billed_items_count: "Abgerechnete Objekte"

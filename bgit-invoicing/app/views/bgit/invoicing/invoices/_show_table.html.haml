@@ -10,8 +10,8 @@
       - else
         = link_to(bgit_lexoffice.new_contact_path(contact: { contactable_type: resource.owner.class, contactable_id: resource.owner.id }), target: "_blank", class: "btn btn-primary btn-xs") do
           = t(".create_lexoffice_contact")
-= table.row :year
-= table.row :month
+= table.row :shipping_date
+= table.row :shipping_end_date
 = table.money :total_net_amount
 = table.timestamps
 = table.aasm_state :billing

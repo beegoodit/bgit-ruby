@@ -9,6 +9,7 @@
   = table.association :owner, label_method: :name
   = table.column :month do |resource|
     - I18n.t("date.month_names")[resource.month.to_i]
-  = table.column :year
+  = table.column :shipping_date
+  = table.column :shipping_end_date
   = table.column :line_items_count
   = table.money :total_price

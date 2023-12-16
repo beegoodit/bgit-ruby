@@ -11,9 +11,7 @@ module Bgit::Invoicing
       subject { create(:bgit_invoicing_invoice) }
 
       it { expect(subject).to validate_presence_of(:owner) }
-      it { expect(subject).to validate_presence_of(:year) }
-      it { expect(subject).to validate_presence_of(:month) }
-      it { expect(subject).to validate_uniqueness_of(:month).scoped_to([:owner_id, :owner_type, :year]).case_insensitive }
+      it { expect(subject).to validate_presence_of(:shipping_date) }
     end
   end
 end

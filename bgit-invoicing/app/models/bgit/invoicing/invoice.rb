@@ -18,10 +18,12 @@ module Bgit::Invoicing
     register_currency Bgit::Invoicing::Configuration.default_currency
     monetize :total_net_amount_cents
 
-    validates :year, presence: true
-    validates :month, presence: true
+    validates :shipping_date, presence: true
     validates :total_net_amount_cents, presence: true
-    validates :month, uniqueness: {scope: [:owner_id, :owner_type, :year]}, if: -> { Cmor::Core::Settings.get(:bgit_invoicing, :enforce_unique_invoices_per_owner_and_month) }
+    # validate shipping date to be at the beginning of the month
+    validates :shipping_date_day, inclusion: {in: [1]}, if: -> { Cmor::Core::Settings.get(:bgit_invoicing, :enforce_unique_invoices_per_owner_and_month) }
+    # validate shipping date to be unique for the owner
+    validates :shipping_date, uniqueness: {scope: [:owner_id, :owner_type]}, if: -> { Cmor::Core::Settings.get(:bgit_invoicing, :enforce_unique_invoices_per_owner_and_month) }
 
     scope :owned_by_any, ->(*owners) { where(owner: owners.flatten) }
 
@@ -30,7 +32,11 @@ module Bgit::Invoicing
     end
 
     def human
-      "#{owner.human} - #{year}-#{month.to_s.rjust(2, "0")}"
+      "#{owner.human} - #{I18n.l(shipping_date)}"
+    end
+
+    def shipping_date_day
+      shipping_date&.day
     end
 
     include AASM

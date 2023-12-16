@@ -65,14 +65,14 @@ en:
         billing_state: "Billing state"
         from: "From"
         line_items_count: "Item count"
-        month: "Month"
         owner: "Owner"
         owner_id: "Owner"
         owner_type: "Owner type"
+        shipping_date: "Shipping date"
+        shipping_end_date: "Shipping end date"
         to: "To"
         total_net_amount_cents: "Total net amount (cents)"
         total_net_amount: "Total net amount"
-        year: "Year"
       bgit/invoicing/line_item:
         <<: *defaults
         billed_items_count: "Billed items"

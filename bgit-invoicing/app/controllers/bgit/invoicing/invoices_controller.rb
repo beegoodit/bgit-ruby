@@ -14,7 +14,7 @@ module Bgit
       private
 
       def permitted_params
-        params.require(:invoice).permit(:owner_type, :owner_id, :year, :month)
+        params.require(:invoice).permit(:owner_type, :owner_id, :shipping_date, :shipping_end_date)
       end
     end
   end
