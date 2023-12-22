@@ -41,24 +41,6 @@ module Bgit
         )
       end
 
-      # Explanation about why we need to use Time.use_zone("Europe/Berlin") here:
-      #
-      # Services are shipped from Germany. For the invoice to show the correct
-      # shipping begin and end date, we need to use the correct timezone.
-      def shipping_base_date
-        Time.use_zone("Europe/Berlin") do
-          @shipping_base_date ||= Time.zone.parse("#{invoice.year}-#{invoice.month}-01")
-        end
-      end
-
-      def shipping_date
-        @shipping_date ||= shipping_base_date.beginning_of_month
-      end
-
-      def shipping_end_date
-        @shipping_end_date ||= shipping_base_date.end_of_month
-      end
-
       def voucher_date
         @voucher_date ||= Time.zone.now
       end
@@ -67,29 +49,34 @@ module Bgit
         LexofficeClient::Invoice.new(
           address: LexofficeClient::Address.new(
             contact_id: contact_lexoffice_id
-            # name: "Art der Gestaltung GbR",
-            # supplement: "c/o Christoph Bönning",
-            # street: "Parkstraße 17",
-            # city: "Bad Vilbel",
-            # zip: "61118",
-            # country_code: "DE"
           ),
-          voucher_date: voucher_date.utc,
+          voucher_date: Time.zone.now.utc,
           line_items: invoice.line_items.collect { |line_item| line_item_as_lexoffice_line_item(line_item) },
           tax_conditions: LexofficeClient::TaxConditions.new(tax_type: "net"),
-          shipping_conditions: LexofficeClient::ShippingConditions.new(
-            shipping_date: shipping_date.utc,
-            shipping_end_date: shipping_end_date.utc,
-            shipping_type: "serviceperiod"
-          ),
+          shipping_conditions: shipping_conditions,
           total_price: LexofficeClient::TotalPrice.new(currency: "EUR")
-          # contact: owner.to_lexoffice_contact,
-          # invoice_date: Date.new(year, month, 1),
-          # due_date: Date.new(year, month, 1) + 14.days,
-          # invoice_number: invoice_number,
-          # currency: Bgit::Invoicing::Configuration.default_currency,
-          # line_items: line_items.collect(&:to_lexoffice_line_item)
         )
+      end
+
+      # Explanation about why we need to use in_time_zone("Europe/Berlin") here:
+      #
+      # Services are shipped from Germany. For the invoice to show the correct
+      # shipping begin and end date, we need to use the correct timezone.
+      def shipping_conditions
+        Time.use_zone("Europe/Berlin") do
+          if invoice.shipping_end_date.blank?
+            LexofficeClient::ShippingConditions.new(
+              shipping_date: invoice.shipping_date.in_time_zone("Europe/Berlin").beginning_of_day.utc,
+              shipping_type: "service"
+            )
+          else
+            LexofficeClient::ShippingConditions.new(
+              shipping_date: invoice.shipping_date.in_time_zone("Europe/Berlin").beginning_of_day.utc,
+              shipping_end_date: invoice.shipping_end_date.in_time_zone("Europe/Berlin").end_of_day.utc,
+              shipping_type: "serviceperiod"
+            )
+          end
+        end
       end
 
       def line_item_as_lexoffice_line_item(line_item)
