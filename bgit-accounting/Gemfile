@@ -21,13 +21,13 @@ git "https://github.com/content-management-on-rails/cmor.git", branch: "main" do
 end
 
 git "https://github.com/rails-administrador/administrador" do
-  gem "administrador", path: "~/projects/gems/administrador"
+  gem "administrador" # , path: "~/projects/gems/administrador"
 end
 
 git "https://github.com/rails-add-ons/rao" do
-  gem "rao-resources_controller", path: "~/projects/gems/rao/rao-resources_controller"
+  gem "rao-resources_controller" # , path: "~/projects/gems/rao/rao-resources_controller"
 end
 
-git "https://github.com/robotex82/keepr" do
-  gem "keepr", path: "~/projects/gems/keepr"
+git "https://github.com/robotex82/keepr", branch: "feature/optimize-associations-and-validations" do
+  gem "keepr" # , path: "~/projects/gems/keepr"
 end

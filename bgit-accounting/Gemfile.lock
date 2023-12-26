@@ -36,6 +36,10 @@ GIT
       rails (>= 6.1)
       rao
       responders
+    rao-resources_controller (0.0.51.pre)
+      rails (>= 6.1)
+      rao
+      responders
     rao-service (0.0.51.pre)
       activemodel
       activesupport
@@ -55,31 +59,6 @@ GIT
   remote: https://github.com/rails-administrador/administrador
   revision: f24ef93a9a879840b4064b7f80bb0f5b014ab081
   specs:
-
-GIT
-  remote: https://github.com/robotex82/json_seeds-rails.git
-  revision: 0861d21ac7a405249b9eeaa5458818f2dd8ccfba
-  specs:
-    json_seeds-rails (0.0.1)
-      activerecord
-      rao-service
-
-GIT
-  remote: https://github.com/robotex82/keepr
-  revision: b8410279c16e7a331a34fe35060b00ac5dc3dad5
-  specs:
-
-GIT
-  remote: https://github.com/robotex82/rails-dummy.git
-  revision: 5920215f0458c693e9c2f8cfa5df313dec074f21
-  branch: feature/ruby-3-2-compatibility
-  specs:
-    rails-dummy (0.1.1)
-      railties
-
-PATH
-  remote: ../../administrador
-  specs:
     administrador (0.0.32.pre)
       bootstrap4-kaminari-views
       coffee-rails
@@ -97,21 +76,31 @@ PATH
       simple_form-datetimepicker (>= 0.0.1)
       simple_sidebar (>= 0.0.6.pre)
 
-PATH
-  remote: ../../keepr
+GIT
+  remote: https://github.com/robotex82/json_seeds-rails.git
+  revision: 0861d21ac7a405249b9eeaa5458818f2dd8ccfba
+  specs:
+    json_seeds-rails (0.0.1)
+      activerecord
+      rao-service
+
+GIT
+  remote: https://github.com/robotex82/keepr
+  revision: 28b2b8f62dd9a907f295619b47651919ae66209d
+  branch: feature/optimize-associations-and-validations
   specs:
     keepr (0.8.0)
       activerecord (>= 6.1)
       ancestry (>= 3.1.0)
       datev (>= 0.5.0)
 
-PATH
-  remote: ../../rao/rao-resources_controller
+GIT
+  remote: https://github.com/robotex82/rails-dummy.git
+  revision: 5920215f0458c693e9c2f8cfa5df313dec074f21
+  branch: feature/ruby-3-2-compatibility
   specs:
-    rao-resources_controller (0.0.51.pre)
-      rails (>= 6.1)
-      rao
-      responders
+    rails-dummy (0.1.1)
+      railties
 
 PATH
   remote: .
