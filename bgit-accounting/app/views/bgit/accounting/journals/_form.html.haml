@@ -1,0 +1,8 @@
+= form.input :accountable, as: :polymorphic_association, classes: {}
+= form.input :number
+= form.input :date
+= form.input :subject
+= form.input :note
+= form.input :permanent
+
+= render partial: "/bgit/accounting/add_association_fields", locals: { form: form, association_class: Keepr::Posting }

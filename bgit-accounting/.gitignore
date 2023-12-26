@@ -1,0 +1,9 @@
+/.bundle/
+/doc/
+/log/*.log
+/pkg/
+/tmp/
+/spec/dummy
+
+# Ignore backup files
+*~

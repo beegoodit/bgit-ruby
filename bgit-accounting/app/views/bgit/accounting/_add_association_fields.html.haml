@@ -1,0 +1,8 @@
+:ruby
+  association_symbol = association_class.name.pluralize.underscore.gsub("/", "_").to_sym
+%h3= association_class.model_name.human(count: :other)
+.div{ id: association_symbol }
+  = form.simple_fields_for association_symbol do |association_form|
+    = render "#{association_class.name.underscore.gsub("/", "_")}_fields", f: association_form
+  .links.mb-4
+    = link_to_add_association t(".add", model_name: association_class.model_name.human), form, association_symbol, class: "btn btn-secondary"

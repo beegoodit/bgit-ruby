@@ -1,0 +1,7 @@
+= form.input :parent_id, collection: resource_class.all, include_blank: true
+= form.association :keepr_group
+= form.association :keepr_tax
+= form.input :accountable, as: :polymorphic_association, classes: {}
+= form.input :kind, collection: resource_class.kinds.keys
+= form.input :number
+= form.input :name
