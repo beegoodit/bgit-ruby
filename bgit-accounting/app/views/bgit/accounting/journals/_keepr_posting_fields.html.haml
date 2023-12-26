@@ -1,0 +1,6 @@
+.nested-fields.mb-4
+  = f.association :keepr_account, label_method: :to_s
+  = f.input :amount
+  = f.input :side, collection: [Keepr::Posting::SIDE_DEBIT, Keepr::Posting::SIDE_CREDIT]
+  = link_to_remove_association t(".remove", model_name: Keepr::Posting.model_name.human), f, class: "btn btn-danger"
+  %hr

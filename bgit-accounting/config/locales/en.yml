@@ -1,0 +1,88 @@
+en:
+  activerecord:
+    models:
+      keepr/account:
+        one: Account
+        other: Accounts
+      keepr/cost_center:
+        one: Cost Center
+        other: Cost Centers
+      keepr/group:
+        one: Group
+        other: Groups
+      keepr/journal:
+        one: Journal
+        other: Journals
+      keepr/posting:
+        one: Posting
+        other: Postings
+      keepr/tax:
+        one: Tax
+        other: Taxes
+    attributes:
+      shared: &shared
+        id: ID
+        created_at: Created at
+        updated_at: Updated at
+      keepr/account:
+        <<: *shared
+        accountable_id: Accountable ID
+        accountable_type: Accountable Type
+        accountable: Accountable
+        ancestry: Ancestry
+        keepr_group_id: Group ID
+        keepr_group: Group
+        keepr_tax_id: Tax ID
+        keepr_tax: Tax
+        kind: Kind
+        name: Name
+        number: Number
+      keepr/cost_center:
+        <<: *shared
+        name: Name
+        note: Note
+        number: Number
+      keepr/group:
+        <<: *shared
+        ancestry: Ancestry
+        is_result: Is Result
+        name: Name
+        number: Number
+        target: Target
+      keepr/journal:
+        <<: *shared
+        accountable_id: Accountable ID
+        accountable_type: Accountable Type
+        accountable: Accountable
+        date: Date
+        note: Note
+        number: Number
+        permanent: Permanent
+        subject: Subject
+      keepr/posting:
+        <<: *shared
+        accountable: Accountable
+        accountable_id: Accountable ID
+        accountable_type: Accountable Type
+        amount: Amount
+        keepr_account: Account
+        keepr_account_id: Account ID
+        keepr_cost_center: Cost Center
+        keepr_cost_center_id: Cost Center ID
+        keepr_journal: Journal
+        keepr_journal_id: Journal ID
+      keepr/tax:
+        <<: *shared
+        description: Description
+        keepr_account_id: Account ID
+        keepr_account: Account
+        name: Name
+        value: Value
+  bgit:
+    accounting:
+      add_association_fields:
+        add: "Add {model_name}"
+  classes:
+    bgit/accounting/engine: Accounting
+  routes:
+    bgit-accounting-engine: accounting

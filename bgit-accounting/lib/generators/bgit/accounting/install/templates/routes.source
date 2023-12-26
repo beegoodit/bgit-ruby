@@ -1,0 +1,5 @@
+
+
+  localized do
+    mount Bgit::Accounting::Engine, at: '/backend/bgit-accounting-engine'
+  end

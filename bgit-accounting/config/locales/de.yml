@@ -1,0 +1,88 @@
+de:
+  activerecord:
+    models:
+      keepr/account:
+        one: Konto
+        other: Konten
+      keepr/cost_center:
+        one: Kostenstelle
+        other: Kostenstellen
+      keepr/group:
+        one: Gruppe
+        other: Gruppen
+      keepr/journal:
+        one: Journal
+        other: Journale
+      keepr/posting:
+        one: Buchung
+        other: Buchungen
+      keepr/tax:
+        one: Steuer
+        other: Steuern
+    attributes:
+      shared: &shared
+        id: ID
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+      keepr/account:
+        <<: *shared
+        accountable_id: Verantwortliche(r) ID
+        accountable_type: Verantwortliche(r) Typ
+        accountable: Verantwortliche(r)
+        ancestry: Ahnenreihe
+        keepr_group_id: Gruppen ID
+        keepr_group: Gruppe
+        keepr_tax_id: Steuer ID
+        keepr_tax: Steuer
+        kind: Art
+        name: Name
+        number: Nummer
+      keepr/cost_center:
+        <<: *shared
+        name: Name
+        note: Notiz
+        number: Nummer
+      keepr/group:
+        <<: *shared
+        ancestry: Ahnenreihe
+        is_result: Ist Ergebnis
+        name: Name
+        number: Nummer
+        target: Ziel
+      keepr/journal:
+        <<: *shared
+        accountable_id: Verantwortliche(r) ID
+        accountable_type: Verantwortliche(r) Typ
+        accountable: Verantwortliche(r)
+        date: Datum
+        note: Notiz
+        number: Nummer
+        permanent: Dauerhaft
+        subject: Thema
+      keepr/posting:
+        <<: *shared
+        accountable: Verantwortliche(r)
+        accountable_id: Verantwortliche(r) ID
+        accountable_type: Verantwortliche(r) Typ
+        amount: Betrag
+        keepr_account: Konto
+        keepr_account_id: Konto ID
+        keepr_cost_center: Kostenstelle
+        keepr_cost_center_id: Kostenstellen ID
+        keepr_journal: Journal
+        keepr_journal_id: Journal ID
+      keepr/tax:
+        <<: *shared
+        description: Beschreibung
+        keepr_account_id: Konto ID
+        keepr_account: Konto
+        name: Name
+        value: Wert
+  bgit:
+    accounting:
+      add_association_fields:
+        add: "%{model_name} hinzufügen"
+  classes:
+    bgit/accounting/engine: Accounting
+  routes:
+    bgit-accounting-engine: accounting
