@@ -1,5 +1,8 @@
+require "csv"
 require "cocoon"
+require "httparty"
 require "keepr"
+require "money-rails"
 require "simple_form-polymorphic_associations"
 
 require "bgit/accounting/version"

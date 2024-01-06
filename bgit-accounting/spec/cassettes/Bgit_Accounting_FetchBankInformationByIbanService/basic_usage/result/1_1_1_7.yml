@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://openiban.com/validate/DE89370400440532013000?getBIC=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Dec 2023 10:39:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Origin
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nLZKUbKOexLZkvEDNsN%2FgYRu1F9beH0QF4ZouNYvNB71yMeIJjoWvbL6vpWQ7pV5JIdlt1Rk64ADEyuVsXhjqdGbFUkqxb%2B6QfxGnc0iRuiL69huG3Lz0SHvMQYsaCs%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 83d16beaabaa6f0a-CDG
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJ2YWxpZCI6IHRydWUsCiAgIm1lc3NhZ2VzIjogW10sCiAgImliYW4iOiAiREU4OTM3MDQwMDQ0MDUzMjAxMzAwMCIsCiAgImJhbmtEYXRhIjogewogICAgImJhbmtDb2RlIjogIjM3MDQwMDQ0IiwKICAgICJuYW1lIjogIkNvbW1lcnpiYW5rIiwKICAgICJ6aXAiOiAiNTA0NDciLAogICAgImNpdHkiOiAiS8O2bG4iLAogICAgImJpYyI6ICJDT0JBREVGRlhYWCIKICB9LAogICJjaGVja1Jlc3VsdHMiOiB7fQp9
+  recorded_at: Fri, 29 Dec 2023 10:39:50 GMT
+recorded_with: VCR 6.2.0

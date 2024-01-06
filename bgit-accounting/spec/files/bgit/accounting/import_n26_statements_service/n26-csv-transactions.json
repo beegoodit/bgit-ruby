@@ -1,0 +1,2277 @@
+{
+  "date": "2020-01-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-01-27",
+  "recipient": "Daniel Massong",
+  "accountNumber": "DE03100110012627332836",
+  "transactionType": "Credit",
+  "purpose": "Daniel Massong, MB 2020",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-01-27",
+  "recipient": "PATRICK PLATH",
+  "accountNumber": "DE63120300000016885147",
+  "transactionType": "Credit",
+  "purpose": "Patrick Plath, MB 2020",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-01-28",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Roberto Vasquez Angel, MB 2020",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-01-30",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Jan Schauzu MB2020",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-01-30",
+  "recipient": "LUCAS SEUBERT",
+  "accountNumber": "DE28512500000020903813",
+  "transactionType": "Credit",
+  "purpose": "Lucas Seubert, MB 2020, TFC Frankfurt",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-01-30",
+  "recipient": "PayPal Europe S.a.r.l. et Cie S.C.A",
+  "accountNumber": "FR7630004021180001013711792",
+  "transactionType": "Lastschrift",
+  "purpose": "PP.5917.PP . IMPEX, Ihr Einkauf bei IMPEX",
+  "amountEur": -54.55,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-01-31",
+  "recipient": "FRANZISKA FEICK",
+  "accountNumber": "DE05120300001038068241",
+  "transactionType": "Credit",
+  "purpose": "Franziska Feick, MB 2020",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-02-03",
+  "recipient": "Philipp Wolf",
+  "accountNumber": "DE02506521240126344720",
+  "transactionType": "Credit",
+  "purpose": "Philipp Wolf, MB 2020",
+  "amountEur": 55.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-02-03",
+  "recipient": "Schultz-Fademrecht, Fabian",
+  "accountNumber": "DE64500502011201091886",
+  "transactionType": "Credit",
+  "purpose": "Fabian Schultz-Fademrecht, MB 2020",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-02-04",
+  "recipient": "MANFRED FORSBACH",
+  "accountNumber": "DE66370100500443079508",
+  "transactionType": "Credit",
+  "purpose": "Manfred Forsbach, MB 2020",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-02-04",
+  "recipient": "Christian Hansch",
+  "accountNumber": "DE70500502011242896838",
+  "transactionType": "Credit",
+  "purpose": "Christian Hansch, MB 2020",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-02-04",
+  "recipient": "Benedict Osterloh",
+  "accountNumber": "DE64501900006000976049",
+  "transactionType": "Credit",
+  "purpose": "Benedict Osterloh, MB 2019",
+  "amountEur": 35.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-02-04",
+  "recipient": "Benedict Osterloh",
+  "accountNumber": "DE64501900006000976049",
+  "transactionType": "Credit",
+  "purpose": "Benedict Osterloh, MB 2020",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-02-18",
+  "recipient": "Tischfu\u00dfballverband Hessen",
+  "accountNumber": "DE17508900000057621001",
+  "transactionType": "Transfer",
+  "purpose": "Rechnungsnummer 8\/2020, Ligaspielbetrieb 2020, 1. TFC Frankfurt",
+  "amountEur": -295.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-02-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-02-28",
+  "recipient": "Mamic, Kristijan",
+  "accountNumber": "DE25500502011202005843",
+  "transactionType": "Credit",
+  "purpose": "Kristijan Mamic, MB 2020",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-03-03",
+  "recipient": "Nele Stibani",
+  "accountNumber": "DE79500105175422590840",
+  "transactionType": "Credit",
+  "purpose": "Mietgliedsbeitrag 1. TFC 2020 Stibani",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-03-09",
+  "recipient": "Felix Scheffler",
+  "accountNumber": "DE92251900010636691000",
+  "transactionType": "Credit",
+  "purpose": "Felix Scheffler, MB 2020",
+  "amountEur": 55.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-03-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-04-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-05-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-06-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-07-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-08-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-09-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-10-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-11-03",
+  "recipient": "Flyeralarm",
+  "accountNumber": "DE40100400000202926200",
+  "transactionType": "Transfer",
+  "purpose": "GD8116410N5",
+  "amountEur": -26.52,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-11-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-16",
+  "recipient": "FRANZISKA FEICK",
+  "accountNumber": "DE05120300001038068241",
+  "transactionType": "Credit",
+  "purpose": "Uebertrag Kasse vom 02.03.2020",
+  "amountEur": 56.31,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-29",
+  "recipient": "Roberto Vasquez-Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Transfer",
+  "purpose": "Leonhart Rechnung 2019 vorgelegt",
+  "amountEur": -48.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-29",
+  "recipient": "Roberto Vasquez-Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Transfer",
+  "purpose": "Ullrich Rechnung 2019 vorgelegt",
+  "amountEur": -56.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-29",
+  "recipient": "Roberto Vasquez-Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Transfer",
+  "purpose": "TFVH Strafe R27\/19 vorgelegt",
+  "amountEur": -10.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-29",
+  "recipient": "Roberto Vasquez-Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Transfer",
+  "purpose": "TFVH Strafe R29\/19 vorgelegt",
+  "amountEur": -50.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-29",
+  "recipient": "Roberto Vasquez-Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Transfer",
+  "purpose": "TFVH Strafe R32\/19 vorgelegt",
+  "amountEur": -10.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-31",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "\u00dcbertrag Kasse vom 09.12.2019",
+  "amountEur": 160.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-31",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE86440100460238219469",
+  "transactionType": "Credit",
+  "purpose": "Kontostand 16.12.2019",
+  "amountEur": 131.45,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-31",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Kontostand 16.12.2019",
+  "amountEur": 712.6,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-31",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "N26 Kontof\u00fchrungsgeb\u00fchren 2020",
+  "amountEur": 118.8,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-31",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Kontostand 16.12.2019",
+  "amountEur": 131.45,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2020-12-31",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE86440100460238219469",
+  "transactionType": "Transfer",
+  "purpose": "Doppelte Ueberweisung",
+  "amountEur": -131.45,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-01-05",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "R\u00fcckerstat. HLM-Gebuehren 2020 TFVH",
+  "amountEur": 170.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-01-05",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "ROBERTO VASQUEZ ANGEL, MB",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-01-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-01-29",
+  "recipient": "CHI-MING HUANG",
+  "accountNumber": "DE82120300001019846375",
+  "transactionType": "Credit",
+  "purpose": "TFC Mitgliedsbeitrag 2019\/2020-01",
+  "amountEur": 65.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-02-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-02-22",
+  "recipient": "SARAH-KRISTIN HEHNER",
+  "accountNumber": "DE61120300001019043981",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag 2019",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-02-24",
+  "recipient": "Steuerberater Volkmar Ackmann",
+  "accountNumber": "DE92200411330233667500",
+  "transactionType": "Transfer",
+  "purpose": "Rechnungsnr. T-1\/2021, Mandantennr. 10026",
+  "amountEur": -273.7,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-03-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-04-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-05-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Membership - Monthly Fee",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-06-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft - Monatliche Geb\u00fchr",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-07-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft - Monatliche Geb\u00fchr",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-08-05",
+  "recipient": "FRANZISKA FEICK",
+  "accountNumber": "DE05120300001038068241",
+  "transactionType": "Credit",
+  "purpose": "Uebertrag Kasse vom 02.08.2021",
+  "amountEur": 26.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-08-11",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "N26 01.2021 - 07.2021 (9,90 monatlich)",
+  "amountEur": 69.3,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-08-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft - Monatliche Geb\u00fchr",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-08-31",
+  "recipient": "FRANZISKA FEICK",
+  "accountNumber": "DE05120300001038068241",
+  "transactionType": "Credit",
+  "purpose": "Uebertrag Kasse vom 30.08.2021",
+  "amountEur": 41.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-09-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-09-30",
+  "recipient": "PayPal Europe S.a.r.l. et Cie S.C.A",
+  "accountNumber": "FR7630004021180001013711792",
+  "transactionType": "Lastschrift",
+  "purpose": "PP.5917.PP . Ullrich Sport \/\/ RiproTec GmbH, Ihr Einkauf bei Ullrich Sport \/\/ RiproTec GmbH",
+  "amountEur": -34.67,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-09-30",
+  "recipient": "PayPal Europe S.a.r.l. et Cie S.C.A",
+  "accountNumber": "FR7630004021180001013711792",
+  "transactionType": "Lastschrift",
+  "purpose": "PP.5917.PP . Leonhart Betriebs GmbH, Ihr Einkauf bei Leonhart Betriebs GmbH",
+  "amountEur": -25.6,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-09-30",
+  "recipient": "Kicker Kult",
+  "accountNumber": "DE47100700240092559400",
+  "transactionType": "Transfer",
+  "purpose": "Order no.: 33645",
+  "amountEur": -42.35,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-10-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-11-18",
+  "recipient": "PayPal Europe S.a.r.l. et Cie S.C.A",
+  "accountNumber": "FR7630004021180001013711792",
+  "transactionType": "Lastschrift",
+  "purpose": "PP.5917.PP . Ullrich Sport \/\/ RiproTec GmbH, Ihr Einkauf bei Ullrich Sport \/\/ RiproTec GmbH",
+  "amountEur": -56.95,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-11-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-11-30",
+  "recipient": "PayPal Europe S.a.r.l. et Cie S.C.A",
+  "accountNumber": "FR7630004021180001013711792",
+  "transactionType": "Lastschrift",
+  "purpose": "PP.5917.PP . Leonhart Betriebs GmbH, Ihr Einkauf bei Leonhart Betriebs GmbH",
+  "amountEur": -187.94,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-12-02",
+  "recipient": "KLARNA AB",
+  "accountNumber": "NL57INGB0006315828",
+  "transactionType": "Lastschrift",
+  "purpose": "Kaufland e-commerce GmbH 6331602910433",
+  "amountEur": -26.98,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-12-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-12-29",
+  "recipient": "Volkmar Ackmann",
+  "accountNumber": "DE92200411330233667500",
+  "transactionType": "Transfer",
+  "purpose": "Steuererklaerung 2020, Rechnungsnummer T-2\/2021",
+  "amountEur": -273.7,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2021-12-31",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Kassen Bargeld Ausnahme 20.12.2021",
+  "amountEur": 100.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-01-04",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "ROBERTO VASQUEZ ANGEL, MB",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-01-11",
+  "recipient": "PayPal Europe S.a.r.l. et Cie S.C.A",
+  "accountNumber": "FR7630004021180001013711792",
+  "transactionType": "Lastschrift",
+  "purpose": "PP.5917.PP . Leonhart Betriebs GmbH, Ihr Einkauf bei Leonhart Betriebs GmbH",
+  "amountEur": -122.65,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-01-14",
+  "recipient": "Tischfussballverband Hessen",
+  "accountNumber": "DE58508501500000746002",
+  "transactionType": "Transfer",
+  "purpose": "1. TFC Frankfurt \/ Rechnungsnummer 23\/2021",
+  "amountEur": -32.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-01-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-01-25",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme Ball- und Baendeverkauf + DYP Einnahmen 24.01.2022",
+  "amountEur": 150.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-02-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-02-22",
+  "recipient": "DANIEL LERCHENM\u00dcLLER",
+  "accountNumber": "DE89508525530117506683",
+  "transactionType": "Credit",
+  "purpose": "Beitrag Daniel Gleis",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-03-22",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme 22.03.22",
+  "amountEur": 150.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-03-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-03-25",
+  "recipient": "PayPal Europe S.a.r.l. et Cie S.C.A",
+  "accountNumber": "FR7630004021180001013711792",
+  "transactionType": "Lastschrift",
+  "purpose": "PP.5917.PP . Leonhart Betriebs GmbH, Ihr Einkauf bei Leonhart Betriebs GmbH",
+  "amountEur": -519.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-04-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-05-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-05-24",
+  "recipient": "Leonhart Betriebs GmbH",
+  "accountNumber": "DE17742500000000111120",
+  "transactionType": "Transfer",
+  "purpose": "Bestellnummer 12828",
+  "amountEur": -543.32,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-05-31",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme 30.05.2022",
+  "amountEur": 150.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-06-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-06-29",
+  "recipient": "AMAZON PAYMENTS EUROPE S.C.A.",
+  "accountNumber": "DE87300308801908262006",
+  "transactionType": "Lastschrift",
+  "purpose": "304-2012416-0749959 AMZN Mktp DE 61ZPE77CVNKSFYM7",
+  "amountEur": -31.98,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-11",
+  "recipient": "PATRICK PLATH",
+  "accountNumber": "DE63120300000016885147",
+  "transactionType": "Credit",
+  "purpose": "Patrick Plath, Mitgliedsbeitrag 2020-2022",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-11",
+  "recipient": "Daniel Massong",
+  "accountNumber": "DE24200411330842266900",
+  "transactionType": "Credit",
+  "purpose": "Daniel Massong, Mitgliedsbeitrag 2020-2022",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-11",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Jan Schauzu Mitgliedsbeitrag 2020-2022",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-12",
+  "recipient": "Oliver Bockemuehl",
+  "accountNumber": "DE72505922000001033417",
+  "transactionType": "Credit",
+  "purpose": "Oliver Bockemuehl, Mitgliedsbeitrag 2020-2022",
+  "amountEur": 70.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-12",
+  "recipient": "MANFRED FORSBACH",
+  "accountNumber": "DE66370100500443079508",
+  "transactionType": "Credit",
+  "purpose": "Manfred Forsbach Mitgliedsb.2020-22",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-18",
+  "recipient": "FRANZISKA FEICK",
+  "accountNumber": "DE05120300001038068241",
+  "transactionType": "Credit",
+  "purpose": "Franziska Feick, MB 2022",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-19",
+  "recipient": "Schultz-Fademrecht, Fabian",
+  "accountNumber": "DE64500502011201091886",
+  "transactionType": "Credit",
+  "purpose": "Fabian Schultz-Fademrecht, Mitgliedsbeitrag 2020-2022",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-22",
+  "recipient": "Philipp Wolf",
+  "accountNumber": "DE02506521240126344720",
+  "transactionType": "Credit",
+  "purpose": "Philipp Wolf Mitgliedsbeitrag 2020-2022",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-22",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": "ZORAN ZUNK MITGLIEDSB. NACHZAHLUNG",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-07-27",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Kasse",
+  "amountEur": 110.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-08-11",
+  "recipient": "Marius Sulzbach",
+  "accountNumber": "DE80513900000086332515",
+  "transactionType": "Credit",
+  "purpose": "1. TFC Mitgliedsbeitr\u00e4ge f\u00fcr das Jahr 2022",
+  "amountEur": 40.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-08-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-08-23",
+  "recipient": "Nele Stibani",
+  "accountNumber": "DE79500105175422590840",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag Stibani 2022",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-08-26",
+  "recipient": "Mamic, Kristijan",
+  "accountNumber": "DE25500502011202005843",
+  "transactionType": "Credit",
+  "purpose": "Kristijan Mamic, Mitgliedsbeitrag 2022-2022",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-08-30",
+  "recipient": "SARAH-KRISTIN HEHNER",
+  "accountNumber": "DE61120300001019043981",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-09-01",
+  "recipient": "Benedict Osterloh",
+  "accountNumber": "DE64501900006000976049",
+  "transactionType": "Credit",
+  "purpose": "Benedict Osterloh, Mitgliedsbeitrag 2020-2022",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-09-07",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag Ahmed Omar",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-09-07",
+  "recipient": "PayPal Europe S.a.r.l. et Cie S.C.A",
+  "accountNumber": "FR7630004021180001013711792",
+  "transactionType": "Lastschrift",
+  "purpose": "1022178742322 PP.5917.PP . RiproTec GmbH, Ihr Einkauf bei RiproTec GmbH",
+  "amountEur": -181.55,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-09-12",
+  "recipient": "Werner Mattern",
+  "accountNumber": "DE57510700240034766600",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag F\u00f6rdermitgliedschaft August bis Dezember",
+  "amountEur": 10.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-09-16",
+  "recipient": "JULIAN BREDERLOW",
+  "accountNumber": "DE46120300001008121566",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitraege Julian Brederlow 2021 2022",
+  "amountEur": 75.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-09-20",
+  "recipient": "Felix Scheffler",
+  "accountNumber": "DE92251900010636691000",
+  "transactionType": "Credit",
+  "purpose": "Felix Scheffler Mitgliedsbeitrag 2020-2022 plus Spende",
+  "amountEur": 45.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-09-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-09-28",
+  "recipient": "LUCAS SEUBERT",
+  "accountNumber": "DE28512500000020903813",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag TFC Frankfurt 2022 - Lucas Seubert",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-10-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-10-25",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Trikot mamic 1x",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-10-25",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Trikot Felix Scheffler",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-10-25",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Trikots 1x schicke, 1x Martin z. 2x Schauzu",
+  "amountEur": 80.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-10-25",
+  "recipient": "PHILIPP WOLF",
+  "accountNumber": "DE02506521240126344720",
+  "transactionType": "Credit",
+  "purpose": "Trikot",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-10-26",
+  "recipient": "SARAH-KRISTIN HEHNER",
+  "accountNumber": "DE61120300001019043981",
+  "transactionType": "Credit",
+  "purpose": "Trikot Sarah-Kristin Hehner",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-11-08",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Trikots schicke und Martin",
+  "amountEur": 40.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-11-14",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Transfer",
+  "purpose": "Ruckuberweisung Uberzahlung Trikots fur Schicke und Martin Z.",
+  "amountEur": -40.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-11-16",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Trikot Daniel Glei\u00df",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-11-16",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE86440100460238219469",
+  "transactionType": "Credit",
+  "purpose": "Trikot",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-11-16",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Trikots",
+  "amountEur": 140.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-11-16",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme",
+  "amountEur": 100.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-11-18",
+  "recipient": "Volkmar Ackmann",
+  "accountNumber": "DE92200411330233667500",
+  "transactionType": "Transfer",
+  "purpose": "Steuererklaerung 2021, Rechnungsnummer T-1\/2022",
+  "amountEur": -273.7,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-11-21",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Trikot Oliver bockemuehl",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-11-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-12-01",
+  "recipient": "Ratepay GmbH",
+  "accountNumber": "DE13512106004223687015",
+  "transactionType": "Transfer",
+  "purpose": "6TG18142S27591420 \/ Bestellung vom 24.10.2022 bei PokaleNRW",
+  "amountEur": -26.15,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-12-05",
+  "recipient": "ROBERTO VASQUEZ ANGEL",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Tisch-Verkauf Ullrich P4P an Philipp Wolf",
+  "amountEur": 900.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-12-05",
+  "recipient": "Benedict Osterloh",
+  "accountNumber": "DE64501900006000976049",
+  "transactionType": "Credit",
+  "purpose": "Trikots",
+  "amountEur": 40.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-12-05",
+  "recipient": "Clopen Superstore",
+  "accountNumber": "DE03500400000661109900",
+  "transactionType": "Transfer",
+  "purpose": "Rechnungsnummer: RE-2022-0272",
+  "amountEur": -1494.64,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-12-06",
+  "recipient": "MANFRED FORSBACH",
+  "accountNumber": "DE66370100500443079508",
+  "transactionType": "Credit",
+  "purpose": "Trikot Forsbach",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-12-07",
+  "recipient": "Reinhold Meister",
+  "accountNumber": "DE76500105175408934943",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag 22 Dezember Meister 5 x 7,50",
+  "amountEur": 37.5,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-12-08",
+  "recipient": "Werner Mattern",
+  "accountNumber": "DE57510700240034766600",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag f\u00fcr 2023 als aktives Mitglied.",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-12-12",
+  "recipient": "FRANZISKA FEICK",
+  "accountNumber": "DE05120300001038068241",
+  "transactionType": "Credit",
+  "purpose": "Franziska Feick, Trikot",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2022-12-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-02",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-02",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag 2023",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-03",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "ROBERTO VASQUEZ ANGEL, MB",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-10",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Turniereinnahmen",
+  "amountEur": 94.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-14",
+  "recipient": "Werner Mattern",
+  "accountNumber": "DE57510700240034766600",
+  "transactionType": "Transfer",
+  "purpose": "Fehlueberweisung vom 08.12.2022",
+  "amountEur": -90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-16",
+  "recipient": "Daniel Massong",
+  "accountNumber": "DE24200411330842266900",
+  "transactionType": "Credit",
+  "purpose": "Daniel Massong, Mitgliedsbeitrag",
+  "amountEur": 60.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-16",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitraege Jan Schauzu 2023",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-16",
+  "recipient": "Daniel Massong",
+  "accountNumber": "DE03100110012627332836",
+  "transactionType": "Credit",
+  "purpose": "Erg\u00e4nzung zum Dauerauftrag. Ab 2024 90\u20ac",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-17",
+  "recipient": "Nele Stibani",
+  "accountNumber": "DE79500105175422590840",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag Nele Stibani",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-17",
+  "recipient": "MANFRED FORSBACH",
+  "accountNumber": "DE66370100500443079508",
+  "transactionType": "Credit",
+  "purpose": "Jahresbeitrag 2023 Manfred Forsbach",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-19",
+  "recipient": "Fabian Schultz-Fademrecht",
+  "accountNumber": "DE64500502011201091886",
+  "transactionType": "Credit",
+  "purpose": "Fabian Schultz-Fademrecht, MB 2023",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-19",
+  "recipient": "Daniel Gleis",
+  "accountNumber": "DE76500502011240611798",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag 2023",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-19",
+  "recipient": "Ratepay GmbH",
+  "accountNumber": "DE13512106004223687015",
+  "transactionType": "Transfer",
+  "purpose": "BB0186924P8 Rechnungsnummer 92393",
+  "amountEur": -21.35,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-20",
+  "recipient": "Oliver Bockemuehl",
+  "accountNumber": "DE72505922000001033417",
+  "transactionType": "Credit",
+  "purpose": "Beitrag Oliver Bockemuehl",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-23",
+  "recipient": "DTFB e.V.",
+  "accountNumber": "DE16550905000003182770",
+  "transactionType": "Transfer",
+  "purpose": "Rechnungsnummer ID 120\/2022",
+  "amountEur": -140.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-23",
+  "recipient": "Tischfussballverband Hessen e.V.",
+  "accountNumber": "DE58508501500000746002",
+  "transactionType": "Transfer",
+  "purpose": "Rechnungsnummer 17-2022",
+  "amountEur": -271.11,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-25",
+  "recipient": "Nurettin Batan",
+  "accountNumber": "DE86500502010352806702",
+  "transactionType": "Credit",
+  "purpose": "Nurettin Batan",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-01-30",
+  "recipient": "SARAH-KRISTIN HEHNER",
+  "accountNumber": "DE61120300001019043981",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag 2023-Sarah-Kristin Hehner",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-01",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-02",
+  "recipient": "Reinhold Meister",
+  "accountNumber": "DE76500105175408934943",
+  "transactionType": "Credit",
+  "purpose": "Jahresbeitrag alle Meister",
+  "amountEur": 450.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-02",
+  "recipient": "AMAZON PAYMENTS EUROPE S.C.A.",
+  "accountNumber": "DE87300308801908262006",
+  "transactionType": "Lastschrift",
+  "purpose": "304-0795277-8121917 AMZN Mktp DE 2982RKAAXQFF4WNM",
+  "amountEur": -40.15,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-06",
+  "recipient": "Niklas Maier",
+  "accountNumber": "DE20501900006001026990",
+  "transactionType": "Credit",
+  "purpose": "Niklas Maier Mitgliedsbeitrag 1. TFC Frankfurt",
+  "amountEur": 82.3,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-06",
+  "recipient": "Niklas Maier",
+  "accountNumber": "DE81100110012621716199",
+  "transactionType": "Credit",
+  "purpose": "MoneyBeam",
+  "amountEur": 0.2,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-07",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme Trainingsgeb\u00fchr",
+  "amountEur": 18.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-07",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme Spende",
+  "amountEur": 31.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-07",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme Turniereinnahmen",
+  "amountEur": 241.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-27",
+  "recipient": "Vereinsbedarf Deitert GmbH",
+  "accountNumber": "DE33360200300000407623",
+  "transactionType": "Transfer",
+  "purpose": "Rechnungsnummer R666599",
+  "amountEur": -37.35,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-02-28",
+  "recipient": "Clopen Superstore",
+  "accountNumber": "DE03500400000661109900",
+  "transactionType": "Transfer",
+  "purpose": "Rechnungsnummer RE-2023-0028",
+  "amountEur": -166.6,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-03-01",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-03-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-03",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-13",
+  "recipient": "MICHAEL PETRI",
+  "accountNumber": "DE95508526510010231801",
+  "transactionType": "Credit",
+  "purpose": "BEITRAG TFC FFM APRIL-DEZEMBER",
+  "amountEur": 67.5,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-17",
+  "recipient": "Mamic, Kristijan",
+  "accountNumber": "DE25500502011202005843",
+  "transactionType": "Credit",
+  "purpose": "Kristijan Mamic, MB 2023",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-17",
+  "recipient": "SARAH-KRISTIN HEHNER",
+  "accountNumber": "DE61120300001019043981",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag 2023",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-24",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Transfer",
+  "purpose": "Fremdauslage: Pohlmann Bon-Nr. 10216116",
+  "amountEur": -23.1,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-25",
+  "recipient": "PHILIPP WOLF",
+  "accountNumber": "DE02506521240126344720",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag 1.TFC Frankfurt 2023",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-25",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme Turniereinnahmen",
+  "amountEur": 184.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-25",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme Spenden",
+  "amountEur": 34.1,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-26",
+  "recipient": "AMAZON PAYMENTS EUROPE S.C.A.",
+  "accountNumber": "DE87300308801908262006",
+  "transactionType": "Lastschrift",
+  "purpose": "304-6972311-9520358 AMZN Mktp DE 26EAXR2LPBJWFNND",
+  "amountEur": -24.4,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-04-26",
+  "recipient": "AMAZON EU S.A R.L., NIEDERLASSUNG DEUTSCHLAND",
+  "accountNumber": "DE93300308800013441006",
+  "transactionType": "Lastschrift",
+  "purpose": "303-5204050-5834765 Amazon.de 3ZOH7KJHII82MKR0",
+  "amountEur": -9.49,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-05-02",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-05-02",
+  "recipient": "Timo Kleinboehl",
+  "accountNumber": "DE59508900000131264003",
+  "transactionType": "Credit",
+  "purpose": "Kleinboehl Mitgliedsbeitrag",
+  "amountEur": 75.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-05-03",
+  "recipient": "Tischfussballverband Hessen e.V.",
+  "accountNumber": "DE58508501500000746002",
+  "transactionType": "Transfer",
+  "purpose": "Jahresbeitrag 2023 Rechnungsnummer 18-2023",
+  "amountEur": -316.11,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-05-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-06-01",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-06-13",
+  "recipient": "Schultz-Fademrecht, Fabian",
+  "accountNumber": "DE64500502011201091886",
+  "transactionType": "Credit",
+  "purpose": "Trikot Fabi Nr 2",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-06-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-07-03",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-07-10",
+  "recipient": "Clopen Superstore",
+  "accountNumber": "DE03500400000661109900",
+  "transactionType": "Transfer",
+  "purpose": "RE-2023-0225, FIN-3",
+  "amountEur": -211.11,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-07-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-08-01",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-08-08",
+  "recipient": "Jan Schauzu",
+  "accountNumber": "DE36500105175419381108",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme 07. August 2023",
+  "amountEur": 200.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-08-08",
+  "recipient": "Niklas Maier",
+  "accountNumber": "DE20501900006001026990",
+  "transactionType": "Credit",
+  "purpose": "Niklas Maier 1x Trikot",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-08-09",
+  "recipient": "Timo Kleinboehl",
+  "accountNumber": "DE59508900000131264003",
+  "transactionType": "Credit",
+  "purpose": "Timo Kleinboehl 2 Trikots",
+  "amountEur": 40.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-08-21",
+  "recipient": "FRANZISKA FEICK",
+  "accountNumber": "DE05120300001038068241",
+  "transactionType": "Credit",
+  "purpose": "Franziska Feick, MB 2023",
+  "amountEur": 90.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-08-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-09-01",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-09-15",
+  "recipient": "Roberto Vasquez Angel",
+  "accountNumber": "DE09500100600175890604",
+  "transactionType": "Credit",
+  "purpose": "Kassenentnahme 2023-09-11, FIN-4",
+  "amountEur": 150.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-09-21",
+  "recipient": "Reinhold Meister",
+  "accountNumber": "DE76500105175408934943",
+  "transactionType": "Credit",
+  "purpose": "Trikots Meister",
+  "amountEur": 40.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-09-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-10-02",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-10-10",
+  "recipient": "RAINER HOLLENSTEIN",
+  "accountNumber": "DE77370501980132493172",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag 2023 anteilig 9 Monate",
+  "amountEur": 67.5,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-10-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-11-01",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-11-06",
+  "recipient": "JAN-HENNING WEINERT",
+  "accountNumber": "DE26690400450270283500",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag TFC Frankfurt, Henning Weinert, 10\/23 - 3\/24",
+  "amountEur": 30.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-11-07",
+  "recipient": "JAN-HENNING WEINERT",
+  "accountNumber": "DE26690400450270283500",
+  "transactionType": "Credit",
+  "purpose": "Mitgliedsbeitrag TFC Frankfurt, Henning Weinert, 10\/23 - 3\/24",
+  "amountEur": 15.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-11-17",
+  "recipient": "JAN-HENNING WEINERT",
+  "accountNumber": "DE26690400450270283500",
+  "transactionType": "Credit",
+  "purpose": "Trikot TFC Frankfurt, Henning Weinert",
+  "amountEur": 20.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-11-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-12-01",
+  "recipient": "Zunk, Zoran",
+  "accountNumber": "DE69500333002322504200",
+  "transactionType": "Credit",
+  "purpose": null,
+  "amountEur": 5.0,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}
+{
+  "date": "2023-12-22",
+  "recipient": "N26",
+  "accountNumber": null,
+  "transactionType": "Transfer",
+  "purpose": "N26 You Mitgliedschaft",
+  "amountEur": -9.9,
+  "amountForeignCurrency": null,
+  "foreignCurrency": null,
+  "exchangeRate": null
+}

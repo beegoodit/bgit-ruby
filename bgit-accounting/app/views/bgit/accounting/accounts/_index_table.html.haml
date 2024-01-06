@@ -1,0 +1,10 @@
+= table.id sort: true
+= table.association :accountable, sort: true, label_method: :human
+= table.association :keepr_group, sort: true
+= table.association :keepr_tax, sort: true
+= table.column :number, sort: true
+= table.column :parent_id, sort: true
+= table.column :name, sort: true
+= table.column :kind, sort: true
+= table.column :balance
+= table.timestamps sort: true

@@ -13,7 +13,9 @@ Bgit::Accounting.configure do |config|
   #            Bgit::Accounting::GroupsController,
   #            Bgit::Accounting::JournalsController,
   #            Bgit::Accounting::PostingsController,
-  #            Bgit::Accounting::TaxesController
+  #            Bgit::Accounting::TaxesController,
+  #            Bgit::Accounting::BankAccountsController,
+  #            Bgit::Accounting::TransfersController
   #          ]}
   #
   config.resources_controllers = -> {
@@ -23,7 +25,9 @@ Bgit::Accounting.configure do |config|
       Bgit::Accounting::GroupsController,
       Bgit::Accounting::JournalsController,
       Bgit::Accounting::PostingsController,
-      Bgit::Accounting::TaxesController
+      Bgit::Accounting::TaxesController,
+      Bgit::Accounting::BankAccountsController,
+      Bgit::Accounting::TransfersController
     ]
   }
 
@@ -39,10 +43,13 @@ Bgit::Accounting.configure do |config|
   # Set the services, that will be shown in the backend menu.
   #
   # Default: config.service_controllers = -> {[
+  #            Bgit::Accounting::ImportN26StatementsServicesController
   #          ]}
   #
   config.service_controllers = -> {
-    []
+    [
+      Bgit::Accounting::ImportN26StatementsServicesController
+    ]
   }
 
   # Set the sidebars, that will be shown in the backend menu.
@@ -53,4 +60,24 @@ Bgit::Accounting.configure do |config|
   config.sidebar_controllers = -> {
     []
   }
+
+  # Set the account owner classes with their respective autocomplete url.
+  #
+  # Default: config.accountable_classes = -> {
+  #            {
+  #              User => main_app.url_for([:autocomplete, User])
+  #            }
+  #          }
+  #
+  config.accountable_classes = -> {
+    {
+      User => main_app.url_for([:autocomplete, User])
+    }
+  }
+
+  # Set the bank account owner factory name.
+  #
+  # Default: config.accountable_factory_name = :user
+  #
+  config.accountable_factory_name = :user
 end

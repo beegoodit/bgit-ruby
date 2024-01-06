@@ -1,0 +1,23 @@
+%h3= Keepr::Journal.model_name.human(count: :other)
+
+= collection_table(collection: @resource.keepr_postings.map(&:keepr_journal)) do |t|
+  = t.id
+  = t.column :date
+  = t.column :debit_postings do |r|
+    - capture_haml do
+      - r.debit_postings.each do |posting|
+        %span.badge.badge-danger= posting.human
+  = t.column :arrow, title: false do
+    - capture_haml do
+      %i.fa.fa-arrow-right
+  = t.column :credit_postings do |r|
+    - capture_haml do
+      - r.credit_postings.each do |posting|
+        %span.badge.badge-success= posting.human
+  = t.column :number
+  = t.column :subject
+  = t.association :accountable
+  = t.column :permanent
+  = t.column :note
+  = t.timestamps
+  = render partial: "administrador/resources_controller/base/index_table_actions", locals: { table: t }

@@ -12,6 +12,8 @@ RSpec.describe "ActiveRecord::Base models", type: :model do
   # rubocop:enable Lint/ConstantDefinitionInBlock
 
   {
+    Bgit::Accounting::BankAccount => {},
+    Bgit::Accounting::Transfer => {},
     Keepr::Account => {factory_name: :account},
     Keepr::CostCenter => {factory_name: :cost_center},
     Keepr::Group => {factory_name: :group},

@@ -1,4 +1,4 @@
-= form.input :accountable, as: :polymorphic_association, classes: {}
+= form.input :accountable, as: :polymorphic_association, classes: instance_exec(&Bgit::Accounting::Configuration.accountable_classes)
 = form.input :number
 = form.input :date
 = form.input :subject

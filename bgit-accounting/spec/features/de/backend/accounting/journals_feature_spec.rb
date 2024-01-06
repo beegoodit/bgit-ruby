@@ -37,14 +37,14 @@ RSpec.describe "/de/backend/accounting/journals", type: :feature do
             within "#keepr_postings .nested-fields:nth-child(1)" do
               find(:xpath, ".//select[contains(@name, '[keepr_account_id]')]").select debit_account.to_s
               find(:xpath, ".//input[contains(@name, '[amount]')]").set "100"
-              find(:xpath, ".//select[contains(@name, '[side]')]").select Keepr::Posting::SIDE_DEBIT
+              find(:xpath, ".//select[contains(@name, '[side]')]").select Keepr::Posting.human_value_name(:side, :debit)
             end
 
             click_on "Buchung hinzufügen"
             within "#keepr_postings .nested-fields:nth-child(2)" do
               find(:xpath, ".//select[contains(@name, '[keepr_account_id]')]").select credit_account.to_s
               find(:xpath, ".//input[contains(@name, '[amount]')]").set "100"
-              find(:xpath, ".//select[contains(@name, '[side]')]").select Keepr::Posting::SIDE_CREDIT
+              find(:xpath, ".//select[contains(@name, '[side]')]").select Keepr::Posting.human_value_name(:side, :credit)
             end
           }
           .increasing { resource_class.count }.by(1)
