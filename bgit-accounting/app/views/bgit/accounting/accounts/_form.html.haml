@@ -1,7 +1,7 @@
 = form.input :parent_id, collection: resource_class.all, include_blank: true
 = form.association :keepr_group
 = form.association :keepr_tax
-= form.input :accountable, as: :polymorphic_association, classes: {}
-= form.input :kind, collection: resource_class.kinds.keys
+= form.input :accountable, as: :polymorphic_association, classes: instance_exec(&Bgit::Accounting::Configuration.accountable_classes)
+= form.input :kind, collection: resource_class.kinds.keys.collect { |k| [resource_class.human_value_name(:kind, k), k]  }
 = form.input :number
 = form.input :name

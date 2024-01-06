@@ -1,6 +1,12 @@
 en:
   activerecord:
     models:
+      bgit/accounting/bank_account:
+        one: Bank Account
+        other: Bank Accounts
+      bgit/accounting/transfer:
+        one: Transfer
+        other: Transfers
       keepr/account:
         one: Account
         other: Accounts
@@ -24,6 +30,28 @@ en:
         id: ID
         created_at: Created at
         updated_at: Updated at
+      bgit/accounting/bank_account:
+        <<: *shared
+        accountable_type: Accountable Type
+        accountable_id: Accountable ID
+        accountable: Accountable
+        name: Name
+        owner: Owner
+        iban: IBAN
+        bic: BIC
+        active_from: Active from
+        active_to: Active to
+      bgit/accounting/transfer:
+        <<: *shared
+        recipient_bank_account_id: Recipient Bank Account ID
+        recipient_bank_account: Recipient Bank Account
+        sender_bank_account_id: Sender Bank Account ID
+        sender_bank_account: Sender Bank Account
+        transaction_at: Transaction at
+        value_at: Value at
+        amount_cents: Amount (Cents)
+        amount: Amount
+        purpose: Purpose
       keepr/account:
         <<: *shared
         accountable_id: Accountable ID
@@ -78,10 +106,18 @@ en:
         keepr_account: Account
         name: Name
         value: Value
+    values:
+      keepr/posting:
+        side:
+          debit: Soll
+          credit: Haben
   bgit:
     accounting:
       add_association_fields:
         add: "Add {model_name}"
+      journals:
+        keepr_posting_fields:
+          remove: "Remove %{model_name}"
   classes:
     bgit/accounting/engine: Accounting
   routes:

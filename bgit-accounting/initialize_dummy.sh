@@ -37,6 +37,34 @@ echo "RouteTranslator.config do |config|" >> config/initializers/route_translato
 echo "  config.force_locale = true" >> config/initializers/route_translator.rb
 echo "end" >> config/initializers/route_translator.rb
 
+# Setup user model as bank account owner
+rails g model User email:string
+
+sed -i "2i\  include SimpleFormPolymorphicAssociations::Model::AutocompleteConcern" app/models/user.rb
+sed -i "3i\  autocomplete scope: ->(matcher) { where(\"users.email LIKE :term\", term: \"%#{matcher.downcase}%\") }, id_method: :id, text_method: :email" app/models/user.rb
+sed -i "3i\  def human; email; end" app/models/user.rb
+
+touch app/controllers/users_controller.rb
+
+echo "class UsersController < Cmor::Core::Backend::ResourcesController::Base" >> app/controllers/users_controller.rb
+echo "  include SimpleFormPolymorphicAssociations::Controller::AutocompleteConcern" >> app/controllers/users_controller.rb
+echo "" >> app/controllers/users_controller.rb
+echo "  def self.resource_class" >> app/controllers/users_controller.rb
+echo "    User" >> app/controllers/users_controller.rb
+echo "  end" >> app/controllers/users_controller.rb
+echo "" >> app/controllers/users_controller.rb
+echo "  private" >> app/controllers/users_controller.rb
+echo "" >> app/controllers/users_controller.rb
+echo "  def permitted_params" >> app/controllers/users_controller.rb
+echo "    params.require(:user).permit()" >> app/controllers/users_controller.rb
+echo "  end" >> app/controllers/users_controller.rb
+echo "end" >> app/controllers/users_controller.rb
+echo "" >> app/controllers/users_controller.rb
+
+sed -i "2i\  resources :users do" config/routes.rb
+sed -i "3i\    get :autocomplete, on: :collection" config/routes.rb
+sed -i "4i\  end" config/routes.rb
+
 # Setup administrador
 rails generate administrador:install
 
