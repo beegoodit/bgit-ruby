@@ -1,2 +1,8 @@
-- resource_class.attribute_names.each do |name|
-  = table.row name
+= table.email :email
+= table.field :login
+= table.field :single_access_token
+= table.boolean :active
+= table.boolean :approved
+= table.boolean :confirmed
+= table.timestamp :created_at
+= table.timestamp :updated_at

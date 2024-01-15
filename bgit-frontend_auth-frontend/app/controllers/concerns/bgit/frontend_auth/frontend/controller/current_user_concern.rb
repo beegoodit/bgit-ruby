@@ -22,11 +22,11 @@ module Bgit
           private
 
           def current_frontend_auth_user
-            @current_user ||= current_frontend_auth_user_session&.user
+            @current_frontend_auth_user ||= current_frontend_auth_user_session&.user
           end
 
           def current_frontend_auth_user_session
-            @current_user_session ||= Bgit::FrontendAuth::UserSession.find
+            @current_frontend_auth_user_session ||= Bgit::FrontendAuth::UserSession.find
           end
 
           def authenticate_frontend_auth_user!

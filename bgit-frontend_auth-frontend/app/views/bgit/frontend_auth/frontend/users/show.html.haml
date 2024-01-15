@@ -1,6 +1,13 @@
-%h1= @resource.email
+= turbo_frame_tag(params[:turbo_frame] || dom_class(Bgit::FrontendAuth::User)) do
+  .row
+    .col-12
+      %h1= @resource.email
 
-= resource_table(resource: @resource) do |t|
-  = render 'show_table', table: t
-  
-= render 'show_actions', resource: @resource
+  .row
+    .col-12
+      = resource_table(resource: @resource) do |t|
+        = render 'show_table', table: t
+
+.row
+  .col-12
+    = render 'show_actions', resource: @resource

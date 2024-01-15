@@ -45,6 +45,10 @@ en:
         controller:
           current_user_concern:
             authentication_failed: "You need to sign in or sign up before continuing."
+        home:
+          index:
+            back: "Zurück"
+            title: "Welcome %{user}!"
         password_reset_requests:
           new:
             back: "Back"

@@ -73,11 +73,12 @@ PATH
       bgit-frontend_auth
       haml-rails
       rails (>= 7.0.4.3)
-      rao-component
+      rao-component (>= 0.0.52.pre)
       rao-resources_controller
       rao-service
       route_translator
       simple_form
+      turbo-rails
 
 GEM
   remote: https://rubygems.org/
@@ -368,7 +369,7 @@ GEM
       zeitwerk (~> 2.6)
     rake (13.1.0)
     rao (0.0.51.pre)
-    rao-component (0.0.51.pre)
+    rao-component (0.0.52.pre)
       haml-rails
       rails (>= 6.1)
       rao
@@ -481,6 +482,10 @@ GEM
     thor (1.3.0)
     tilt (2.3.0)
     timeout (0.4.1)
+    turbo-rails (1.5.0)
+      actionpack (>= 6.0.0)
+      activejob (>= 6.0.0)
+      railties (>= 6.0.0)
     twitter-bootstrap-components-rails (1.0.0)
       haml-rails
       rails (>= 3.2)

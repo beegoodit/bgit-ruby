@@ -36,15 +36,19 @@ de:
               new: Registrieren
               sign_out: Ausloggen
               sign_in: Einloggen
-              show: Profil
+              home: Home
             render_dropdown:
               new: Registrieren
               sign_out: Ausloggen
               sign_in: Einloggen
-              show: Profil
+              home: Home
         controller:
           current_user_concern:
             authentication_failed: "Sie müssen sich anmelden oder registrieren, bevor Sie fortfahren können."
+        home:
+          index:
+            back: "Zurück"
+            title: "Willkommen %{user}!"
         password_reset_requests:
           new:
             back: "Zurück"

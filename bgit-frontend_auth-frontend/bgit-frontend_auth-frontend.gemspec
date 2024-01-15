@@ -28,12 +28,13 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", ">= 7.0.4.3"
   spec.add_dependency "bgit-frontend_auth"
-  spec.add_dependency "simple_form"
-  spec.add_dependency "route_translator"
-  spec.add_dependency "rao-component"
+  spec.add_dependency "haml-rails"
+  spec.add_dependency "rao-component", ">= 0.0.52.pre"
   spec.add_dependency "rao-resources_controller"
   spec.add_dependency "rao-service"
-  spec.add_dependency "haml-rails"
+  spec.add_dependency "route_translator"
+  spec.add_dependency "simple_form"
+  spec.add_dependency "turbo-rails"
 
   spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "factory_bot_rails"

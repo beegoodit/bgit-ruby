@@ -17,7 +17,7 @@ Bgit::FrontendAuth::Frontend::Engine.routes.draw do
         match "/:id/:token" => "password_resets#update", constraint: { token: /\d+/ }, as: :update, via: [:put, :patch]
       end
 
-      root to: "users#show"
+      root to: "home#index"
     end
   end
 end
