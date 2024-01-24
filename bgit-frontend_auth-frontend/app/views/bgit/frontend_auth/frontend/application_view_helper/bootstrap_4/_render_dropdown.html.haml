@@ -9,7 +9,7 @@
     .dropdown-menu{"aria-labelledby" => "dropdown02"}
       - if frontend_auth_user_signed_in?
         = link_to t('.home'), bgit_frontend_auth_frontend.root_path, class: 'dropdown-item'
-        = link_to t('.sign_out'), bgit_frontend_auth_frontend.user_session_path, class: 'dropdown-item', method: :delete
+        = link_to t('.sign_out'), bgit_frontend_auth_frontend.user_session_path, class: 'dropdown-item', method: :delete, data: { turbo_method: :delete }
       - else
         = link_to t('.sign_in'), bgit_frontend_auth_frontend.new_user_session_path, class: 'dropdown-item'
         - if Bgit::FrontendAuth::Frontend::Configuration.enable_registrations

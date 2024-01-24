@@ -2,7 +2,7 @@
   - if frontend_auth_user_signed_in?
     .btn-group
       = link_to t('.home'), bgit_frontend_auth_frontend.root_path, class: 'btn btn-secondary'
-      = link_to t('.sign_out'), bgit_frontend_auth_frontend.user_session_path, class: 'btn btn-primary', method: :delete
+      = link_to t('.sign_out'), bgit_frontend_auth_frontend.user_session_path, class: 'btn btn-primary', method: :delete, method: :delete, data: { turbo_method: :delete }
   - else
     .btn-group
       = link_to t('.sign_in'), bgit_frontend_auth_frontend.new_user_session_path, class: 'btn btn-primary'
