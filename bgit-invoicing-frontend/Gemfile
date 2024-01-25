@@ -30,4 +30,6 @@ gem "json_seeds-rails", git: "https://github.com/robotex82/json_seeds-rails"
 gem "lexoffice_client", git: "https://github.com/beegoodit/lexoffice-ruby"
 gem "lexoffice_client-rails", git: "https://github.com/beegoodit/lexoffice-ruby"
 
-gem "rao-component", git: "https://github.com/rails-add-ons/rao.git", glob: "rao-component/*.gemspec"
+git "https://github.com/rails-add-ons/rao.git" do
+  gem "rao-component"
+end

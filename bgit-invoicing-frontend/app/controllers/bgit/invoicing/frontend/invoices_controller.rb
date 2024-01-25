@@ -31,11 +31,11 @@ module Bgit
         end
 
         def load_collection_scope
-          Bgit::Invoicing::Invoice.owned_by_any(*current_owners).order(year: :desc, month: :desc)
+          super.owned_by_any(*current_owners)
         end
 
         def load_resource_scope
-          Bgit::Invoicing::Invoice.owned_by_any(*current_owners)
+          super.owned_by_any(*current_owners)
         end
 
         def current_owners

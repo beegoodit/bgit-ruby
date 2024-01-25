@@ -1,7 +1,7 @@
 require "rails_helper"
 
-RSpec.describe "/de/invoicing", type: :feature do
-  let(:base_path) { "/de/invoicing" }
+RSpec.describe "/de/abrechnung", type: :feature do
+  let(:base_path) { "/de/abrechnung" }
 
   # describe "when not authenticated" do
   #   it "redirects to the login page" do

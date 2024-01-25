@@ -11,6 +11,7 @@ de:
           show:
             back: "Zurück"
   classes:
-    bgit/invoicing/frontend/engine: "Invoicing Frontend"
+    bgit/invoicing/frontend/engine: "Abrechnung"
   routes:
-    bgit_invoicing_frontend_engine: "invoicing"
+    bgit_invoicing_frontend_engine: "abrechnung"
+    invoices: "rechnungen"

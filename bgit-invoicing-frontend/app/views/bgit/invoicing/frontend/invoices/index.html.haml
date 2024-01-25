@@ -5,21 +5,22 @@
       %span.badge.bg-primary
         = @collection.count
 
-.row
-  .col
-    .table.table-responsive
-      = collection_table(collection: @collection, resource_class: resource_class) do |table|
-        = table.id sort: true
-        = table.association :owner, label_method: :human
-        = table.column :year, sort: true
-        = table.column :month, sort: true
-        = table.money :total_price, sort: true
-        = table.aasm_state :billing, sort: true do |resource|
-          - capture_haml do
-            %span.badge.bg-primary= resource.aasm(:billing).human_state
-        - if Object.const_defined?("Bgit::Lexoffice")
-          = table.attachment :lexoffice_document, title: false
-        = render partial: "bgit/invoicing/frontend/collection_table/default_actions", locals: { table: table }
+= turbo_frame_tag(params[:turbo_frame] || "invoicing") do
+  .row
+    .col
+      .table.table-responsive
+        = collection_table(collection: @collection, resource_class: resource_class) do |table|
+          = table.column :uuid, sort: true
+          = table.column :shipping_date, sort: true
+          = table.column :shipping_end_date, sort: true
+          = table.column :line_items_count
+          = table.money :total_net_amount, sort: { column_name: :total_net_amount_cents }
+          = table.aasm_state :billing, sort: true do |resource|
+            - capture_haml do
+              %span.badge.bg-primary= resource.aasm(:billing).human_state
+          - if Object.const_defined?("Bgit::Lexoffice")
+            = table.attachment :lexoffice_document, title: false
+          = render partial: "bgit/invoicing/frontend/collection_table/default_actions", locals: { table: table }
 
 .row
   .col

@@ -11,6 +11,7 @@ en:
           show:
             back: "Back"
   classes:
-    bgit/invoicing/frontend/engine: "Pricin Frontend"
+    bgit/invoicing/frontend/engine: "Invoicing"
   routes:
     bgit_invoicing_frontend_engine: "invoicing"
+    invoices: "invoices"

@@ -1,36 +1,79 @@
-.row
-  .col
-    %h1= @resource.human
+= turbo_frame_tag(params[:turbo_frame] || "invoicing") do
+  .row
+    .col
+      %h1= @resource.human
 
-.row
-  .col
-    = resource_table(resource: @resource) do |table|
-      = table.id
-      = table.association :owner, label_method: :human
-      = table.row :uuid
-      = table.row :year
-      = table.row :month
-      = table.money :total_price
-      = table.timestamps
-      - if Object.const_defined?("Bgit::Lexoffice")
-        = table.attachment :lexoffice_document, title: false
+  .row
+    .col
+      = resource_table(resource: @resource) do |table|
+        = table.id
+        = table.association :owner, label_method: :human
+        = table.row :uuid
+        = table.field :shipping_date, sort: true
+        = table.field :shipping_end_date, sort: true
+        = table.field :line_items_count
+        = table.money :total_net_amount, sort: { column_name: :total_net_amount_cents }
+        = table.timestamps
+        = table.attachment :lexoffice_document
+        = table.field :open_lexoffice_document, title: false do
+          - capture_haml do
+            %button.btn.btn-primary.text-white{ type: :button, data: { "open-dialog": "#invoice-dialog" } }
+              %i.fas.fa-eye
+              = t(".open")
+        = table.aasm_state :billing
 
-.row
-  .col
-    %h2
-      = Bgit::Invoicing::LineItem.model_name.human(count: :other)
-      %span.badge.bg-secondary
-        = @resource.line_items.count
+  .row
+    .col
+      %h2
+        = Bgit::Invoicing::LineItem.model_name.human(count: :other)
+        %span.badge.bg-secondary
+          = @resource.line_items.count
 
-.row
-  .col
-    = collection_table(collection: add_order_scope(@resource.line_items)) do |table|
-      = table.id sort: true
-      = table.association :subscription, label_method: :human
-      = table.column :uuid, sort: true
-      = table.column :seconds, sort: true
-      = table.money :price, sort: { column_name: :price_cents }
+  .row
+    .col
+      = collection_table(collection: add_order_scope(@resource.line_items)) do |table|
+        = table.field :description
+        = table.field :quantity
+        = table.field :unit_name
+        = table.field :unit_net_amount
+        = table.field :gross_amount
+        = table.field :net_amount
 
-.row
-  .col
-    = link_to(t(".back"), bgit_invoicing_frontend.invoices_path, class: "btn btn-primary text-white")
+  .row.mb-4
+    .col
+      = link_to(t(".back"), bgit_invoicing_frontend.invoices_path, class: "btn btn-primary text-white")
+
+  %dialog.border-1.border-light.rounded#invoice-dialog
+    .h-100.d-flex.flex-column.justify-content-between
+      %iframe.pdf-document{ src: main_app.url_for(@resource.lexoffice_document) }
+      .w-100.d-flex.justify-content-end
+        %button.btn.btn-primary.text-white{ type: :button, data: { "close-dialog": "#invoice-dialog" } }= t(".close")
+
+:css
+  dialog#invoice-dialog {
+    width: 80%;
+    height: 80%;
+  }
+
+
+  .pdf-document {
+    width: 100%;
+    height: calc(100% - 4rem);
+  }
+
+:javascript
+  document.addEventListener("turbo:load", function() {
+    document.querySelectorAll("[data-open-dialog]").forEach(function(element) {
+      element.addEventListener("click", function(event) {
+        event.preventDefault();
+        document.querySelector(this.dataset.openDialog).showModal();
+      });
+    });
+
+    document.querySelectorAll("[data-close-dialog]").forEach(function(element) {
+      element.addEventListener("click", function(event) {
+        event.preventDefault();
+        document.querySelector(this.dataset.closeDialog).close();
+      });
+    });
+  });
