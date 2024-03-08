@@ -1,0 +1,3 @@
+
+
+  mount Bgit::FrontendAuth::Api::Engine, at: "/api/auth"
