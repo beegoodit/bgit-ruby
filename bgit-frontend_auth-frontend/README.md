@@ -19,9 +19,15 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
+Install the initializer and the routes:
 ```bash
-$ gem install bgit-frontend_auth-frontend
+$ rails generate bgit:frontend_auth:frontend:install
+```
+
+## Generating feature specs
+
+```bash
+$ rails g bgit:frontend_auth:frontend:feature_specs
 ```
 
 ## Contributing
