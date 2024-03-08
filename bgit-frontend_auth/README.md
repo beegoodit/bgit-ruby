@@ -16,9 +16,21 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
+Install the database migrations:
 ```bash
-$ gem install bgit-frontend_auth
+$ rails bgit_frontend_auth:install:migrations
+$ rails db:migrate && rails db:test:prepare
+```
+
+Install the initializer and the routes:
+```bash
+$ rails generate bgit:frontend_auth:install
+```
+
+## Generating feature specs
+
+```bash
+$ rails g bgit:frontend_auth:feature_specs
 ```
 
 ## Contributing
