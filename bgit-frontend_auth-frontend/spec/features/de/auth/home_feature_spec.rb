@@ -1,7 +1,7 @@
 require "rails_helper"
 
-RSpec.describe "/en/auth", type: :feature do
-  let(:base_path) { "/en/auth" }
+RSpec.describe "/de/auth", type: :feature do
+  let(:base_path) { "/de/auth" }
 
   describe "authenticated access" do
     let(:user) { create(:bgit_frontend_auth_user, :authenticable) }
@@ -12,11 +12,12 @@ RSpec.describe "/en/auth", type: :feature do
     end
 
     it { expect(current_path).to eq(base_path) }
-    it { expect(page.body).to have_text("Welcome #{user.email}!") }
+    it { expect(page.body).to have_text("Erfolgreich angemeldet.") }
+    it { expect(page.body).to have_text("Willkommen #{user.email}!") }
   end
 
   describe "unauthenticated access" do
-    let(:sign_in_path) { "/en/auth/session/new" }
+    let(:sign_in_path) { "/de/auth/session/new" }
 
     before(:each) do
       visit(base_path)

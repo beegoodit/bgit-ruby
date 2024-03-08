@@ -25,6 +25,8 @@ de:
         create: "Einloggen"
   routes:
     bgit_frontend_auth_frontend_engine: "auth"
+    password_reset: passwort-zuruecksetzen
+    password_reset_request: passwort-vergessen
     user: "benutzer"
     user_session: "session"
   bgit:

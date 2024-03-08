@@ -1,8 +1,4 @@
 Bgit::FrontendAuth::Frontend::Engine.routes.draw do
-  namespace :api do
-    resource :user, only: [:show]
-  end
-
   localized do
     scope :bgit_frontend_auth_frontend_engine do
       resource :user, only: [:show, :edit, :update]

@@ -25,6 +25,8 @@ en:
         create: "Sign in"
   routes:
     bgit_frontend_auth_frontend_engine: "auth"
+    password_reset: password-reset
+    password_reset_request: password-reset-request
     user: "user"
     user_session: "session"
   bgit:

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "/en/auth/password_reset_request/new", type: :feature do
-  let(:base_path) { "/en/auth/password_reset_request/new" }
+RSpec.describe "/de/auth/passwort-vergessen/new", type: :feature do
+  let(:base_path) { "/de/auth/passwort-vergessen/new" }
   
   describe "Accessing the page" do
     before(:each) do
@@ -9,12 +9,12 @@ RSpec.describe "/en/auth/password_reset_request/new", type: :feature do
     end
   
     it { expect(current_path).to eq(base_path) }
-    it { expect(page.body).to have_text("Forgot password?") }
+    it { expect(page.body).to have_text("Passwort vergessen?") }
   end
 
   describe "Request new password" do
     let(:user) { create(:bgit_frontend_auth_user, :authenticable) }
-    let(:after_request_path) { "/en/auth/session/new" }
+    let(:after_request_path) { "/de/auth/session/new" }
     let(:submit_button) { find("input[type=submit]") }
 
     before(:each) do
@@ -23,7 +23,7 @@ RSpec.describe "/en/auth/password_reset_request/new", type: :feature do
     end
 
     describe "Response" do
-      let(:success_message) { "An email with instructions for creating a new password has been sent to you." }
+      let(:success_message) { "Eine E-Mail mit Anweisungen zum Erstellen eines neuen Passwort wurde an Sie gesendet." }
 
       before(:each) do
         submit_button.click

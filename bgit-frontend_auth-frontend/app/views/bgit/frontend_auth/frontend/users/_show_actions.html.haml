@@ -1,6 +1,6 @@
 .well.well-sm
   .btn-group
-    = link_to(bgit_frontend_auth_frontend.user_session_path, class: 'btn btn-warning btn-responsive', method: :delete) do
+    = link_to(bgit_frontend_auth_frontend.user_session_path, class: 'btn btn-warning btn-responsive', method: :delete, data: { turbo_method: :delete }) do
       %span.glyphicon.glyphicon-pencil
       %span.btn-text= t('.sign_out')
     = link_to(bgit_frontend_auth_frontend.edit_user_path, class: 'btn btn-primary btn-responsive') do

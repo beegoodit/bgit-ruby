@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "/en/auth/user/edit" do
-  let(:base_path) { "/en/auth/user/edit" }
+RSpec.describe "/de/auth/benutzer/edit" do
+  let(:base_path) { "/de/auth/benutzer/edit" }
 
   describe "authenticated access" do
     let(:user) { create(:bgit_frontend_auth_user, :authenticable) }
@@ -22,7 +22,7 @@ RSpec.describe "/en/auth/user/edit" do
       end
 
       describe "response" do
-        let(:show_path) { "/en/auth/user" }
+        let(:show_path) { "/de/auth/benutzer" }
         before(:each) do
           submit_button.click
         end
@@ -37,7 +37,7 @@ RSpec.describe "/en/auth/user/edit" do
   end
 
   describe "unauthenticated access" do
-    let(:sign_in_path) { "/en/auth/session/new" }
+    let(:sign_in_path) { "/de/auth/session/new" }
 
     before(:each) do
       visit(base_path)

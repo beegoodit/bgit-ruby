@@ -8,6 +8,7 @@ module Bgit
 
         def generate_feature_specs
           directory "features", "spec/features"
+          template "support/bgit-frontend_auth-frontend.rb", "spec/support/bgit-frontend_auth-frontend.rb"
         end
       end
     end

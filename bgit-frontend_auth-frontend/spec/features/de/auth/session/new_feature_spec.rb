@@ -1,14 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe "/en/auth/session/new", type: :feature do
-  let(:base_path) { "/en/auth/session/new" }
+RSpec.describe "/de/auth/session/new", type: :feature do
+  let(:base_path) { "/de/auth/session/new" }
   
   describe "Accessing the page" do
     before(:each) do
       visit(base_path)
     end
   
-    it { expect(page.body).to have_text("Sign in") }
+    it { expect(page.body).to have_text("Einloggen") }
   end
 
   describe "Signing in a user" do

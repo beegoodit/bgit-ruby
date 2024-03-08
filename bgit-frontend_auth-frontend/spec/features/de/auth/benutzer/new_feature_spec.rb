@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "/en/auth/user/new", type: :feature do
-  let(:base_path) { "/en/auth/user/new" }
+RSpec.describe "/de/auth/benutzer/new", type: :feature do
+  let(:base_path) { "/de/auth/benutzer/new" }
   
   describe "Accessing the page" do
     before(:each) do
       visit(base_path)
     end
   
-    it { expect(page.body).to have_text("Sign up") }
+    it { expect(page.body).to have_text("Registrieren") }
   end
 
   describe "Registering a new user" do
-    let(:after_sign_up_path) { "/en/auth/user" }
+    let(:after_sign_up_path) { "/de/auth/benutzer" }
     let(:submit_button) { find("input[type=submit]") }
 
     before(:each) do
