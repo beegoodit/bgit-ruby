@@ -31,12 +31,16 @@ module Bgit
                                                          Bgit::Accounting::GroupsController,
                                                          Bgit::Accounting::JournalsController,
                                                          Bgit::Accounting::PostingsController,
-                                                         Bgit::Accounting::TaxesController
+                                                         Bgit::Accounting::TaxesController,
+                                                         Bgit::Accounting::BankAccountsController,
+                                                         Bgit::Accounting::TransfersController
                                                        ]
                                                      }
       define_option :resource_controllers, default: -> { [] }
-      define_option :service_controllers, default: -> { [] }
+      define_option :service_controllers, default: -> { [Bgit::Accounting::ImportN26StatementsServicesController] }
       define_option :sidebar_controllers, default: -> { [] }
+      define_option :accountable_classes, default: -> { {} }
+      define_option :accountable_factory_name, default: :user
     end
   end
 end

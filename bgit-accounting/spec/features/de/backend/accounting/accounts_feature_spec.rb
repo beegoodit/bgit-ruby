@@ -33,7 +33,7 @@ RSpec.describe "/de/backend/accounting/accounts", type: :feature do
           #     fill_in 'slider[interval]', with: '3'
           fill_in "keepr_account[number]", with: "1000"
           fill_in "keepr_account[name]", with: "Bank"
-          select "asset", from: "keepr_account[kind]"
+          select Keepr::Account.human_value_name(:kind, :asset), from: "keepr_account[kind]"
         }
         .increasing { resource_class.count }.by(1)
     }

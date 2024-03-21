@@ -1,0 +1,6 @@
+= form.input :accountable, as: :polymorphic_association, classes: instance_exec(&Bgit::Accounting::Configuration.accountable_classes)
+= form.input :name
+= form.input :owner
+= form.input :iban
+= form.input :active_from, as: :date_time_picker
+= form.input :active_to, as: :date_time_picker

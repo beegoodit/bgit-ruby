@@ -1,6 +1,12 @@
 de:
   activerecord:
     models:
+      bgit/accounting/bank_account:
+        one: Bankkonto
+        other: Bankkonten
+      bgit/accounting/transfer:
+        one: Buchung
+        other: Buchungen
       keepr/account:
         one: Konto
         other: Konten
@@ -24,6 +30,28 @@ de:
         id: ID
         created_at: Erstellt am
         updated_at: Aktualisiert am
+      bgit/accounting/bank_account:
+        <<: *shared
+        accountable_type: Verantwortliche(r) Typ
+        accountable_id: Verantwortliche(r) ID
+        accountable: Verantwortliche(r)
+        name: Name
+        owner: Besitzer
+        iban: IBAN
+        bic: BIC
+        active_from: Aktiv von
+        active_to: Aktiv bis
+      bgit/accounting/transfer:
+        <<: *shared
+        recipient_bank_account_id: Empfänger Bankkonto ID
+        recipient_bank_account: Empfänger Bankkonto
+        sender_bank_account_id: Sender Bankkonto ID
+        sender_bank_account: Sender Bankkonto
+        transaction_at: Transaktion am
+        value_at: Wertstellung am
+        amount_cents: Betrag (Cent)
+        amount: Betrag
+        purpose: Verwendungszweck
       keepr/account:
         <<: *shared
         accountable_id: Verantwortliche(r) ID
@@ -78,10 +106,27 @@ de:
         keepr_account: Konto
         name: Name
         value: Wert
+    values:
+      keepr/account:
+        kind:
+          asset: Aktiva oder Vermögenswert
+          creditor: Gläubiger
+          debtor: Schuldner
+          expense: Aufwand oder Kosten
+          forward: Termingeschäft
+          liability: Passiva oder Verbindlichkeit
+          revenue: Ertrag oder Umsatz
+      keepr/posting:
+        side:
+          debit: Soll
+          credit: Haben
   bgit:
     accounting:
       add_association_fields:
         add: "%{model_name} hinzufügen"
+      journals:
+        keepr_posting_fields:
+          remove: "%{model_name} entfernen"
   classes:
     bgit/accounting/engine: Accounting
   routes:

@@ -1,0 +1,11 @@
+%h3= Bgit::Accounting::Transfer.model_name.human(count: :other)
+
+= collection_table(collection: @resource.transfers.order(value_at: :desc)) do |table|
+  = table.id sort: true
+  = table.column :sender_bank_account, sort: true, label_method: :human
+  = table.column :recipient_bank_account, sort: true, label_method: :human
+  = table.timestamp :transaction_at, sort: true
+  = table.timestamp :value_at, sort: true
+  = table.money :amount, sort: true
+  = table.column :purpose, sort: true
+  = table.timestamps sort: true

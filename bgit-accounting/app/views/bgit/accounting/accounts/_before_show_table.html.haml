@@ -1,0 +1,40 @@
+:ruby
+  months = (0..11).map { |i| i.months.ago.beginning_of_month }
+
+.card.mb-4
+  .card-header
+    %i.fas.fa-money-bill-alt
+    = resource_class.human_attribute_name(:balance)
+  .card-body
+    .row
+      .col-12.col-lg-4.mb-4
+        .w-100
+          %canvas{ id: "balance_report_chart" }
+
+
+      .col-12.col-lg-8
+        = resource_table(resource: @resource) do |t|
+          - months.each do |month|
+            = t.row month.strftime("%Y-%m") do |account|
+              - account.balance(month.to_date)
+          = t.row :balance
+
+:javascript
+  $(document).ready(function() {
+    var ctx = document.getElementById('balance_report_chart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: #{(months).map { |m| m.strftime("%Y-%m") }.reverse.to_json},
+        datasets: [{
+          label: "#{resource_class.human_attribute_name(:balance)}",
+          data: #{months.reverse.map { |m| @resource.balance(m.to_date) }.to_json},
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 16/9,
+      }
+    });
+  });
