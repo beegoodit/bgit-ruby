@@ -79,7 +79,7 @@ module Bgit
     
           def authenticate_with_jwt!
             unless !!current_user
-            render json: { message: 'Please log in' }, status: :unauthorized
+              render json: { message: 'Please log in' }, status: :unauthorized
             end
           end
         end
