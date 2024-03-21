@@ -71,6 +71,8 @@ en:
         shipping_date: "Shipping date"
         shipping_end_date: "Shipping end date"
         to: "To"
+        total_gross_amount_cents: "Total gross amount (cents)"
+        total_gross_amount: "Total gross amount"
         total_net_amount_cents: "Total net amount (cents)"
         total_net_amount: "Total net amount"
       bgit/invoicing/line_item:

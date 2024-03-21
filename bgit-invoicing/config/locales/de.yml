@@ -74,8 +74,10 @@ de:
         shipping_date: "Lieferdatum"
         shipping_end_date: "Liefer-Enddatum"
         to: "Bis"
-        total_net_amount_cents: "Netto-Gesamtpreis (Cent)"
-        total_net_amount: "Netto-Gesamtpreis"
+        total_gross_amount_cents: "Gesamt (brutto) (Cent)"
+        total_gross_amount: "Gesamt (brutto)"
+        total_net_amount_cents: "Gesamt (netto) (Cent)"
+        total_net_amount: "Gesamt (netto)"
       bgit/invoicing/line_item:
         <<: *defaults
         billed_items_count: "Abgerechnete Objekte"
