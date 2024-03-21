@@ -19,6 +19,10 @@ module Bgit::Invoicing
 
     validates :name, presence: true
 
+    def billables
+      billed_items.map(&:billable)
+    end
+
     def billed_items_count
       billed_items.count
     end
