@@ -7,6 +7,10 @@ module Bgit::Invoicing
       it { expect(subject).to have_many(:line_items) }
     end
 
+    describe "scopes" do
+      it { expect(described_class).to respond_to(:for_year) }
+    end
+
     describe "validations" do
       subject { create(:bgit_invoicing_invoice) }
 

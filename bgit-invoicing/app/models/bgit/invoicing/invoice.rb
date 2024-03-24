@@ -26,6 +26,12 @@ module Bgit::Invoicing
     validates :shipping_date, uniqueness: {scope: [:owner_id, :owner_type]}, if: -> { Cmor::Core::Settings.get(:bgit_invoicing, :enforce_unique_invoices_per_owner_and_month) }
 
     scope :owned_by_any, ->(*owners) { where(owner: owners.flatten) }
+    scope :for_year, ->(year) do
+      where(
+        "extract(year from shipping_date) = :year OR extract(year from shipping_end_date) = :year",
+        year: year
+      )
+    end
 
     def owned_by_any(*owners)
       owners.flatten.include?(owner)
