@@ -15,7 +15,7 @@ module Bgit
           :quantity,
           :tax_rate_percentage,
           :unit_name,
-          :unit_net_amount_cents,
+          :unit_net_amount,
           billed_items_attributes: [
             :id,
             :_destroy,
