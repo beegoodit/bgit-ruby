@@ -1,0 +1,136 @@
+- if form.object.voucher_id.nil?
+  = form.input :voucher_id, collection: Bgit::Accounting::Vouchers::Voucher.all.collect { |c| [c.human, c.id] }
+
+  :javascript
+    // on change of voucher_id select, reload the page with the selected voucher_id
+    $(document).on("change", "select#vouchers_assign_voucher_service_voucher_id", function() {
+      var voucher_id = $(this).val();
+      var url = new URL(window.location.href);
+      url.searchParams.set("vouchers_assign_voucher_service[voucher_id]", voucher_id);
+      window.location.href = url.href;
+    });
+
+- else
+  = form.input :voucher_id, as: :hidden
+
+.row
+  .col-12.col-md-6
+    = form.input :type, as: :select, collection: Bgit::Accounting::Vouchers::Voucher::ASSIGNABLE_VOUCHER_TYPES.collect { |c| [c.constantize.model_name.human, c] }, input_html: { class: 'form-control' }
+  .col-12.col-md-6
+    = form.input :voucher_number
+
+.row
+  .col-12.col-md-6
+    = form.input :voucher_date, as: :date_picker
+  .col-12.col-md-6
+    = form.input :due_date, as: :date_picker
+= form.input :description, as: :text
+
+%hr
+
+#amounts.mb-4
+  = form.fields_for "amounts[]", Bgit::Accounting::Vouchers::Amount.new do |af|
+    = render "amount_fields", form: af
+    .links
+      .link_to_add_association.btn.btn-primary
+        %i.fas.fa-plus
+        %span.btn-text= "Betrag aufteilen"
+
+:javascript
+  /*
+    function AccountIdSelectHandler(selector) {
+      this.selector = selector;
+
+      this.init = function() {
+        console.log("init", this.selector);
+        this.selector = $(this.selector);
+        this.registerSelect2();
+      }
+
+      this.registerSelect2 = function() {
+        console.log("register", this.selector);
+        this.selector.select2(
+          {
+            allowClear: true,
+            ajax: {
+              url: '/de/backend/accounting/accounts/autocomplete.json',
+              dataType: 'json',
+              delay: 250,
+              data: function (params) {
+                return {
+                  term: params.term,
+                  q: params.term,
+                  type: "query"
+                };
+              },
+            }
+          }
+        );
+      }
+    }
+
+    window.accountIdSelectHandler = AccountIdSelectHandler;
+
+  $(document).ready(function() {
+    // create object
+    function NestedFieldsHandler(id) {
+      this.id = id;
+
+      this.cloneFields = function() {
+        var clonedFields =  this.e.find(".nested-fields").first().clone();
+        // remove values from cloned fields
+        clonedFields.find("input").val("");
+        // unselect values from cloned fields
+        clonedFields.find("select").val(null).trigger('change');
+        // uncheck values from cloned fields
+        clonedFields.find("input[type=checkbox]").prop('checked', false);
+
+        return clonedFields;
+      }
+
+      this.init = function() {
+        console.log("init", this.e);
+        this.e = $(this.id);
+        this.clonedFields = this.cloneFields();
+        this.registerClickHandlers();
+      }
+      
+      this.addFields = function() {
+        console.log("add", this.e);
+        // find .links in e
+        var links = this.e.find(".links");
+        // prepend cloned fields to links
+        links.prepend(this.clonedFields.clone());
+      }
+      
+      this.removeFields = function() {
+        console.log("remove", this.e);
+        // find .nested-fields in es ancestors
+        var parent = $(event.target).closest(".nested-fields");
+        // remove parent
+        parent.remove();
+      }
+
+      this.registerClickHandlers = function() {
+        console.log(this.e);
+        // find the link to add association
+        var link_to_add_association = this.e.find(".link_to_add_association");
+        console.log(link_to_add_association);
+        // register click handler
+        link_to_add_association.on("click", (e) => {
+          this.addFields();
+        })
+
+        // register click handler for remove. make it work for all remove links, also those add in the future
+        $(document).on("click", ".link_to_remove_association", (e) => {
+          this.removeFields();
+        })
+      }
+    }
+
+    var nestedFieldsHandler = new NestedFieldsHandler("#amounts");
+    nestedFieldsHandler.init();
+
+    // new window.accountIdSelectHandler(".account_id").init()
+  });
+  */

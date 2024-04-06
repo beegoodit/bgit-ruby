@@ -74,12 +74,10 @@ rails generate cmor:core:install
 # Setup cmor-core-backend
 rails generate cmor:core:backend:install
 
-# Setup keepr
-rails generate keepr:migration
-
 # Setup bgit-accounting
 rails generate bgit:accounting:install
 rails bgit_accounting:install:migrations
+echo "Bgit::Accounting::Engine.load_seed" >> db/seeds.rb
 
 # Setup database
 rails db:migrate db:seed db:test:prepare

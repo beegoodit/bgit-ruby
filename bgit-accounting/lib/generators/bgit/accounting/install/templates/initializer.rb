@@ -8,26 +8,30 @@ Bgit::Accounting.configure do |config|
   # Set the resources, that will be shown in the backend menu.
   #
   # Default: config.resources_controllers = -> {[
-  #            Bgit::Accounting::AccountsController,
-  #            Bgit::Accounting::CostCentersController,
-  #            Bgit::Accounting::GroupsController,
-  #            Bgit::Accounting::JournalsController,
-  #            Bgit::Accounting::PostingsController,
-  #            Bgit::Accounting::TaxesController,
-  #            Bgit::Accounting::BankAccountsController,
-  #            Bgit::Accounting::TransfersController
+  #            Bgit::Accounting::Accounting::ChartsController,
+  #            Bgit::Accounting::Accounting::AccountableChartsController,
+  #            Bgit::Accounting::Accounting::AccountCategoriesController,
+  #            Bgit::Accounting::Accounting::AccountsController,
+  #            Bgit::Accounting::Banking::AccountsController,
+  #            Bgit::Accounting::Banking::TransfersController,
+  #            Bgit::Accounting::Banking::TransferVouchersController,
+  #            Bgit::Accounting::Vouchers::AmountsController,
+  #            Bgit::Accounting::Vouchers::UncheckedsController,
+  #            Bgit::Accounting::Vouchers::VouchersController
   #          ]}
   #
   config.resources_controllers = -> {
     [
-      Bgit::Accounting::AccountsController,
-      Bgit::Accounting::CostCentersController,
-      Bgit::Accounting::GroupsController,
-      Bgit::Accounting::JournalsController,
-      Bgit::Accounting::PostingsController,
-      Bgit::Accounting::TaxesController,
-      Bgit::Accounting::BankAccountsController,
-      Bgit::Accounting::TransfersController
+      Bgit::Accounting::Accounting::ChartsController,
+      Bgit::Accounting::Accounting::AccountableChartsController,
+      Bgit::Accounting::Accounting::AccountCategoriesController,
+      Bgit::Accounting::Accounting::AccountsController,
+      Bgit::Accounting::Banking::AccountsController,
+      Bgit::Accounting::Banking::TransfersController,
+      Bgit::Accounting::Banking::TransferVouchersController,
+      Bgit::Accounting::Vouchers::AmountsController,
+      Bgit::Accounting::Vouchers::UncheckedsController,
+      Bgit::Accounting::Vouchers::VouchersController
     ]
   }
 
@@ -43,12 +47,20 @@ Bgit::Accounting.configure do |config|
   # Set the services, that will be shown in the backend menu.
   #
   # Default: config.service_controllers = -> {[
-  #            Bgit::Accounting::ImportN26StatementsServicesController
+  #            Bgit::Accounting::Accounting::ChartReportServicesController,
+  #            Bgit::Accounting::Banking::AssignTransferServicesController,
+  #            Bgit::Accounting::Banking::ImportN26StatementsServicesController,
+  #            Bgit::Accounting::Vouchers::AssignVoucherServicesController,
+  #            Bgit::Accounting::Vouchers::BulkUploadServicesController
   #          ]}
   #
   config.service_controllers = -> {
     [
-      Bgit::Accounting::ImportN26StatementsServicesController
+      Bgit::Accounting::Accounting::ChartReportServicesController,
+      Bgit::Accounting::Banking::AssignTransferServicesController,
+      Bgit::Accounting::Banking::ImportN26StatementsServicesController,
+      Bgit::Accounting::Vouchers::AssignVoucherServicesController,
+      Bgit::Accounting::Vouchers::BulkUploadServicesController
     ]
   }
 

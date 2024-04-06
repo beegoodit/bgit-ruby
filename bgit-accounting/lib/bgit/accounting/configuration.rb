@@ -26,18 +26,24 @@ module Bgit
 
       define_option :resources_controllers, default: -> {
                                                        [
-                                                         Bgit::Accounting::AccountsController,
-                                                         Bgit::Accounting::CostCentersController,
-                                                         Bgit::Accounting::GroupsController,
-                                                         Bgit::Accounting::JournalsController,
-                                                         Bgit::Accounting::PostingsController,
-                                                         Bgit::Accounting::TaxesController,
-                                                         Bgit::Accounting::BankAccountsController,
-                                                         Bgit::Accounting::TransfersController
+                                                         Bgit::Accounting::Accounting::AccountsController,
+                                                         Bgit::Accounting::Banking::AccountsController,
+                                                         Bgit::Accounting::Banking::TransfersController,
+                                                         Bgit::Accounting::Banking::TransferVouchersController,
+                                                         Bgit::Accounting::Vouchers::CategoriesController,
+                                                         Bgit::Accounting::Vouchers::ExpenditureCategoriesController,
+                                                         Bgit::Accounting::Vouchers::VouchersController,
+                                                         Bgit::Accounting::Vouchers::PurchaseInvoicesController
                                                        ]
                                                      }
       define_option :resource_controllers, default: -> { [] }
-      define_option :service_controllers, default: -> { [Bgit::Accounting::ImportN26StatementsServicesController] }
+      define_option :service_controllers, default: -> {
+                                                     [
+                                                       Bgit::Accounting::Banking::AssignTransferServicesController,
+                                                       Bgit::Accounting::Banking::ImportN26StatementsServicesController,
+                                                       Bgit::Accounting::Vouchers::AssignVoucherServicesController
+                                                     ]
+                                                   }
       define_option :sidebar_controllers, default: -> { [] }
       define_option :accountable_classes, default: -> { {} }
       define_option :accountable_factory_name, default: :user

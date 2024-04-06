@@ -1,0 +1,2 @@
+= form.input :accountable, as: :polymorphic_association, classes: instance_exec(&Bgit::Accounting::Configuration.accountable_classes)
+= form.input :year, collection: (20.years.ago.year..Time.now.year).to_a, include_blank: true

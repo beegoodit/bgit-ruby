@@ -1,0 +1,47 @@
+.row
+  .col-12
+    %h1
+      = "#{@result.year} (#{@result.chart.identifier})"
+
+.row
+  .col-12.col-md-6
+    .card
+      .card-header.d-flex.justify-content-between
+        %span= t(".expense")
+        %span= @result.chart.account_categories.expense.map { |ac| ac.accounts.map { |a| a.amounts.map(&:gross_amount).sum }.sum }.sum
+      .card-body
+        - @result.chart.account_categories.expense.each do |account_category|
+          %h3= account_category.label
+          %table.w-100.mb-4
+            %tbody
+              - account_category.accounts.each do |account|
+                %tr
+                  %td
+                    = link_to(account) do
+                      = account.human
+                  %td.d-flex.justify-content-end= account.amounts.transferred_in_year(@result.year).map(&:gross_amount).sum
+            %tfoot
+              %tr.border-top
+                %th= "Total"
+                %th.d-flex.justify-content-end= account_category.accounts.map(&:amounts).flatten.map(&:gross_amount).sum
+
+  .col-12.col-md-6
+    .card
+      .card-header.d-flex.justify-content-between
+        %span= t(".income")
+        %span= @result.chart.account_categories.income.map { |ac| ac.accounts.map { |a| a.amounts.map(&:gross_amount).sum }.sum }.sum
+      .card-body
+        - @result.chart.account_categories.income.each do |account_category|
+          %h3= account_category.label
+          %table.w-100.mb-4
+            %tbody
+              - account_category.accounts.each do |account|
+                %tr
+                  %td
+                    = link_to(account) do
+                      = account.human
+                  %td.d-flex.justify-content-end= account.amounts.map(&:gross_amount).sum
+            %tfoot
+              %tr.border-top
+                %th= "Total"
+                %th.d-flex.justify-content-end= account_category.accounts.map(&:amounts).flatten.sum

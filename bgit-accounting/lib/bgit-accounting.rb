@@ -1,8 +1,10 @@
+require "active_storage_validations"
 require "csv"
 require "cocoon"
 require "httparty"
-require "keepr"
+require "image_processing"
 require "money-rails"
+require "poppler"
 require "simple_form-polymorphic_associations"
 
 require "bgit/accounting/version"

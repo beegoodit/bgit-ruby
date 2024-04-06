@@ -12,14 +12,15 @@ RSpec.describe "ActiveRecord::Base models", type: :model do
   # rubocop:enable Lint/ConstantDefinitionInBlock
 
   {
-    Bgit::Accounting::BankAccount => {},
-    Bgit::Accounting::Transfer => {},
-    Keepr::Account => {factory_name: :account},
-    Keepr::CostCenter => {factory_name: :cost_center},
-    Keepr::Group => {factory_name: :group},
-    Keepr::Journal => {factory_name: :journal},
-    Keepr::Posting => {factory_name: :posting},
-    Keepr::Tax => {factory_name: :tax}
+    Bgit::Accounting::Accounting::Account => {},
+    Bgit::Accounting::Accounting::AccountCategory => {},
+    Bgit::Accounting::Accounting::Chart => {},
+    Bgit::Accounting::Banking::Account => {},
+    Bgit::Accounting::Banking::Transfer => {},
+    Bgit::Accounting::Banking::TransferVoucher => {},
+    Bgit::Accounting::Vouchers::Amount => {},
+    Bgit::Accounting::Vouchers::PurchaseInvoice => {},
+    Bgit::Accounting::Vouchers::Unchecked => {}
 
   }.each do |model, options|
     options.reverse_merge!(specs_to_run: DEFAULT_SPECS_TO_RUN, specs_to_skip: [], factory_name: model.to_s.tableize.singularize.underscore.tr("/", "_"))

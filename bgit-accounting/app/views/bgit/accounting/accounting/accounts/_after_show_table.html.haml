@@ -1,0 +1,15 @@
+.row
+  .col-12
+    %h3= "#{Bgit::Accounting::Vouchers::Amount.model_name.human(count: :other)} (#{@resource.amounts.count})"
+
+- years = @resource.transfers.pluck(:value_at).collect { |vd| vd.year }.uniq
+
+- years.each do |year|
+  .row
+    .col-12
+      %h4= year
+  
+  .row
+    .col-12
+      = collection_table(collection: @resource.amounts.transferred_in_year(year), resource_class: Bgit::Accounting::Vouchers::Amount) do |table|
+        = render partial: "bgit/accounting/vouchers/amounts/index_table", locals: { table: table }

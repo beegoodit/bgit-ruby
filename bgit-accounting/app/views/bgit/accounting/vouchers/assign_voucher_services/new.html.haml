@@ -1,0 +1,19 @@
+.row
+  .col-12
+    %h1= t('administrador.service_controller.base.new.title', **inflections)
+
+.row
+  .col-8
+    = render 'new_before_form', service: @service
+
+  .col-4
+    = simple_form_for(@service, url: create_service_path) do |form|
+      = render partial: 'form_errors', locals: { resource: form.object }
+      = render 'form', form: form
+      = render 'form_buttons', form: form
+
+= render 'new_after_form', service: @service
+
+.row
+  .new-actions.col-12.d-flex
+    = render partial: 'new_actions'

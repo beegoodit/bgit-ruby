@@ -1,0 +1,21 @@
+= table.field :vouchers_amount_sum do |resource|
+  - capture_haml do
+    = resource.vouchers.map(&:amount).sum
+= table.field :vouchers do |resource|
+  - capture_haml do
+    - resource.vouchers.each do |v|
+      = link_to(v.id, v)
+= table.id sort: true
+= table.column :sender_bank_account, sort: true, label_method: :human
+= table.column :recipient_bank_account, sort: true, label_method: :human
+/=# table.timestamp :transaction_at, sort: true
+= table.timestamp :value_at, sort: true
+= table.money :amount, sort: { column_name: 'amount_cents' }
+= table.column :purpose, sort: true
+= table.timestamps sort: true
+= table.field :transfer_actions do |resource|
+  - capture_haml do
+    = link_to(new_polymorphic_path([Bgit::Accounting::Banking::AssignTransferService], banking_assign_transfer_service: { transfer_id: resource.id }), class: 'btn btn-primary btn-responsive btn-xs') do
+      %i.fas.fa-plus
+      %span.btn-text= t('rao.service_controller.base.new.title', service_name: Bgit::Accounting::Banking::AssignTransferService.model_name.human)
+

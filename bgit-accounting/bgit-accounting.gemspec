@@ -22,12 +22,14 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency "rails", ">= 7.0"
+  spec.add_dependency "active_storage_validations"
   spec.add_dependency "administrador", ">= 0.0.30.pre"
   spec.add_dependency "cmor-core-backend", ">= 0.0.60.pre"
   spec.add_dependency "cocoon"
   spec.add_dependency "httparty"
-  spec.add_dependency "keepr"
+  spec.add_dependency "image_processing"
   spec.add_dependency "money-rails"
+  spec.add_dependency "poppler"
   spec.add_dependency "simple_form-polymorphic_associations"
   spec.add_development_dependency "bootsnap"
   spec.add_development_dependency "capybara"
@@ -37,6 +39,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "guard-standardrb"
   spec.add_development_dependency "i18n-debug"
   spec.add_development_dependency "json_seeds-rails"
+  spec.add_development_dependency "pry-rails"
   spec.add_development_dependency "puma"
   spec.add_development_dependency "rails-dummy"
   spec.add_development_dependency "rails-erd"

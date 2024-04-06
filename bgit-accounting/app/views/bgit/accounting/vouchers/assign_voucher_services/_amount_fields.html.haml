@@ -1,0 +1,89 @@
+.nested-fields{ id: "#{uuid = SecureRandom.uuid}" }
+  = form.input :net_amount, input_html: { class: 'net_amount' }
+  = form.input :tax_amount, input_html: { class: 'tax_amount' }
+  = form.input :tax_rate_percentage, collection: [0, 7, 19].collect { |p| ["#{p}%", p] }, input_html: { class: 'tax_rate_percentage form-control' }
+  = form.input :account_id, collection: Bgit::Accounting::Accounting::Account.where(accountable: @service.accountable).all.collect { |c| [c.human, c.id] }, input_html: { class: 'account_id form-control' }
+  .link_to_remove_association.btn.btn-danger
+    %i.fas.fa-minus
+    %span.btn-text= "Betrag entfernen"
+
+  %hr
+
+:javascript
+  /*
+  $(document).ready(function() {
+    new window.accountIdSelectHandler("##{uuid} .account_id").init()
+
+    function AmountCalculator(selector) {
+      this.selector = selector;
+
+      this.init = function() {
+        console.log("init", this.selector);
+        this.e = $(this.selector);
+      }
+
+      this.registerHandlers = function() {
+        console.log("register", this.selector);
+        this.e.on("change", ".net_amount", this.calculateTaxAmount);
+        this.e.on("change", ".tax_rate_percentage", this.calculateTaxAmount);
+      }
+
+      this.calculateTaxAmount = function(e) {
+        console.log(e)
+
+        // find nearest tax rate percentage input
+        var tax_rate_percentage_input = $(this).closest('.nested-fields').find('.tax_rate_percentage');
+        // get tax percentage
+        var tax_rate_percentage = tax_rate_percentage_input.val();
+
+        // find nearest tax amount input
+        var tax_amount_input = $(this).closest('.nested-fields').find('.tax_amount');
+        // calculate tax amount
+        tax_amount_input.val((parseFloat($(this).val()) * tax_rate_percentage / 100).toFixed(2));
+      }
+
+      this.calculateTaxAmount = function(e) {
+        console.log(e)
+
+        // find nearest net amount input
+        var net_amount_input = $(this).closest('.nested-fields').find('.net_amount');
+        // get net amount
+        var net_amount = net_amount_input.val();
+
+        // find nearest tax amount input
+        var tax_amount_input = $(this).closest('.nested-fields').find('.tax_amount');
+        // calculate tax amount
+        tax_amount_input.val((parseFloat(net_amount) * $(this).val() / 100).toFixed(2));
+      }
+    }
+    
+    $(document).on("change", ".net_amount", function(e) {
+      console.log(e)
+
+      // find nearest tax rate percentage input
+      var tax_rate_percentage_input = $(this).closest('.nested-fields').find('.tax_rate_percentage');
+      // get tax percentage
+      var tax_rate_percentage = tax_rate_percentage_input.val();
+
+      // find nearest tax amount input
+      var tax_amount_input = $(this).closest('.nested-fields').find('.tax_amount');
+      // calculate tax amount
+      tax_amount_input.val((parseFloat($(this).val()) * tax_rate_percentage / 100).toFixed(2));
+    });
+
+    $(document).on("change", ".tax_rate_percentage", function(e) {
+      console.log(e)
+
+      // find nearest net amount input
+      var net_amount_input = $(this).closest('.nested-fields').find('.net_amount');
+      // get net amount
+      var net_amount = net_amount_input.val();
+
+      // find nearest tax amount input
+      var tax_amount_input = $(this).closest('.nested-fields').find('.tax_amount');
+      // calculate tax amount
+      tax_amount_input.val((parseFloat(net_amount) * $(this).val() / 100).toFixed(2));
+    });
+  });
+  */
+      

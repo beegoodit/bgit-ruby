@@ -1,0 +1,21 @@
+.row
+  .col-12.col-md-6
+    = form.input :voucher_id_eq, collection: Bgit::Accounting::Vouchers::Voucher.all.collect { |v| ["#{v.human}", v.id] }, include_blank: true, input_html: { class: "form-control" }
+  .col-12.col-md-6
+    = form.input :account_id_eq, collection: Bgit::Accounting::Accounting::Account.all.collect { |a| ["#{a.accountable.human}: #{a.human}", a.id] }, include_blank: true, input_html: { class: "form-control" }
+
+:javascript
+  $(document).ready(function() {
+    $('#q_voucher_id_eq').select2();
+    $('#q_account_id_eq').select2();
+  });
+
+.row
+  .col-12.col-md-4
+    = form.input :net_amount_cents_gt
+  .col-12.col-md-4
+    = form.input :net_amount_cents_eq
+  .col-12.col-md-4
+    = form.input :net_amount_cents_lt
+
+= form.input :tax_rate_percentage_eq, collection: resource_class.pluck(:tax_rate_percentage).uniq.sort.collect { |tax_rate_percentage| ["#{tax_rate_percentage}%", tax_rate_percentage] }, include_blank: true, input_html: { class: "form-control" }

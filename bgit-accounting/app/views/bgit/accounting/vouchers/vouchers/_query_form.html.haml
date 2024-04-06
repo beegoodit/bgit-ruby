@@ -1,0 +1,1 @@
+= form.input :type_eq, collection: Bgit::Accounting::Vouchers::Voucher::VOUCHER_TYPES.collect { |c| [c.constantize.model_name.human, c] }, input_html: { class: 'form-control' }

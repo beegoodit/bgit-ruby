@@ -1,0 +1,8 @@
+= table.id sort: true
+= table.association :accountable, sort: true, label_method: :human
+= table.field :name, sort: true
+= table.field :owner, sort: true
+= table.field :iban, sort: true
+= table.timestamp :active_from, sort: true
+= table.timestamp :active_to, sort: true
+= table.timestamps sort: true

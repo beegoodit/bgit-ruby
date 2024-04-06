@@ -1,0 +1,5 @@
+= form.association :account_category, label_method: :human
+= form.input :accountable, as: :polymorphic_association, classes: instance_exec(&Bgit::Accounting::Configuration.accountable_classes)
+= form.input :account_number
+= form.input :label
+= form.input :description

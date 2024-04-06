@@ -2,14 +2,12 @@ require "rails_helper"
 
 RSpec.describe "Translations", type: :model do
   {
-    Bgit::Accounting::BankAccount => {},
-    Bgit::Accounting::Transfer => {},
-    Keepr::Account => {},
-    Keepr::CostCenter => {},
-    Keepr::Group => {},
-    Keepr::Journal => {},
-    Keepr::Posting => {},
-    Keepr::Tax => {}
+    # Bgit::Accounting::Accounting::Account => {},
+    Bgit::Accounting::Banking::Account => {},
+    Bgit::Accounting::Banking::Transfer => {},
+    Bgit::Accounting::Banking::TransferVoucher => {}
+    # Bgit::Accounting::Vouchers::Voucher => {},
+    # Bgit::Accounting::Vouchers::Amount => {}
   }.each do |model, options|
     I18n.available_locales.each do |locale|
       I18n.locale = locale

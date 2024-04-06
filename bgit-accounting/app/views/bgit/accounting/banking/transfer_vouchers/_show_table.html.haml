@@ -1,0 +1,7 @@
+= table.attachment :voucher_asset
+= table.id
+= table.association :transfer, label_method: :human, link_to: ->(resource) { url_for(resource.transfer) }
+= table.association :voucher, label_method: :human, link_to: ->(resource) { url_for(resource.voucher.becomes(resource.voucher.class.base_class)) }
+= table.timestamps
+= table.field :note
+

@@ -1,0 +1,8 @@
+= table.id
+= table.association :voucher, label_method: :human, link_to: ->(resource) { url_for(resource.voucher.becomes(resource.voucher.class.base_class)) }
+= table.association :account, label_method: :human, link_to: ->(resource) { url_for(resource.account) }
+= table.money :net_amount
+= table.money :tax_amount
+= table.money :gross_amount
+= table.field :tax_rate_percentage
+= table.timestamps

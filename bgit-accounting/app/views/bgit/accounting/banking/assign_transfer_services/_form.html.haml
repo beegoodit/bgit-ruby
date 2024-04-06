@@ -1,0 +1,45 @@
+= @service.inspect
+
+- if form.object.transfer_id.nil?
+  = form.input :transfer_id, collection: Bgit::Accounting::Banking::Transfer.all.collect { |c| [c.human, c.id] }
+
+  :javascript
+    // on change of transfer_id select, reload the page with the selected transfer_id
+    $(document).on("change", "select#transfers_assign_transfer_service_transfer_id", function() {
+      var transfer_id = $(this).val();
+      var url = new URL(window.location.href);
+      url.searchParams.set("transfers_assign_transfer_service[transfer_id]", transfer_id);
+      window.location.href = url.href;
+    });
+
+- else
+  = form.input :transfer_id, as: :hidden
+  
+  .row
+    .col-12.col-md-6
+      .card
+        .card-header
+          .card-title.d-flex.justify-content-between
+            %span.transfer-sender_bank_account-accountable= @service.transfer.sender_bank_account.human
+            %span.transfer-amount= number_to_currency(@service.transfer.amount)
+          .card-body
+            .transfer-value_at= I18n.l(@service.transfer.value_at.to_date)
+            .transfer-purpose= @service.transfer.purpose
+    .col-12.col-md-6
+      -if form.object.transfer_vouchers.any?
+        = form.simple_fields_for :transfer_vouchers, form.object.transfer_vouchers do |vf|
+          .card
+            .card-header
+              .card-title.d-flex.justify-content-between
+                %span.voucher-type= vf.object.voucher.type.constantize.model_name.human
+                %span.voucher-amount= number_to_currency(vf.object.voucher.amount)
+              .card-body
+                .voucher-asset
+                  = image_tag main_app.url_for(vf.object.voucher.asset.preview(:thumb))
+                .voucher-voucher_date= I18n.l(vf.object.voucher.voucher_date.to_date)
+                .voucher-due_date= vf.object.voucher.due_date.present? ? I18n.l(vf.object.voucher.due_date.to_date) : "-"
+                .voucher-voucher_number= vf.object.voucher.voucher_number
+                .voucher-description= vf.object.voucher.description
+                .voucher-actions
+                  .btn.btn-primary
+                    = vf.input :id, as: :boolean, value: vf.object.voucher.id, input_html: { checked: false }

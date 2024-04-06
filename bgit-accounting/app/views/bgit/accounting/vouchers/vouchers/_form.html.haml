@@ -1,0 +1,3 @@
+= form.input :accountable, as: :polymorphic_association, classes: instance_exec(&Bgit::Accounting::Configuration.accountable_classes)
+= form.input :type, collection: Bgit::Accounting::Vouchers::Voucher::VOUCHER_TYPES.collect { |type| [type.constantize.model_name.human, type] } if form.object.new_record?
+= form.input :asset

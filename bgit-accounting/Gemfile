@@ -21,13 +21,19 @@ git "https://github.com/content-management-on-rails/cmor.git", branch: "main" do
 end
 
 git "https://github.com/rails-administrador/administrador" do
-  gem "administrador" # , path: "~/projects/gems/administrador"
+  gem "administrador", path: "~/projects/gems/administrador"
 end
 
 git "https://github.com/rails-add-ons/rao" do
+  gem "rao-component", path: "~/projects/gems/rao/rao-component"
   gem "rao-resources_controller" # , path: "~/projects/gems/rao/rao-resources_controller"
 end
 
 git "https://github.com/robotex82/keepr", branch: "feature/optimize-associations-and-validations" do
   gem "keepr" # , path: "~/projects/gems/keepr"
 end
+
+git "https://github.com/robotex82/simple_form-datetimepicker" do
+  gem "simple_form-datetimepicker", path: "~/projects/gems/simple_form-datetimepicker"
+end
+

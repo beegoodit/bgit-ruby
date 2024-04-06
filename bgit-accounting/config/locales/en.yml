@@ -1,36 +1,39 @@
 en:
   activerecord:
     models:
-      bgit/accounting/bank_account:
-        one: Bank Account
-        other: Bank Accounts
-      bgit/accounting/transfer:
-        one: Transfer
-        other: Transfers
-      keepr/account:
+      bgit/accounting/accounting/account:
         one: Account
         other: Accounts
-      keepr/cost_center:
-        one: Cost Center
-        other: Cost Centers
-      keepr/group:
-        one: Group
-        other: Groups
-      keepr/journal:
-        one: Journal
-        other: Journals
-      keepr/posting:
-        one: Posting
-        other: Postings
-      keepr/tax:
-        one: Tax
-        other: Taxes
+      bgit/accounting/banking/account:
+        one: Bank Account
+        other: Bank Accounts
+      bgit/accounting/banking/transfer:
+        one: Transfer
+        other: Transfers
+      bgit/accounting/banking/transfer_voucher:
+        one: Transfer Voucher
+        other: Transfer Vouchers
+      bgit/accounting/vouchers/amount:
+        one: Amount
+        other: Amounts
+      bgit/accounting/vouchers/purchase_invoice:
+        one: Purchase Invoice
+        other: Purchase Invoices
+      bgit/accounting/vouchers/sales_invoice:
+        one: Sales Invoice
+        other: Sales Invoices
+      bgit/accounting/vouchers/unchecked:
+        one: Unchecked Voucher
+        other: Unchecked Vouchers
+      bgit/accounting/vouchers/voucher:
+        one: Voucher
+        other: Vouchers
     attributes:
       shared: &shared
         id: ID
         created_at: Created at
         updated_at: Updated at
-      bgit/accounting/bank_account:
+      bgit/accounting/banking/account:
         <<: *shared
         accountable_type: Accountable Type
         accountable_id: Accountable ID
@@ -41,7 +44,7 @@ en:
         bic: BIC
         active_from: Active from
         active_to: Active to
-      bgit/accounting/transfer:
+      bgit/accounting/banking/transfer:
         <<: *shared
         recipient_bank_account_id: Recipient Bank Account ID
         recipient_bank_account: Recipient Bank Account
@@ -52,72 +55,17 @@ en:
         amount_cents: Amount (Cents)
         amount: Amount
         purpose: Purpose
-      keepr/account:
+      bgit/accounting/banking/transfer_voucher:
         <<: *shared
-        accountable_id: Accountable ID
-        accountable_type: Accountable Type
-        accountable: Accountable
-        ancestry: Ancestry
-        keepr_group_id: Group ID
-        keepr_group: Group
-        keepr_tax_id: Tax ID
-        keepr_tax: Tax
-        kind: Kind
-        name: Name
-        number: Number
-      keepr/cost_center:
-        <<: *shared
-        name: Name
         note: Note
-        number: Number
-      keepr/group:
-        <<: *shared
-        ancestry: Ancestry
-        is_result: Is Result
-        name: Name
-        number: Number
-        target: Target
-      keepr/journal:
-        <<: *shared
-        accountable_id: Accountable ID
-        accountable_type: Accountable Type
-        accountable: Accountable
-        date: Date
-        note: Note
-        number: Number
-        permanent: Permanent
-        subject: Subject
-      keepr/posting:
-        <<: *shared
-        accountable: Accountable
-        accountable_id: Accountable ID
-        accountable_type: Accountable Type
-        amount: Amount
-        keepr_account: Account
-        keepr_account_id: Account ID
-        keepr_cost_center: Cost Center
-        keepr_cost_center_id: Cost Center ID
-        keepr_journal: Journal
-        keepr_journal_id: Journal ID
-      keepr/tax:
-        <<: *shared
-        description: Description
-        keepr_account_id: Account ID
-        keepr_account: Account
-        name: Name
-        value: Value
-    values:
-      keepr/posting:
-        side:
-          debit: Soll
-          credit: Haben
+        voucher_id: Voucher
+        voucher: Voucher
+        transfer_id: Transfer
+        transfer: Transfer
   bgit:
     accounting:
       add_association_fields:
         add: "Add {model_name}"
-      journals:
-        keepr_posting_fields:
-          remove: "Remove %{model_name}"
   classes:
     bgit/accounting/engine: Accounting
   routes:

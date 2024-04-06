@@ -1,0 +1,4 @@
+= table.id sort: true
+= table.association :transfer, sort: true, label_method: :human, link_to: ->(resource) { url_for(resource.transfer) }
+= table.association :voucher, sort: true, label_method: :human, link_to: ->(resource) { url_for(resource.voucher.becomes(resource.voucher.class.base_class)) }
+= table.timestamps sort: true

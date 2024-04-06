@@ -1,0 +1,14 @@
+= table.id sort: true
+= table.field :type, sort: true do |resource|
+  - capture_haml do
+    = resource.type.constantize.model_name.human
+= table.field :due_date, sort: true
+= table.field :voucher_date, sort: true
+= table.field :voucher_number, sort: true
+= table.money :amount, sort: true
+= table.timestamps sort: true
+= table.field :voucher_actions, label: false do |resource|
+  - capture_haml do
+    = link_to(new_polymorphic_path([Bgit::Accounting::Vouchers::AssignVoucherService], vouchers_assign_voucher_service: { voucher_id: resource.id }), class: 'btn btn-primary btn-responsive btn-xs') do
+      %i.fas.fa-plus
+      %span.btn-text= t('rao.service_controller.base.new.title', service_name: Bgit::Accounting::Vouchers::AssignVoucherService.model_name.human)
