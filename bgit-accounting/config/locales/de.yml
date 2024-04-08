@@ -1,10 +1,13 @@
 de:
   activerecord:
     models:
-      bgit/accounting/bank_account:
+      bgit/accounting/accounting/journal:
+        one: Journal
+        other: Journale
+      bgit/accounting/banking/account:
         one: Bankkonto
         other: Bankkonten
-      bgit/accounting/transfer:
+      bgit/accounting/banking/transfer:
         one: Buchung
         other: Buchungen
       keepr/account:
@@ -30,7 +33,7 @@ de:
         id: ID
         created_at: Erstellt am
         updated_at: Aktualisiert am
-      bgit/accounting/bank_account:
+      bgit/accounting/banking/account:
         <<: *shared
         accountable_type: Verantwortliche(r) Typ
         accountable_id: Verantwortliche(r) ID
@@ -41,7 +44,7 @@ de:
         bic: BIC
         active_from: Aktiv von
         active_to: Aktiv bis
-      bgit/accounting/transfer:
+      bgit/accounting/banking/transfer:
         <<: *shared
         recipient_bank_account_id: Empfänger Bankkonto ID
         recipient_bank_account: Empfänger Bankkonto
@@ -107,6 +110,24 @@ de:
         name: Name
         value: Wert
     values:
+      bgit/accounting/accounting/account:
+        kind:
+          asset: Aktiva oder Vermögenswert
+          creditor: Gläubiger
+          debtor: Schuldner
+          expense: Aufwand oder Kosten
+          forward: Termingeschäft
+          liability: Passiva oder Verbindlichkeit
+          revenue: Ertrag oder Umsatz
+      bgit/accounting/accounting/group:
+        target:
+          asset: Aktiva oder Vermögenswert
+          creditor: Gläubiger
+          debtor: Schuldner
+          expense: Aufwand oder Kosten
+          forward: Termingeschäft
+          liability: Passiva oder Verbindlichkeit
+          revenue: Ertrag oder Umsatz
       keepr/account:
         kind:
           asset: Aktiva oder Vermögenswert

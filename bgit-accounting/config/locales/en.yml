@@ -1,10 +1,13 @@
 en:
   activerecord:
     models:
-      bgit/accounting/bank_account:
+      bgit/accounting/accounting/journal:
+        one: Journal
+        other: Journals
+      bgit/accounting/banking/account:
         one: Bank Account
         other: Bank Accounts
-      bgit/accounting/transfer:
+      bgit/accounting/banking/transfer:
         one: Transfer
         other: Transfers
       keepr/account:
@@ -30,7 +33,7 @@ en:
         id: ID
         created_at: Created at
         updated_at: Updated at
-      bgit/accounting/bank_account:
+      bgit/accounting/banking/account:
         <<: *shared
         accountable_type: Accountable Type
         accountable_id: Accountable ID
@@ -41,7 +44,7 @@ en:
         bic: BIC
         active_from: Active from
         active_to: Active to
-      bgit/accounting/transfer:
+      bgit/accounting/banking/transfer:
         <<: *shared
         recipient_bank_account_id: Recipient Bank Account ID
         recipient_bank_account: Recipient Bank Account
@@ -107,6 +110,24 @@ en:
         name: Name
         value: Value
     values:
+      bgit/accounting/accounting/account:
+        kind:
+          asset: Asset
+          creditor: Creditor
+          debtor: Debtor
+          expense: Expense
+          forward: Forward
+          liability: Liability
+          revenue: Revenue
+      keepr/account:
+        kind:
+          asset: Asset
+          creditor: Creditor
+          debtor: Debtor
+          expense: Expense
+          forward: Forward
+          liability: Liability
+          revenue: Revenue
       keepr/posting:
         side:
           debit: Soll

@@ -13,6 +13,10 @@ module Bgit
         def human
           "#{keepr_account.human}: #{amount}"
         end
+
+        def human_value_name(attribute)
+          self.class.human_value_name(attribute, send(attribute))
+        end
       end
     end
   end

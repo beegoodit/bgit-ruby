@@ -36,7 +36,7 @@ module Bgit
       end
 
       def account
-        @account ||= Bgit::Accounting::BankAccount.find_by(id: account_id)
+        @account ||= Bgit::Accounting::Banking::Account.find_by(id: account_id)
       end
 
       def csv_data
@@ -79,7 +79,7 @@ module Bgit
 
       def process_credit(row)
         # find or initialize sender account
-        sender_account = @result.bank_accounts.find { |ba| ba.iban == row["Kontonummer"] } || Bgit::Accounting::BankAccount.find_or_initialize_by(iban: row["Kontonummer"]) do |ba|
+        sender_account = @result.bank_accounts.find { |ba| ba.iban == row["Kontonummer"] } || Bgit::Accounting::Banking::Account.find_or_initialize_by(iban: row["Kontonummer"]) do |ba|
           ba.owner = row["Empfänger"]
           ba.name = "Bank-Konto"
           @result.bank_accounts << ba
@@ -87,7 +87,7 @@ module Bgit
         # target account is the account
         target_account = account
         # build transfer
-        @result.credit_transfers << Bgit::Accounting::Transfer.new(
+        @result.credit_transfers << Bgit::Accounting::Banking::Transfer.new(
           sender_bank_account: sender_account,
           recipient_bank_account: target_account,
           amount: row["Betrag (EUR)"].to_f,
@@ -100,13 +100,13 @@ module Bgit
         # sender account is the account
         sender_account = account
         # find or initialize target account
-        target_account = @result.bank_accounts.find { |ba| ba.iban == row["Kontonummer"] } || Bgit::Accounting::BankAccount.find_or_initialize_by(iban: row["Kontonummer"]) do |ba|
+        target_account = @result.bank_accounts.find { |ba| ba.iban == row["Kontonummer"] } || Bgit::Accounting::Banking::Account.find_or_initialize_by(iban: row["Kontonummer"]) do |ba|
           ba.owner = row["Empfänger"]
           ba.name = "Bank-Konto"
           @result.bank_accounts << ba
         end
         # build transfer
-        @result.debit_transfers << Bgit::Accounting::Transfer.new(
+        @result.debit_transfers << Bgit::Accounting::Banking::Transfer.new(
           sender_bank_account: sender_account,
           recipient_bank_account: target_account,
           amount: row["Betrag (EUR)"].to_f,

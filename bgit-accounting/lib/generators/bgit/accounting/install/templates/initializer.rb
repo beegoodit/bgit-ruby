@@ -8,26 +8,26 @@ Bgit::Accounting.configure do |config|
   # Set the resources, that will be shown in the backend menu.
   #
   # Default: config.resources_controllers = -> {[
-  #            Bgit::Accounting::AccountsController,
-  #            Bgit::Accounting::CostCentersController,
-  #            Bgit::Accounting::GroupsController,
-  #            Bgit::Accounting::JournalsController,
-  #            Bgit::Accounting::PostingsController,
-  #            Bgit::Accounting::TaxesController,
-  #            Bgit::Accounting::BankAccountsController,
-  #            Bgit::Accounting::TransfersController
+  #            Bgit::Accounting::Accounting::AccountsController,
+  #            Bgit::Accounting::Accounting::CostCentersController,
+  #            Bgit::Accounting::Accounting::GroupsController,
+  #            Bgit::Accounting::Accounting::JournalsController,
+  #            Bgit::Accounting::Accounting::PostingsController,
+  #            Bgit::Accounting::Accounting::TaxesController,
+  #            Bgit::Accounting::Banking::AccountsController,
+  #            Bgit::Accounting::Banking::TransfersController
   #          ]}
   #
   config.resources_controllers = -> {
     [
-      Bgit::Accounting::AccountsController,
-      Bgit::Accounting::CostCentersController,
-      Bgit::Accounting::GroupsController,
-      Bgit::Accounting::JournalsController,
-      Bgit::Accounting::PostingsController,
-      Bgit::Accounting::TaxesController,
-      Bgit::Accounting::BankAccountsController,
-      Bgit::Accounting::TransfersController
+      Bgit::Accounting::Accounting::AccountsController,
+      Bgit::Accounting::Accounting::CostCentersController,
+      Bgit::Accounting::Accounting::GroupsController,
+      Bgit::Accounting::Accounting::JournalsController,
+      Bgit::Accounting::Accounting::PostingsController,
+      Bgit::Accounting::Accounting::TaxesController,
+      Bgit::Accounting::Banking::AccountsController,
+      Bgit::Accounting::Banking::TransfersController
     ]
   }
 
@@ -48,7 +48,8 @@ Bgit::Accounting.configure do |config|
   #
   config.service_controllers = -> {
     [
-      Bgit::Accounting::ImportN26StatementsServicesController
+      Bgit::Accounting::ImportN26StatementsServicesController,
+      Bgit::Accounting::SeedServicesController
     ]
   }
 

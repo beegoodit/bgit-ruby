@@ -1,0 +1,38 @@
+{
+  "groups": [
+    {
+      "number": "0",
+      "name": "Anlagevermögen",
+      "target": "asset",
+      "groups": [
+        {
+          "name": "Entgeltlich erworbene Konzessionen, gewerbliche Schutzrechte und ähnliche Rechte und Werte sowie Lizenzen an solchen Rechten und Werten",
+          "target": "asset",
+          "accounts": [
+            {
+              "number": "0100 0",
+              "name": "Entgeltlich erworbene Konzessionen, gewerbliche Schutzrechte und ähnliche Rechte und Werte sowie Lizenzen an solchen Rechten und Werten",
+              "kind": "asset"
+            },
+            {
+              "number": "0110 0",
+              "name": "Konzessionen",
+              "kind": "asset"
+            }
+          ]
+        },
+        {
+          "name": "Geschäfts- oder Firmenwert",
+          "target": "asset",
+          "accounts": [
+            {
+              "number": "0150 0",
+              "name": "Geschäfts- oder Firmenwert",
+              "kind": "asset"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

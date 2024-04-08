@@ -2,8 +2,8 @@ require "rails_helper"
 
 RSpec.describe "Translations", type: :model do
   {
-    Bgit::Accounting::BankAccount => {},
-    Bgit::Accounting::Transfer => {},
+    Bgit::Accounting::Banking::Account => {},
+    Bgit::Accounting::Banking::Transfer => {},
     Keepr::Account => {},
     Keepr::CostCenter => {},
     Keepr::Group => {},

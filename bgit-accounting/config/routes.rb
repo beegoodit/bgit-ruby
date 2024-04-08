@@ -1,14 +1,20 @@
 Bgit::Accounting::Engine.routes.draw do
-  resources :accounts
-  resources :cost_centers
-  resources :groups
-  resources :journals
-  resources :postings, only: [:index, :show]
-  resources :taxes
-  resources :bank_accounts
-  resources :transfers
+  namespace :accounting do
+    resources :accounts
+    resources :cost_centers
+    resources :journals
+    resources :groups
+    resources :postings, only: [:index, :show]
+    resources :taxes
+  end
+
+  namespace :banking do
+    resources :accounts
+    resources :transfers
+  end
 
   resources :import_n26_statements_services, only: [:new, :create]
+  resources :seed_services, only: [:new, :create]
 
   root to: "home#index"
 end

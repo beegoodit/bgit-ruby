@@ -13,6 +13,10 @@ module Bgit
         def human
           [accountable&.human, self, self.class.human_value_name(:kind, kind)].compact.join(" - ")
         end
+
+        def human_value_name(attribute)
+          self.class.human_value_name(attribute, send(attribute))
+        end
       end
     end
   end

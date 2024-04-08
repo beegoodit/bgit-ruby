@@ -1,0 +1,8 @@
+= table.id sort: true
+= table.association :parent, label_method: :human
+= table.field :number, sort: true
+= table.field :name, sort: true do |resource|
+  - resource.name.truncate(32)
+= table.field :target, sort: true do |resource|
+  - resource.human_value_name(:target)
+= table.boolean :is_result, sort: true
