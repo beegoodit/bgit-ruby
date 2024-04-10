@@ -1,0 +1,12 @@
+.nested-fields.mb-4
+  .row
+    .col-12.col-md-6
+      = f.input :role,
+        collection: Bgit::Accounting::Contacts::EmailAddress::ROLES.map { |r| [Bgit::Accounting::Contacts::EmailAddress.human_value_name(:role, r), r] },
+        input_html: { class: "form-control" }
+    .col-12.col-md-6
+      = f.input :email
+    
+    .col-12
+      = link_to_remove_association t(".remove", model_name: Bgit::Accounting::Contacts::EmailAddress.model_name.human), f, class: "btn btn-danger"
+      %hr

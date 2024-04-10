@@ -13,6 +13,16 @@ Bgit::Accounting::Engine.routes.draw do
     resources :transfers
   end
 
+  namespace :contacts do
+    resources :addresses
+    resources :companies
+    resources :contact_people
+    resources :contacts
+    resources :email_addresses
+    resources :phone_numbers
+    resources :emails
+  end
+
   resources :import_n26_statements_services, only: [:new, :create]
   resources :seed_services, only: [:new, :create]
 

@@ -14,6 +14,12 @@ Bgit::Accounting.configure do |config|
   #            Bgit::Accounting::Accounting::JournalsController,
   #            Bgit::Accounting::Accounting::PostingsController,
   #            Bgit::Accounting::Accounting::TaxesController,
+  #            Bgit::Accounting::Contacts::AddressesController,
+  #            Bgit::Accounting::Contacts::CompaniesController,
+  #            Bgit::Accounting::Contacts::ContactPeopleController,
+  #            Bgit::Accounting::Contacts::ContactsController,
+  #            Bgit::Accounting::Contacts::EmailAddressesController,
+  #            Bgit::Accounting::Contacts::PhoneNumbersController,
   #            Bgit::Accounting::Banking::AccountsController,
   #            Bgit::Accounting::Banking::TransfersController
   #          ]}
@@ -26,6 +32,12 @@ Bgit::Accounting.configure do |config|
       Bgit::Accounting::Accounting::JournalsController,
       Bgit::Accounting::Accounting::PostingsController,
       Bgit::Accounting::Accounting::TaxesController,
+      Bgit::Accounting::Contacts::AddressesController,
+      Bgit::Accounting::Contacts::CompaniesController,
+      Bgit::Accounting::Contacts::ContactPeopleController,
+      Bgit::Accounting::Contacts::ContactsController,
+      Bgit::Accounting::Contacts::EmailAddressesController,
+      Bgit::Accounting::Contacts::PhoneNumbersController,
       Bgit::Accounting::Banking::AccountsController,
       Bgit::Accounting::Banking::TransfersController
     ]
