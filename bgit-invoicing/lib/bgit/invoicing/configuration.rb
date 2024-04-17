@@ -49,6 +49,7 @@ module Bgit
           delete: "Bgit::Lexoffice::Invoice::DeleteService"
         }
       }
+      define_option :set_invoice_number_on_ready, default: false
     end
   end
 end

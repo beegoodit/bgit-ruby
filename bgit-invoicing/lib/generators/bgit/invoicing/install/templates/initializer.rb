@@ -4,12 +4,14 @@ Bgit::Invoicing.configure do |config|
   # Default: config.resources_controllers = -> {[
   #            Bgit::Invoicing::InvoicesController,
   #            Bgit::Invoicing::LineItemsController
+  #            Bgit::Invoicing::NumberRangesController
   #          ]}
   #
   config.resources_controllers = -> {
     [
       Bgit::Invoicing::InvoicesController,
-      Bgit::Invoicing::LineItemsController
+      Bgit::Invoicing::LineItemsController,
+      Bgit::Invoicing::NumberRangesController
     ]
   }
 
@@ -91,4 +93,11 @@ Bgit::Invoicing.configure do |config|
       delete: "Bgit::Lexoffice::Invoice::DeleteService"
     }
   }
+
+  # Set the invoice number on ready. Disabled by default as lexoffice will set
+  # the invoice number. Enable it to use the number generator from bgit-invoicing.
+  #
+  # Default: config.set_invoice_number_on_ready = false
+  #
+  config.set_invoice_number_on_ready = false
 end

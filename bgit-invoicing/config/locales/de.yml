@@ -67,6 +67,7 @@ de:
         billing_actions: "Abrechnungsaktionen"
         billing_state: "Abrechnungsstatus"
         from: "Von"
+        invoice_number: "Rechnungsnummer"
         line_items_count: "Posten"
         owner: "Besitzer"
         owner_id: "Besitzer"

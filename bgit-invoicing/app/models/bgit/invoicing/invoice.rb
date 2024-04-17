@@ -53,6 +53,7 @@ module Bgit::Invoicing
 
     aasm :billing, column: :billing_state do
       state :draft, initial: true
+      state :ready
       state :at_accounting
       state :open
       state :overdue
@@ -63,8 +64,12 @@ module Bgit::Invoicing
         transitions from: :at_accounting, to: :open
       end
 
+      event :mark_as_ready do
+        transitions from: :draft, to: :ready, after: :set_invoice_number!
+      end
+
       event :send_to_accounting do
-        transitions from: :draft, to: :at_accounting, after: :send_invoice_to_accounting!
+        transitions from: :ready, to: :at_accounting, after: :send_invoice_to_accounting!
       end
 
       event :pay do
@@ -82,6 +87,11 @@ module Bgit::Invoicing
       event :mark_as_overdue do
         transitions from: :open, to: :overdue
       end
+    end
+
+    def set_invoice_number!
+      return unless Bgit::Invoicing::Configuration.set_invoice_number_on_ready
+      update(invoice_number: Bgit::Invoicing::NextNumberService.call!(identifier: "invoice_number").value)
     end
 
     def send_invoice_to_accounting!

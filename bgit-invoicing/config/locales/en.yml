@@ -64,6 +64,7 @@ en:
         billing_actions: "Billing actions"
         billing_state: "Billing state"
         from: "From"
+        invoice_number: "Invoice number"
         line_items_count: "Item count"
         owner: "Owner"
         owner_id: "Owner"

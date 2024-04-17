@@ -4,6 +4,7 @@ Bgit::Invoicing::Engine.routes.draw do
     get :autocomplete, on: :collection
   end
   resources :line_items
+  resources :number_ranges
 
   root to: "home#index"
 end
