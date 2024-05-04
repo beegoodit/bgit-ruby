@@ -1,4 +1,4 @@
-class CreateBgitInvoicingNumberRanges < ActiveRecord::Migration[7.1]
+class CreateBgitInvoicingNumberRanges < ActiveRecord::Migration[7.0]
   def change
     create_table :bgit_invoicing_number_ranges do |t|
       t.string :uuid

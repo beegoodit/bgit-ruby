@@ -2,8 +2,10 @@ require "rails_helper"
 
 RSpec.describe "Translations", type: :model do
   {
+    Bgit::Invoicing::BilledItem => {},
     Bgit::Invoicing::Invoice => {},
-    Bgit::Invoicing::LineItem => {}
+    Bgit::Invoicing::LineItem => {},
+    Bgit::Invoicing::NumberRange => {}
   }.each do |model, options|
     I18n.available_locales.each do |locale|
       I18n.locale = locale

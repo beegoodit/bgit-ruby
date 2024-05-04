@@ -44,9 +44,9 @@ de:
       bgit/invoicing/invoice:
         one: "Rechnung"
         other: "Rechnungen"
-      bgit/invoicing/tier:
-        one: "Stufe"
-        other: "Stufen"
+      bgit/invoicing/number_range:
+        one: "Nummernkreis"
+        other: "Nummernkreise"
     attributes:
       defaults: &defaults
         description: "Beschreibung"
@@ -57,6 +57,7 @@ de:
         created_at: "Erstellt am"
         updated_at: "Aktualisiert am"
       bgit/invoicing/billed_item:
+        <<: *defaults
         line_item: "Abrechnungsposten"
         line_item_id: "Abrechnungsposten"
         billable: "Abgerechnetes Objekt"
@@ -68,6 +69,7 @@ de:
         billing_state: "Abrechnungsstatus"
         from: "Von"
         invoice_number: "Rechnungsnummer"
+        invoice_date: "Rechnungsdatum"
         line_items_count: "Posten"
         owner: "Besitzer"
         owner_id: "Besitzer"
@@ -96,6 +98,12 @@ de:
         unit_name: "Einheit"
         unit_net_amount_cents: "Netto-Einheitspreis (Cent)"
         unit_net_amount: "Netto-Einheitspreis"
+      bgit/invoicing/number_range:
+        <<: *defaults
+        format: "Format"
+        minimum_length: "Mindestlänge"
+        next_value: "Nächster Wert"
+        prefix: "Präfix"
   bgit:
     invoicing:
       invoices:

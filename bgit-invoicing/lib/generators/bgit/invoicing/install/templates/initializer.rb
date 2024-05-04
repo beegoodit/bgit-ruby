@@ -95,7 +95,8 @@ Bgit::Invoicing.configure do |config|
   }
 
   # Set the invoice number on ready. Disabled by default as lexoffice will set
-  # the invoice number. Enable it to use the number generator from bgit-invoicing.
+  # the invoice number. Enable it to use the number generator
+  # Bgit::Invoicing::NumberRanges::NextNumberService.
   #
   # Default: config.set_invoice_number_on_ready = false
   #

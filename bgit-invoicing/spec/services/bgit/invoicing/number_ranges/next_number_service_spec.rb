@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Bgit::Invoicing::NextNumberService, type: :service do
+RSpec.describe Bgit::Invoicing::NumberRanges::NextNumberService, type: :service do
   include ActiveSupport::Testing::TimeHelpers
 
   describe "basic usage" do

@@ -18,6 +18,28 @@ module Bgit::Invoicing
       it { expect(subject).to validate_presence_of(:shipping_date) }
     end
 
+    describe "total_net_amount" do
+      let(:invoice) { create(:bgit_invoicing_invoice) }
+      let(:line_items) { create_list(:bgit_invoicing_line_item, 3, invoice: invoice) }
+
+      before(:each) do
+        line_items
+      end
+
+      it { expect(invoice.total_net_amount).to eq(invoice.line_items.sum(&:net_amount)) }
+    end
+
+    describe "total_gross_amount" do
+      let(:invoice) { create(:bgit_invoicing_invoice) }
+      let(:line_items) { create_list(:bgit_invoicing_line_item, 3, invoice: invoice) }
+
+      before(:each) do
+        line_items
+      end
+
+      it { expect(invoice.total_gross_amount).to eq(invoice.line_items.sum(&:gross_amount)) }
+    end
+
     describe "state machine" do
       describe "transitions" do
         describe "from draft" do

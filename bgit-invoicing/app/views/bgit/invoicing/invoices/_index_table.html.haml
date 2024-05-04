@@ -1,6 +1,9 @@
+= table.batch_actions actions: { destroy: url_for([:destroy_many, resource_class]) }
 = table.id sort: true
 = table.association :owner, label_method: :human
 = table.column :uuid, sort: true
+= table.column :invoice_number, sort: true
+= table.column :invoice_date, sort: true
 = table.column :shipping_date, sort: true
 = table.column :shipping_end_date, sort: true
 = table.column :line_items_count

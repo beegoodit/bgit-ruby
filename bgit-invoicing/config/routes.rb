@@ -2,6 +2,7 @@ Bgit::Invoicing::Engine.routes.draw do
   resources :invoices do
     post "trigger_event/:machine_name/:event_name", on: :member, action: "trigger_event", as: :trigger_event
     get :autocomplete, on: :collection
+    post :destroy_many, on: :collection
   end
   resources :line_items
   resources :number_ranges
