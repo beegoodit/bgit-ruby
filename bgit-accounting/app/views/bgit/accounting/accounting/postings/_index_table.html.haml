@@ -1,0 +1,6 @@
+= table.field :id, sort: true
+= table.association :accountable, sort: true
+= table.association :keepr_account, sort: { column_name: "keepr_accounts.number" }
+= table.association :keepr_cost_center, sort: true
+= table.association :keepr_journal, sort: { column_name: "keepr_journal_id" }, label_method: :human, link_to: ->(r) { url_for(r.keepr_journal.becomes(Bgit::Accounting::Accounting::Journal)) }
+= table.field :amount, sort: true

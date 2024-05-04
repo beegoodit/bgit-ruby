@@ -1,0 +1,45 @@
+{
+  "groups": [
+    {
+      "number": "13371",
+      "name": "Hilfskonten",
+      "target": "asset",
+      "groups": [
+        {
+          "name": "Technische Hilfskonten",
+          "target": "asset",
+          "accounts": [
+            {
+              "number": "133710",
+              "name": "Nicht zugeordnete eingehende Bankbuchungen",
+              "kind": "asset"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "13372",
+      "name": "Hilfskonten",
+      "target": "liability",
+      "groups": [
+        {
+          "name": "Technische Hilfskonten",
+          "target": "liability",
+          "accounts": [
+            {
+              "number": "133721",
+              "name": "Nicht zugeordnete Eingangsrechnungen",
+              "kind": "liability"
+            },
+            {
+              "number": "133720",
+              "name": "Nicht zugeordnete ausgehende Bankbuchungen",
+              "kind": "liability"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

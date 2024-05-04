@@ -1,0 +1,6 @@
+= table.id
+= table.association :keepr_account, label_method: :human, link_to: ->(r) { url_for(r.keepr_account.becomes(Bgit::Accounting::Accounting::Account)) }
+= table.association :keepr_journal, label_method: :human, link_to: ->(r) { url_for(r.keepr_journal.becomes(Bgit::Accounting::Accounting::Journal)) }
+= table.association :keepr_cost_center, label_method: :human, link_to: ->(r) { url_for(r.keepr_cost_center.becomes(Bgit::Accounting::Accounting::CostCenter)) }
+= table.association :accountable, label_method: :human
+= table.field :amount

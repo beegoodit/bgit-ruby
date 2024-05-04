@@ -46,6 +46,9 @@ en:
         active_to: Active to
       bgit/accounting/banking/transfer:
         <<: *shared
+        digest: Digest
+        journal_id: Journal
+        journal: Journal
         recipient_bank_account_id: Recipient Bank Account ID
         recipient_bank_account: Recipient Bank Account
         sender_bank_account_id: Sender Bank Account ID
@@ -119,6 +122,24 @@ en:
           forward: Forward
           liability: Liability
           revenue: Revenue
+        type:
+          customer: Customer
+          supplier: Supplier
+      bgit/accounting/accounting/group:
+        target:
+          asset: Asset
+          creditor: Creditor
+          debtor: Debtor
+          expense: Expense
+          forward: Forward
+          liability: Liability
+          profit_and_loss: Profit and Loss
+          revenue: Revenue
+      bgit/accounting/vouchers/voucher:
+        kind:
+          unchecked: Unchecked
+          purchase_invoice: Purchase Invoice
+          sales_invoice: Sales Invoice
       keepr/account:
         kind:
           asset: Asset
@@ -136,8 +157,7 @@ en:
     accounting:
       add_association_fields:
         add: "Add {model_name}"
-      journals:
-        keepr_posting_fields:
+      remove_association_link:
           remove: "Remove %{model_name}"
   classes:
     bgit/accounting/engine: Accounting

@@ -8,5 +8,9 @@ module Bgit::Accounting
     validates :firstname, presence: true
     validates :lastname, presence: true
     validates :primary, inclusion: {in: [true, false]}
+
+    def human
+      "#{salutation} #{firstname} #{lastname}"
+    end
   end
 end

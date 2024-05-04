@@ -1,12 +1,17 @@
 = table.id sort: true
-= table.association :parent, label_method: :human
-= table.association :keepr_group, label_method: ->(r) { r.name.truncate(32) }, link_to: ->(r) { accounting_group_path(r.keepr_group) }
-= table.association :accountable, sort: true, label_method: :human
-= table.association :keepr_tax, sort: true
 = table.column :number, sort: true
 = table.column :name, sort: true do |resource|
   - resource.name.truncate(32)
-= table.column :kind, sort: true do |resource|
-  - resource.human_value_name(:kind)
+= table.association :keepr_group, label_method: ->(r) { r.name.truncate(32) }, link_to: ->(r) { accounting_group_path(r.keepr_group) }
+= table.column :balance_debit do |resource|
+  - resource.balance_debit
+= table.column :balance_credit do |resource|
+  - resource.balance_credit
 = table.column :balance
-= table.timestamps sort: true
+:ruby
+  # = table.association :parent, label_method: :human
+  # = table.association :accountable, sort: true, label_method: :human
+  # = table.association :keepr_tax, sort: true
+  # = table.column :kind, sort: true do |resource|
+  #   - resource.human_value_name(:kind)
+  # = table.timestamps sort: true

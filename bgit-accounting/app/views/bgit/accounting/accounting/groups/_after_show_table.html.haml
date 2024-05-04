@@ -1,0 +1,9 @@
+%h3= resource_class.model_name.human(count: :other)
+
+= collection_table(collection: @resource.children, resource_class: resource_class) do |table|
+  = render partial: "index_table", locals: { table: table }
+
+%h3= Bgit::Accounting::Accounting::Account.model_name.human(count: :other)
+
+= collection_table(collection: @resource.keepr_accounts, resource_class: Bgit::Accounting::Accounting::Account) do |table|
+  = render partial: "/bgit/accounting/accounting/accounts/index_table", locals: { table: table }

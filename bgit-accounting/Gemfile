@@ -21,7 +21,7 @@ git "https://github.com/content-management-on-rails/cmor.git", branch: "main" do
 end
 
 git "https://github.com/rails-administrador/administrador" do
-  gem "administrador" # , path: "~/projects/gems/administrador"
+  gem "administrador", path: "~/projects/gems/administrador"
 end
 
 git "https://github.com/rails-add-ons/rao" do

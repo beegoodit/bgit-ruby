@@ -83,6 +83,9 @@ guard :rspec, cmd: "bundle exec rspec" do
   # Generic model specs
   watch(%r{^app/models/(.+)\.rb$}) { |m| "spec/models/generic_spec.rb" }
   watch(%r{^spec/factories/(.+)\.rb$}) { |m| "spec/models/generic_spec.rb" }
+
+  # I18n model specs
+  watch(%r{^config/locales/(.+)\.yml$}) { |m| "spec/models/i18n_spec.rb" }
 end
 
 guard :standardrb, fix: true, all_on_start: false, progress: false do

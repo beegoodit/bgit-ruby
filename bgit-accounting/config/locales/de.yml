@@ -46,6 +46,9 @@ de:
         active_to: Aktiv bis
       bgit/accounting/banking/transfer:
         <<: *shared
+        digest: Hash
+        journal_id: Journal
+        journal: Journal
         recipient_bank_account_id: Empfänger Bankkonto ID
         recipient_bank_account: Empfänger Bankkonto
         sender_bank_account_id: Sender Bankkonto ID
@@ -109,16 +112,30 @@ de:
         keepr_account: Konto
         name: Name
         value: Wert
+    scopes:
+      bgit/accounting/banking/transfer:
+        unchecked: Ungeprüft
     values:
       bgit/accounting/accounting/account:
         kind:
           asset: Aktiva oder Vermögenswert
           creditor: Gläubiger
           debtor: Schuldner
-          expense: Aufwand oder Kosten
+          expense: Ausgaben (Aufwand oder Kosten)
           forward: Termingeschäft
           liability: Passiva oder Verbindlichkeit
-          revenue: Ertrag oder Umsatz
+          revenue: Einnahmen (Ertrag oder Umsatz)
+        kind_symbol:
+          asset: A
+          creditor: G
+          debtor: S
+          expense: "-"
+          forward: F
+          liability: P
+          revenue: "+"
+        type:
+          customer: Kunde
+          supplier: Lieferant
       bgit/accounting/accounting/group:
         target:
           asset: Aktiva oder Vermögenswert
@@ -127,7 +144,13 @@ de:
           expense: Aufwand oder Kosten
           forward: Termingeschäft
           liability: Passiva oder Verbindlichkeit
+          profit_and_loss: Gewinn und Verlust
           revenue: Ertrag oder Umsatz
+      bgit/accounting/vouchers/voucher:
+        kind:
+          unchecked: Ungeprüft
+          purchase_invoice: Einkaufsrechnung
+          sales_invoice: Verkaufsrechnung
       keepr/account:
         kind:
           asset: Aktiva oder Vermögenswert
@@ -137,6 +160,14 @@ de:
           forward: Termingeschäft
           liability: Passiva oder Verbindlichkeit
           revenue: Ertrag oder Umsatz
+        kind_symbol:
+          asset: A
+          creditor: G
+          debtor: S
+          expense: "-"
+          forward: F
+          liability: P
+          revenue: "+"
       keepr/posting:
         side:
           debit: Soll
@@ -145,8 +176,7 @@ de:
     accounting:
       add_association_fields:
         add: "%{model_name} hinzufügen"
-      journals:
-        keepr_posting_fields:
+      remove_association_link:
           remove: "%{model_name} entfernen"
   classes:
     bgit/accounting/engine: Accounting

@@ -1,0 +1,6 @@
+= table.id
+= table.field :uuid
+= table.association :contact, label_method: :human, link_to: ->(r) { url_for(r.contact) }
+= table.field :tax_number
+= table.field :vat_identifier
+= table.timestamps

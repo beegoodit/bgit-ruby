@@ -6,6 +6,9 @@
       .btn.btn-primary#type-person
         = Bgit::Accounting::Contacts::Person.model_name.human
 
+    = render partial: "/bgit/accounting/add_association_fields", locals: { form: form, association_name: :supplier_account, association_class: Bgit::Accounting::Accounting::Account, title: Bgit::Accounting::Accounting::Account.human_value_name(:type, :supplier) }
+    = render partial: "/bgit/accounting/add_association_fields", locals: { form: form, association_name: :customer_account, association_class: Bgit::Accounting::Accounting::Account, title: Bgit::Accounting::Accounting::Account.human_value_name(:type, :customer) }
+
 .row
   .col-12
     = form.input :name

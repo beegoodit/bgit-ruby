@@ -12,5 +12,9 @@ module Bgit::Accounting
     accepts_nested_attributes_for :contact_people, allow_destroy: true, reject_if: :all_blank
     accepts_nested_attributes_for :email_addresses, allow_destroy: true, reject_if: :all_blank
     accepts_nested_attributes_for :phone_numbers, allow_destroy: true, reject_if: :all_blank
+
+    def human
+      contact&.human
+    end
   end
 end

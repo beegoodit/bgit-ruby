@@ -2,5 +2,5 @@
   = f.association :keepr_account, label_method: :human
   = f.input :amount
   = f.input :side, collection: [Keepr::Posting::SIDE_DEBIT, Keepr::Posting::SIDE_CREDIT].collect { |k| [Keepr::Posting.human_value_name(:side, k), k]  }
-  = link_to_remove_association t(".remove", model_name: Keepr::Posting.model_name.human), f, class: "btn btn-danger"
+  = render partial: "/bgit/accounting/remove_association_link", locals: { f: f, model_name: Keepr::Posting.model_name.human }
   %hr

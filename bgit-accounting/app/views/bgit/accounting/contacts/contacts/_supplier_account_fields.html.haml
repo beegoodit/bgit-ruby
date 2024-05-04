@@ -1,0 +1,12 @@
+.nested-fields.mb-4
+  = f.object.kind ||= "creditor"
+  = f.object.name ||= "default"
+  .row
+    .col-12.col-md-4
+      = f.input :name, as: :string, input_html: { readonly: true }      
+    .col-12.col-md-4
+      = f.input :kind, as: :string, input_html: { readonly: true }
+    
+    .col-12
+      = render partial: "/bgit/accounting/remove_association_link", locals: { f: f, model_name: Bgit::Accounting::Accounting::Account.model_name.human }
+      %hr

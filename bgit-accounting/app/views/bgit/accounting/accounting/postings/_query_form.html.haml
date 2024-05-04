@@ -1,0 +1,11 @@
+.row
+  .col-12
+    = form.input :keepr_account_id_eq, collection: Keepr::Account.all, label_method: :human
+
+.row
+  .col-12.col-md-4
+    = form.input :amount_gt
+  .col-12.col-md-4
+    = form.input :amount_eq
+  .col-12.col-md-4
+    = form.input :amount_lt

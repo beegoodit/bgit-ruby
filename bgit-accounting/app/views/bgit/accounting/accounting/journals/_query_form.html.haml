@@ -1,0 +1,11 @@
+.row
+  .col-12
+    = form.input :keepr_account_id_eq, association: :keepr_postings, collection: Keepr::Account.all, label_method: :human
+
+.row
+  .col-12.col-md-4
+    = form.input :date_gt_or_eq, as: :date_picker
+  .col-12.col-md-4
+    = form.input :date_eq, as: :date_picker
+  .col-12.col-md-4
+    = form.input :date_lt_or_eq, as: :date_picker

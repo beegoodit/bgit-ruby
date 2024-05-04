@@ -1,0 +1,5 @@
+= table.id
+= table.association :company, label_method: :human, link_to: ->(r) { url_for(r.company) }
+= table.field :role
+= table.field :number
+= table.timestamps

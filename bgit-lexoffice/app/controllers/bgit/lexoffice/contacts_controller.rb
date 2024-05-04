@@ -16,7 +16,6 @@ module Bgit
         end
       end
 
-
       def permitted_params
         params.require(:contact).permit(:lexoffice_id, :contactable_id, :contactable_type)
       end

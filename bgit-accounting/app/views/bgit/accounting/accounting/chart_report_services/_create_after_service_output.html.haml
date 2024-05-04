@@ -1,0 +1,22 @@
+%h2= year_range = Date.new(@result.year.to_i, 1, 1)..Date.new(@result.year.to_i, 12, 31)
+- @result.groups.roots.group_by{ |g| g.human_value_name(:target) }.each do |target, groups|
+  %h3= target
+  - groups.each do |group|
+    .card.mb-4
+      .card-header
+        = group.name
+      .card-body
+        - group.descendants.all.each do |sub_group|
+          %h5= sub_group.human
+
+          %table.table.table-sm.table-striped.table-hover.w-100
+            %thead
+            %tbody
+              - sub_group.keepr_accounts.all.each do |account|
+                - account = account.becomes(Bgit::Accounting::Accounting::Account)
+                %tr
+                  %th
+                    = link_to(account) do
+                      = account.human
+                  %td.d-flex.justify-content-end= account.balance(year_range)
+            %tfoot

@@ -14,9 +14,12 @@
 
       .col-12.col-lg-8
         = resource_table(resource: @resource) do |t|
-          - months.each do |month|
+          - months.reverse.each do |month|
             = t.row month.strftime("%Y-%m") do |account|
-              - account.balance(month.to_date)
+              - capture_haml do
+                - change = account.balance(month.to_date.beginning_of_month..month.to_date.end_of_month)
+                %span= account.balance(month.to_date)
+                %span{ class: (change.positive? ? "text-success" : "text-danger") }= "(#{change.positive? ?  '+' : ''}#{change})"
           = t.row :balance
 
 :javascript

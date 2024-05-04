@@ -1,0 +1,36 @@
+= table.batch_actions actions: { destroy: url_for([:destroy_many, resource_class]) }
+= table.thumbnail :asset
+= table.id sort: true
+= table.association :contact, sort: true, label_method: :human, link_to: ->(r) { url_for(r.contact) }
+= table.field :kind, sort: true
+= table.field :number, sort: true
+= table.field :issue_date, sort: true
+= table.field :due_date, sort: true
+= table.association :debit_postings, label_method: :human do |resource|
+  - capture_haml do
+    .text-right
+      - resource.postings.debits.each do |posting|
+        = link_to([:edit, posting.becomes(Bgit::Accounting::Accounting::Posting)], class: 'btn btn-xs btn-link') do
+          %i.fas.fa-edit
+        = link_to(posting.becomes(Bgit::Accounting::Accounting::Posting)) do
+          %span.badge.badge-primary
+            = posting.human
+= table.money :amount, sort: { column_name: :amount_cents } do |resource|
+  - capture_haml do
+    %i.fas.fa-minus
+    = humanized_money_with_symbol(resource.amount)
+    %i.fas.fa-arrow-right
+= table.association :credit_postings, label_method: :human do |resource|
+  - capture_haml do
+    - resource.postings.credits.each do |posting|
+      = link_to(posting.becomes(Bgit::Accounting::Accounting::Posting)) do
+        %span.badge.badge-primary
+          = posting.human
+      = link_to([:edit, posting.becomes(Bgit::Accounting::Accounting::Posting)], class: 'btn btn-xs btn-link') do
+        %i.fas.fa-edit
+= table.timestamps sort: true
+= table.field :voucher_actions, label: false do |resource|
+  - capture_haml do
+    = link_to(new_polymorphic_path([Bgit::Accounting::Vouchers::AssignVoucherService], vouchers_assign_voucher_service: { voucher_id: resource.id }), class: 'btn btn-primary btn-responsive btn-xs') do
+      %i.fas.fa-plus
+      %span.btn-text= t('rao.service_controller.base.new.title', service_name: Bgit::Accounting::Vouchers::AssignVoucherService.model_name.human)

@@ -16,7 +16,20 @@ module Bgit
           params.require(:contacts_contact).permit(
             :name,
             :note,
+            customer_account_attributes: [
+              :kind,
+              :name,
+              :number,
+              :_destroy
+            ],
+            supplier_account_attributes: [
+              :kind,
+              :name,
+              :number,
+              :_destroy
+            ],
             company_attributes: [
+              :id,
               :tax_number,
               :vat_identifier,
               addresses_attributes: [
@@ -44,6 +57,13 @@ module Bgit
                 :role,
                 :number
               ]
+            ],
+            person_attributes: [
+              :id,
+              :salutation,
+              :firstname,
+              :lastname,
+              :_destroy
             ]
           )
         end

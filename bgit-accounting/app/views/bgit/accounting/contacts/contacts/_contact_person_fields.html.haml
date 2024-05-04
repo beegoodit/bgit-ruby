@@ -16,5 +16,5 @@
       = f.input :phone
     
     .col-12
-      = link_to_remove_association t(".remove", model_name: Bgit::Accounting::Contacts::ContactPerson.model_name.human), f, class: "btn btn-danger"
+      = render partial: "/bgit/accounting/remove_association_link", locals: { f: f, model_name: Bgit::Accounting::Contacts::Address.model_name.human }
       %hr

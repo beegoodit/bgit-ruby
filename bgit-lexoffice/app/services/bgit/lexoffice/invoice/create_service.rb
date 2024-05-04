@@ -102,7 +102,7 @@ module Bgit
           #   gross_amount: (line_item.price.to_f * 1.19).round(2),
           #   tax_rate_percentage: 19
           # ),
-          discount_percentage: 0,
+          discount_percentage: 0
           # line_item_amount: 100.0
         )
       end

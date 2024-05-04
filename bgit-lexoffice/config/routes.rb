@@ -21,5 +21,9 @@ Bgit::Lexoffice::Engine.routes.draw do
     resources :read_services, only: [:new, :create]
   end
 
+  namespace :voucher do
+    resources :list_services, only: [:new, :create]
+  end
+
   root to: "home#index"
 end

@@ -1,0 +1,187 @@
+.row
+  .col-12
+    %h3= Bgit::Accounting::Accounting::Account.model_name.human(count: :other)
+
+- if @resource.supplier_account.present?
+  .row
+    .col-12
+      .card.mb-4
+        .card-header.d-flex.justify-content-between
+          = @resource.supplier_account.human
+          .card-actions
+            .btn-group
+              = link_to([@resource.supplier_account], class: "btn btn-xs btn-primary") do
+                %i.fas.fa-eye
+                = t(".show")
+              = link_to([:edit, @resource.supplier_account], class: "btn btn-xs btn-secondary") do
+                %i.fas.fa-edit
+                = t(".edit")
+              = link_to([@resource.supplier_account], class: "btn btn-xs btn-danger", method: :destroy, data: { confirm: t(".confirm") }) do
+                %i.fas.fa-fire
+                = t(".destroy")
+        .card-body
+          = resource_table(resource: @resource.supplier_account, table_html: "table mb-0") do |table|
+            = render partial: "/bgit/accounting/accounting/accounts/show_table", locals: { table: table, resource: @resource.supplier_account }
+
+
+- if @resource.customer_account.present?
+  .row
+    .col-12
+      .card.mb-4
+        .card-header.d-flex.justify-content-between
+          = @resource.customer_account.human
+          .card-actions
+            .btn-group
+              = link_to([@resource.customer_account], class: "btn btn-xs btn-primary") do
+                %i.fas.fa-eye
+                = t(".show")
+              = link_to([:edit, @resource.customer_account], class: "btn btn-xs btn-secondary") do
+                %i.fas.fa-edit
+                = t(".edit")
+              = link_to([@resource.customer_account], class: "btn btn-xs btn-danger", method: :destroy, data: { confirm: t(".confirm") }) do
+                %i.fas.fa-fire
+                = t(".destroy")
+        .card-body
+          = resource_table(resource: @resource.customer_account, table_html: "table mb-0") do |table|
+            = render partial: "/bgit/accounting/accounting/accounts/show_table", locals: { table: table, resource: @resource.customer_account }
+
+- if @resource.company.present?
+  .row
+    .col-12
+      %h3= Bgit::Accounting::Contacts::Company.model_name.human(count: :other)
+  .row
+    .col-12
+      .card.mb-4
+        .card-header.d-flex.justify-content-between
+          = @resource.company.human
+          .card-actions
+            .btn-group
+              = link_to([@resource.company], class: "btn btn-xs btn-primary") do
+                %i.fas.fa-eye
+                = t(".show")
+              = link_to([:edit, @resource.company], class: "btn btn-xs btn-secondary") do
+                %i.fas.fa-edit
+                = t(".edit")
+              = link_to([@resource.company], class: "btn btn-xs btn-danger", method: :destroy, data: { confirm: t(".confirm") }) do
+                %i.fas.fa-fire
+                = t(".destroy")
+        .card-body
+          = resource_table(resource: @resource.company, table_html: "table mb-0") do |table|
+            = render partial: "/bgit/accounting/contacts/company/show_table", locals: { table: table, resource: @resource.company }
+
+  .row
+    .col-12
+      %h3= "#{Bgit::Accounting::Contacts::Address.model_name.human(count: :other)} (#{@resource.company.addresses.count})"
+    .col-12
+      - @resource.company.addresses.each do |address|
+        .card.mb-4
+          .card-header.d-flex.justify-content-between
+            = address.human_value_name(:role)
+            .card-actions
+              .btn-group
+                = link_to([address], class: "btn btn-xs btn-primary") do
+                  %i.fas.fa-eye
+                  = t(".show")
+                = link_to([:edit, address], class: "btn btn-xs btn-secondary") do
+                  %i.fas.fa-edit
+                  = t(".edit")
+                = link_to([address], class: "btn btn-xs btn-danger", method: :destroy, data: { confirm: t(".confirm") }) do
+                  %i.fas.fa-fire
+                  = t(".destroy")
+          .card-body
+            = resource_table(resource: address, table_html: "table mb-0") do |table|
+              = render partial: "/bgit/accounting/contacts/addresses/show_table", locals: { table: table, resource: address }
+  
+  .row
+    .col-12
+      %h3= "#{Bgit::Accounting::Contacts::ContactPerson.model_name.human(count: :other)} (#{@resource.company.contact_people.count})"
+    .col-12
+      - @resource.company.contact_people.each do |contact_person|
+        .card.mb-4
+          .card-header.d-flex.justify-content-between
+            = contact_person.human
+            .card-actions
+              .btn-group
+                = link_to([contact_person], class: "btn btn-xs btn-primary") do
+                  %i.fas.fa-eye
+                  = t(".show")
+                = link_to([:edit, contact_person], class: "btn btn-xs btn-secondary") do
+                  %i.fas.fa-edit
+                  = t(".edit")
+                = link_to([contact_person], class: "btn btn-xs btn-danger", method: :destroy, data: { confirm: t(".confirm") }) do
+                  %i.fas.fa-fire
+                  = t(".destroy")
+          .card-body
+            = resource_table(resource: contact_person, table_html: "table mb-0") do |table|
+              = render partial: "/bgit/accounting/contacts/contact_people/show_table", locals: { table: table, resource: contact_person }
+
+  .row
+    .col-12
+      %h3= "#{Bgit::Accounting::Contacts::EmailAddress.model_name.human(count: :other)} (#{@resource.company.email_addresses.count})"
+    .col-12
+      - @resource.company.email_addresses.each do |email_address|
+        .card.mb-4
+          .card-header.d-flex.justify-content-between
+            = email_address.human
+            .card-actions
+              .btn-group
+                = link_to([email_address], class: "btn btn-xs btn-primary") do
+                  %i.fas.fa-eye
+                  = t(".show")
+                = link_to([:edit, email_address], class: "btn btn-xs btn-secondary") do
+                  %i.fas.fa-edit
+                  = t(".edit")
+                = link_to([email_address], class: "btn btn-xs btn-danger", method: :destroy, data: { confirm: t(".confirm") }) do
+                  %i.fas.fa-fire
+                  = t(".destroy")
+          .card-body
+            = resource_table(resource: email_address, table_html: "table mb-0") do |table|
+              = render partial: "/bgit/accounting/contacts/email_addresses/show_table", locals: { table: table, resource: email_address }
+
+  .row
+    .col-12
+      %h3= "#{Bgit::Accounting::Contacts::PhoneNumber.model_name.human(count: :other)} (#{@resource.company.phone_numbers.count})"
+    .col-12
+      - @resource.company.phone_numbers.each do |phone_number|
+        .card.mb-4
+          .card-header.d-flex.justify-content-between
+            = phone_number.human
+            .card-actions
+              .btn-group
+                = link_to([phone_number], class: "btn btn-xs btn-primary") do
+                  %i.fas.fa-eye
+                  = t(".show")
+                = link_to([:edit, phone_number], class: "btn btn-xs btn-secondary") do
+                  %i.fas.fa-edit
+                  = t(".edit")
+                = link_to([phone_number], class: "btn btn-xs btn-danger", method: :destroy, data: { confirm: t(".confirm") }) do
+                  %i.fas.fa-fire
+                  = t(".destroy")
+          .card-body
+            = resource_table(resource: phone_number, table_html: "table mb-0") do |table|
+              = render partial: "/bgit/accounting/contacts/phone_numbers/show_table", locals: { table: table, resource: phone_number }
+
+
+- if @resource.person.present?
+  .row
+    .col-12
+      %h3= Bgit::Accounting::Contacts::Person.model_name.human(count: :other)
+  .row
+    .col-12
+      .card.mb-4
+        .card-header.d-flex.justify-content-between
+          = @resource.person.human
+          .card-actions
+            .btn-group
+              = link_to([@resource.person], class: "btn btn-xs btn-primary") do
+                %i.fas.fa-eye
+                = t(".show")
+              = link_to([:edit, @resource.person], class: "btn btn-xs btn-secondary") do
+                %i.fas.fa-edit
+                = t(".edit")
+              = link_to([@resource.person], class: "btn btn-xs btn-danger", method: :destroy, data: { confirm: t(".confirm") }) do
+                %i.fas.fa-fire
+                = t(".destroy")
+        .card-body
+          = resource_table(resource: @resource.person, table_html: "table mb-0") do |table|
+            = render partial: "/bgit/accounting/contacts/people/show_table", locals: { table: table, resource: @resource.person }

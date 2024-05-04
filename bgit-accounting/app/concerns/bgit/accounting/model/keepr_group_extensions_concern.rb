@@ -11,7 +11,7 @@ module Bgit
         end
 
         def human
-          to_s
+          [number, name].compact.join(" - ")
         end
 
         def human_value_name(attribute)

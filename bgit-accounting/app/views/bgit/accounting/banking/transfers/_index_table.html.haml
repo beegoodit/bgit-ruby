@@ -1,8 +1,37 @@
 = table.id sort: true
-= table.column :sender_bank_account, sort: true, label_method: :human
-= table.column :recipient_bank_account, sort: true, label_method: :human
+= table.association :sender_bank_account, sort: true, label_method: ->(account) { account.accountable&.human || account.human }
+= table.association :recipient_bank_account, sort: true, label_method: ->(account) { account.accountable&.human || account.human }
+= table.association :journal, sort: true, label_method: :human do |resource|
+  - if resource.journal.present?
+    - capture_haml do
+      = link_to(resource.journal.becomes(Bgit::Accounting::Accounting::Journal), class: 'btn btn-xs btn-link') do
+        %i.fas.fa-eye
+      = link_to([:edit, resource.journal.becomes(Bgit::Accounting::Accounting::Journal)], class: 'btn btn-xs btn-link') do
+        %i.fas.fa-edit
+= table.association :debit_postings, label_method: :human do |resource|
+  - capture_haml do
+    .text-right
+      - resource.postings.debits.each do |posting|
+        = link_to([:edit, posting.becomes(Bgit::Accounting::Accounting::Posting)], class: 'btn btn-xs btn-link') do
+          %i.fas.fa-edit
+        = link_to(posting.becomes(Bgit::Accounting::Accounting::Posting)) do
+          %span.badge.badge-primary
+            = posting.human
+= table.money :amount, sort: { column_name: :amount_cents } do |resource|
+  - capture_haml do
+    %i.fas.fa-minus
+    = humanized_money_with_symbol(resource.amount)
+    %i.fas.fa-arrow-right
+= table.association :credit_postings, label_method: :human do |resource|
+  - capture_haml do
+    - resource.postings.credits.each do |posting|
+      = link_to(posting.becomes(Bgit::Accounting::Accounting::Posting)) do
+        %span.badge.badge-primary
+          = posting.human
+      = link_to([:edit, posting.becomes(Bgit::Accounting::Accounting::Posting)], class: 'btn btn-xs btn-link') do
+        %i.fas.fa-edit
 = table.timestamp :transaction_at, sort: true
 = table.timestamp :value_at, sort: true
-= table.money :amount, sort: true
 = table.column :purpose, sort: true
+= table.field :digest, sort: true
 = table.timestamps sort: true

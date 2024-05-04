@@ -12,9 +12,14 @@ module Bgit
 
         private
 
+        def load_collection_scope
+          super.joins(:keepr_postings)
+        end
+
         def permitted_params
           params.require(:accounting_journal).permit(
-            :accountable,
+            :accountable_id,
+            :accountable_type,
             :number,
             :date,
             :subject,

@@ -1,0 +1,17 @@
+.row
+  .col-12
+    = collection_table(collection: @result.vouchers, resource_class: LexofficeClient::Voucher) do |table|
+      = table.field :id
+      = table.field :archived
+      = table.field :contact_id
+      = table.field :contact_name
+      = table.field :created_date
+      = table.field :currency
+      = table.field :due_date
+      = table.field :open_amount
+      = table.field :total_amount
+      = table.field :updated_date
+      = table.field :voucher_date
+      = table.field :voucher_number
+      = table.field :voucher_status
+      = table.field :voucher_type

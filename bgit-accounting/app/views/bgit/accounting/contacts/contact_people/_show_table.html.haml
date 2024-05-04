@@ -1,0 +1,10 @@
+= table.id
+= table.field :uuid
+= table.association :company, label_method: :human, link_to: ->(r) { url_for(r.company) }
+= table.field :salutation
+= table.field :firstname
+= table.field :lastname
+= table.email :email
+= table.field :phone
+= table.boolean :primary
+= table.timestamps

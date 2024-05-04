@@ -1,0 +1,3 @@
+= form.input :keepr_group_id_eq, collection: Bgit::Accounting::Accounting::Group.all, label_method: :human
+= form.input :name_cont
+= form.input :kind_eq, collection: Bgit::Accounting::Accounting::Account.kinds.collect { |k, v| [resource_class.human_value_name(:kind, k), v] }, input_html: { class: 'form-control' }

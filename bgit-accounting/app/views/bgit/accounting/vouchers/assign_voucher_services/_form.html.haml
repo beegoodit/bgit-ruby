@@ -1,0 +1,66 @@
+= form.input :voucher_id, as: :hidden
+
+.row
+  .col-12.col-md-6
+    = form.input :issue_date, as: :date_picker
+  .col-12.col-md-6
+    = form.input :due_date, as: :date_picker
+
+.row
+  .col-12.col-md-6
+    = form.input :kind, collection: Bgit::Accounting::Vouchers::Voucher::KINDS.map { |k| [Bgit::Accounting::Vouchers::Voucher.human_value_name(:kind, k), k] }, input_html: { class: "form-control" }
+  .col-12.col-md-6
+    = form.input :number
+
+#sales-invoice-fields.d-none
+  .row
+    .col-12
+      /=# form.input :contact_id, collection: Bgit::Accounting::Contacts::Contact.customers.all, input_html: { class: "form-control" }
+    .col-12
+      = form.input :debtor_account_id, collection: Bgit::Accounting::Accounting::Account.assets.all, label_method: :human, input_html: { class: "form-control" }
+    .col-12
+      = form.input :creditor_account_id, collection: Bgit::Accounting::Accounting::Account.assets.all, label_method: :human, input_html: { class: "form-control" }
+
+#purchase-invoice-fields.d-none
+  .row
+    .col-12
+      /=# form.input :contact_id, collection: Bgit::Accounting::Contacts::Contact.suppliers.all, input_html: { class: "form-control" }
+    .col-12
+      = form.input :creditor_account_id, collection: Bgit::Accounting::Accounting::Account.creditors.all, label_method: :human, input_html: { class: "form-control" }
+    .col-12
+      /=# form.input :debtor_account_id, collection: Bgit::Accounting::Accounting::Account.expenses.all, label_method: :human, input_html: { class: "form-control" }
+
+  #postings-fields.mb-4
+    = form.fields_for "postings[]", Bgit::Accounting::Accounting::Posting.new do |af|
+      = render "posting_fields", form: af
+      .links
+        .link_to_add_association.btn.btn-primary
+          %i.fas.fa-plus
+          %span.btn-text= "Betrag aufteilen"
+
+.row
+  .col-12
+    = form.input :note, as: :text
+
+:javascript
+  $(document).ready(function() {
+    // initialize select2 for all select fields in the form
+    
+    
+
+    // when kind is changed to purchase_invoice, show the purchase_invoice fields
+    $('#vouchers_assign_voucher_service_kind').change(function() {
+      if ($(this).val() == 'purchase_invoice') {
+        $('#purchase-invoice-fields').removeClass('d-none');
+        $('#sales-invoice-fields').addClass('d-none');
+        $('#purchase-invoice-fields select').select2();
+      } else if ($(this).val() == 'sales_invoice') {
+        $('#purchase-invoice-fields').addClass('d-none');
+        $('#sales-invoice-fields').removeClass('d-none');
+        $('#sales-invoice-fields select').select2();
+      } else {
+        $('#purchase-invoice-fields').addClass('d-none');
+        $('#sales-invoice-fields').addClass('d-none');
+      }
+    });
+  });

@@ -5,8 +5,8 @@ module Bgit
         include Bgit::Accounting::Model::ActiveConcern
 
         belongs_to :accountable, polymorphic: true, optional: true
-        has_many :incoming_transfers, class_name: "Bgit::Accounting::Banking::Transfer", foreign_key: "recipient_bank_account_id", inverse_of: :recipient_bank_account
-        has_many :outgoing_transfers, class_name: "Bgit::Accounting::Banking::Transfer", foreign_key: "sender_bank_account_id", inverse_of: :sender_bank_account
+        has_many :incoming_transfers, class_name: "Bgit::Accounting::Banking::Transfer", foreign_key: "recipient_bank_account_id", inverse_of: :recipient_bank_account, dependent: :destroy
+        has_many :outgoing_transfers, class_name: "Bgit::Accounting::Banking::Transfer", foreign_key: "sender_bank_account_id", inverse_of: :sender_bank_account, dependent: :destroy
 
         validates :name, presence: true
         validates :iban, presence: true, uniqueness: true

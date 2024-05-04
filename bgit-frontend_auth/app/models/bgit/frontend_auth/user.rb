@@ -2,21 +2,21 @@ module Bgit
   module FrontendAuth
     class User < ApplicationRecord
       include SimpleFormPolymorphicAssociations::Model::AutocompleteConcern
-
-      if Object.const_defined?("Bgit::Hosting")
-        has_many :apps, class_name: "Bgit::Hosting::App", as: :owner, inverse_of: :owner, dependent: :destroy
-        has_many :team_memberships, class_name: "Bgit::Hosting::TeamMembership", foreign_key: :member_id, inverse_of: :member, dependent: :destroy
-        has_many :teams, class_name: "Bgit::Hosting::Team", through: :team_memberships, source: :team
-      end
-
-      if Object.const_defined?("Bgit::Pricing")
-        has_many :resources, class_name: "Bgit::Pricing::Resource", as: :owner, inverse_of: :owner, dependent: :restrict_with_error
-        has_many :subscriptions, class_name: "Bgit::Pricing::Subscription", as: :owner, inverse_of: :owner, dependent: :restrict_with_error, through: :resources
-      end
-
-      if Object.const_defined?("Bgit::Invoicing")
-        has_many :invoices, class_name: "Bgit::Invoicing::Invoice", as: :owner, inverse_of: :owner, dependent: :restrict_with_error
-      end
+#
+#      if Object.const_defined?("Bgit::Hosting")
+#        has_many :apps, class_name: "Bgit::Hosting::App", as: :owner, inverse_of: :owner, dependent: :destroy
+#        has_many :team_memberships, class_name: "Bgit::Hosting::TeamMembership", foreign_key: :member_id, inverse_of: :member, dependent: :destroy
+#        has_many :teams, class_name: "Bgit::Hosting::Team", through: :team_memberships, source: :team
+#      end
+#
+#      if Object.const_defined?("Bgit::Pricing")
+#        has_many :resources, class_name: "Bgit::Pricing::Resource", as: :owner, inverse_of: :owner, dependent: :restrict_with_error
+#        has_many :subscriptions, class_name: "Bgit::Pricing::Subscription", as: :owner, inverse_of: :owner, dependent: :restrict_with_error, through: :resources
+#      end
+#
+#      if Object.const_defined?("Bgit::Invoicing")
+#        has_many :invoices, class_name: "Bgit::Invoicing::Invoice", as: :owner, inverse_of: :owner, dependent: :restrict_with_error
+#      end
 
       autocomplete scope: ->(matcher) { where("bgit_frontend_auth_users.email LIKE :term", term: "%#{matcher.downcase}%") }, id_method: :id, text_method: :human
 

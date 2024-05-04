@@ -1,0 +1,130 @@
+.container{ "x-data": "{ shippingOption: 'shippingDate', shippingOptions: [ { id: 'shippingDate', label: 'Lieferdatum' }, { id: 'serviceDate', label: 'Leistungsdatum' }, { id: 'servicePeriod', label: 'Lieferzeitraum' }, { id: 'noShippingDate', label: 'Kein Lieferdatum anzeigen' } ] }" }
+  .row
+    .col-12.d-flex.justify-content-between.mb-4
+      %h1 Rechnung erstellen
+
+      %div
+        .btn-group
+          = link_to("#", class: "btn btn-secondary") do
+            Brutto
+          = link_to("#", class: "btn btn-secondary active") do
+            %i.fas.fa-check
+            Netto
+
+  .row
+    .col-12
+      .card.mb-4
+        .card-header
+          Kundenangaben
+        .card-body
+          .row
+            .col-6
+              .form-group
+                = form.input :customer, collection: [], prompt: "Kunde suchen oder erfassen", input_html: { class: "select2 w-100" }, label: false
+                = form.input :address_supplement, placeholder: "Adresszusatz", label: false
+                = form.input :street, placeholder: "Straße", label: false
+                .row
+                  .col-4
+                    = form.input :zip, placeholder: "PLZ", label: false
+                  .col-8
+                    = form.input :city, placeholder: "Ort", label: false
+                = form.input :country, collection: [], prompt: "Land auswählen", input_html: { class: "select2 w-100" }, label: false
+            .col-6
+              .row.mb-3
+                .col-5.d-flex.flex-row.align-items-center.justify-content-end
+                  = form.label :invoice_number, class: "mb-0"
+                .col-7
+                  .input-group
+                    .input-group-prepend
+                      .input-group-text RE
+                    = form.input_field :invoice_number, class: "form-control"
+              .row.mb-3
+                .col-5.d-flex.flex-row.align-items-center.justify-content-end
+                  = form.label :customer_number, class: "mb-0"
+                .col-7
+                  = form.input_field :customer_number, class: "form-control"
+              .row.mb-3
+                .col-5.d-flex.flex-row.align-items-center.justify-content-end
+                  = form.label :invoice_date, class: "mb-0"
+                .col-7
+                  = form.input :invoice_date, wrapper: false, label: false, input_html: { class: "form-control" }, as: :date_picker
+              
+              .row.mb-3
+                .col-5.d-flex.flex-row.align-items-center.justify-content-end
+                  %select.form-control.mb-0{ "x-model": "shippingOption"}
+                    %template{"x-for" => "so in shippingOptions", key: "so.id" }
+                      %option{ ":value": "so.id" }
+                        %span{ "x-text" => "so.label" }
+                      
+                .col-7.d-flex
+                  .shippingDate.flex-grow-1{ "x-show": "shippingOption === 'shippingDate'" }
+                    = form.input :shipping_date, wrapper: false, label: false, input_html: { class: "form-control" }, as: :date_picker
+                  .serviceDate.flex-grow-1{ "x-show": "shippingOption === 'serviceDate'" }
+                    = form.input :service_date, wrapper: false, label: false, input_html: { class: "form-control" }, as: :date_picker
+                  .servicePeriod{ "x-show": "shippingOption === 'servicePeriod'" }
+                    .row.grid.gap-4.grid-cols-3
+                      %div
+                        = form.input :shipping_date, wrapper: false, label: false, input_html: { class: "form-control" }, as: :date_picker
+                      %div.d-flex.justify-content-center.align-items-center
+                        bis
+                      %div
+                        = form.input :shipping_end_date, wrapper: false, label: false, input_html: { class: "form-control" }, as: :date_picker
+                  .noShippingDate.d-flex-i.align-items-center{ "x-show": "shippingOption === 'noShippingDate'"}
+                    %span Kein Lieferdatum anzeigen
+
+  .row
+    .col-12
+      .card.mb-4
+        .card-header
+          Kopfbereich
+        .card-body
+          .row
+            .col-12
+              = form.input :voucher_title
+            .col-12
+              = form.input :introduction
+
+  .row
+    .col-12
+      .card.mb-4
+        .card-header
+          Belegpositionen
+        .card-body
+
+  .row
+    .col-12
+      .card.mb-4
+        .card-header
+          Fußbereich
+        .card-body
+          .row
+            .col-12
+              = form.input :payment_terms
+            .col-12
+              = form.input :postscript
+
+  .row
+    .col-12
+      .page-actions.d-flex.justify-content-end
+        %div.d-flex.gap-4
+          = link_to("#", class: "btn btn-secondary") do
+            Zwischenspeichern
+          = link_to("#", class: "btn btn-primary") do
+            Weiter zur Vorschau
+
+:javascript
+  $(document).ready(function() {
+    $('.select2').select2({});
+  });
+
+  document.addEventListener('alpine:init', () => {
+    Alpine.store('shipping', {
+      selected: 'Date',
+      options: [
+        { id: 'shippingDate', label: 'Lieferdatum' },
+        { id: 'serviceDate', label: 'Leistungsdatum' },
+        { id: 'servicePeriod', label: 'Leistungszeitraum' },
+        { id: 'noShippingDate', label: 'Kein Lieferdatum anzeigen' }
+      ]
+    })
+  });

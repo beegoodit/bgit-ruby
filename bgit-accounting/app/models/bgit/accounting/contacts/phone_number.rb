@@ -9,5 +9,9 @@ module Bgit::Accounting
 
     validates :number, presence: true
     validates :role, presence: true, uniqueness: {scope: :company_id}, inclusion: {in: ROLES}
+
+    def human
+      number
+    end
   end
 end

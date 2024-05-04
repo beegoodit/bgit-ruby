@@ -1,6 +1,6 @@
 :ruby
   association_name = local_assigns[:association_name]&.to_s || association_class.name.pluralize.underscore.gsub("/", "_")
-%h3= association_class.model_name.human(count: :other)
+%h3= local_assigns[:title] || association_class.model_name.human(count: :other)
 .div{ id: association_name }
   = form.simple_fields_for association_name.to_sym do |association_form|
     = render partial: "#{association_name.singularize}_fields", locals: { f: association_form }

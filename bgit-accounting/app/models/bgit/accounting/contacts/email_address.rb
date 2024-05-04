@@ -9,5 +9,9 @@ module Bgit::Accounting
 
     validates :email, presence: true
     validates :role, presence: true, uniqueness: {scope: :company_id}, inclusion: {in: ROLES}
+
+    def human
+      email
+    end
   end
 end

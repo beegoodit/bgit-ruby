@@ -1,23 +1,70 @@
+%h3= resource_class.human_attribute_name(:statement)
+
+= collection_table(collection: @resource.keepr_postings) do |t|
+  = t.column :journal_date do |resource|
+    - resource.keepr_journal.date
+  = t.column :voucher do |resource|
+    - "todo"
+  = t.column :journal_subject do |resource|
+    - resource.keepr_journal.subject
+  = t.column :counter_account do |resource|
+    - resource.keepr_journal.keepr_postings.where.not(keepr_account_id: resource.keepr_account_id).first.keepr_account
+  = t.column :debit do |resource|
+    - capture_haml do
+      - if resource.debit?
+        = humanized_money_with_symbol(resource.amount)
+  = t.column :credit do |resource|
+    - capture_haml do
+      - if resource.credit?
+        = humanized_money_with_symbol(resource.amount)
+  = t.column :tax do |resource|
+    - "todo"
+  = t.column :tax_account do |resource|
+    - "todo"
+
+
 %h3= Keepr::Journal.model_name.human(count: :other)
 
 = collection_table(collection: @resource.keepr_postings.map(&:keepr_journal)) do |t|
   = t.id
   = t.column :date
-  = t.column :debit_postings do |r|
+  = t.association :debit_postings, label_method: :human do |resource|
     - capture_haml do
-      - r.debit_postings.each do |posting|
-        %span.badge.badge-danger= posting.human
-  = t.column :arrow, title: false do
+      .text-right
+        - resource.keepr_postings.debits.each do |posting|
+          = link_to([:edit, posting.becomes(Bgit::Accounting::Accounting::Posting)], class: 'btn btn-xs btn-link') do
+            %i.fas.fa-edit
+          = link_to(posting.becomes(Bgit::Accounting::Accounting::Posting)) do
+            %span.badge.badge-primary
+              = posting.human
+  = t.money :amount do |resource|
     - capture_haml do
-      %i.fa.fa-arrow-right
-  = t.column :credit_postings do |r|
+      %i.fas.fa-minus
+      = humanized_money_with_symbol(resource.amount)
+      %i.fas.fa-arrow-right
+  = t.association :credit_postings, label_method: :human do |resource|
     - capture_haml do
-      - r.credit_postings.each do |posting|
-        %span.badge.badge-success= posting.human
+      - resource.keepr_postings.credits.each do |posting|
+        = link_to(posting.becomes(Bgit::Accounting::Accounting::Posting)) do
+          %span.badge.badge-primary
+            = posting.human
+        = link_to([:edit, posting.becomes(Bgit::Accounting::Accounting::Posting)], class: 'btn btn-xs btn-link') do
+          %i.fas.fa-edit
   = t.column :number
   = t.column :subject
-  = t.association :accountable
+  = t.association :accountable, label_method: :human
   = t.column :permanent
   = t.column :note
   = t.timestamps
-  = render partial: "administrador/resources_controller/base/index_table_actions", locals: { table: t }
+  = t.column :actions do |resource|
+    - capture_haml do
+      .btn-group
+        = link_to(resource.becomes(Bgit::Accounting::Accounting::Journal), class: 'btn btn-primary btn-xs') do
+          %i.fa.fa-eye
+          = t('.show')
+        = link_to([:edit, resource.becomes(Bgit::Accounting::Accounting::Journal)], class: 'btn btn-secondary btn-xs') do
+          %i.fa.fa-pen
+          = t('.edit')
+        = link_to(resource.becomes(Bgit::Accounting::Accounting::Journal), class: 'btn btn-danger btn-xs', method: :delete, 'data-confirm': I18n.t('administrador.controller.confirmations.destroy')) do
+          %i.fa.fa-fire
+          = t('.destroy')

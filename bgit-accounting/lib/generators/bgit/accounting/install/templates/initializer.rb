@@ -39,7 +39,8 @@ Bgit::Accounting.configure do |config|
       Bgit::Accounting::Contacts::EmailAddressesController,
       Bgit::Accounting::Contacts::PhoneNumbersController,
       Bgit::Accounting::Banking::AccountsController,
-      Bgit::Accounting::Banking::TransfersController
+      Bgit::Accounting::Banking::TransfersController,
+      Bgit::Accounting::Vouchers::VouchersController
     ]
   }
 
@@ -55,13 +56,22 @@ Bgit::Accounting.configure do |config|
   # Set the services, that will be shown in the backend menu.
   #
   # Default: config.service_controllers = -> {[
-  #            Bgit::Accounting::ImportN26StatementsServicesController
+  #            Bgit::Accounting::Accounting::ChartReportServicesController,
+  #            Bgit::Accounting::Banking::ImportN26StatementsServicesController,
+  #            Bgit::Accounting::SeedServicesController,
+  #            Bgit::Accounting::Vouchers::AssignVoucherServicesController,
+  #            Bgit::Accounting::Vouchers::BulkUploadServicesController,
+  #            Bgit::Accounting::Vouchers::CreateServicesController
   #          ]}
   #
   config.service_controllers = -> {
     [
-      Bgit::Accounting::ImportN26StatementsServicesController,
-      Bgit::Accounting::SeedServicesController
+      Bgit::Accounting::Accounting::ChartReportServicesController,
+      Bgit::Accounting::Banking::ImportN26StatementsServicesController,
+      Bgit::Accounting::SeedServicesController,
+      Bgit::Accounting::Vouchers::AssignVoucherServicesController,
+      Bgit::Accounting::Vouchers::BulkUploadServicesController,
+      Bgit::Accounting::Vouchers::CreateServicesController,
     ]
   }
 
@@ -78,13 +88,15 @@ Bgit::Accounting.configure do |config|
   #
   # Default: config.accountable_classes = -> {
   #            {
-  #              User => main_app.url_for([:autocomplete, User])
+  #              User => main_app.url_for([:autocomplete, User]),
+  #              Bgit::Accounting::Contacts::Contact => bgit_accounting.url_for([:autocomplete, Bgit::Accounting::Contacts::Contact])
   #            }
   #          }
   #
   config.accountable_classes = -> {
     {
-      User => main_app.url_for([:autocomplete, User])
+      User => main_app.url_for([:autocomplete, User]),
+      Bgit::Accounting::Contacts::Contact => bgit_accounting.url_for([:autocomplete, Bgit::Accounting::Contacts::Contact])
     }
   }
 

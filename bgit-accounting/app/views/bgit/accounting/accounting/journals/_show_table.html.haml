@@ -1,0 +1,18 @@
+= table.id
+= table.association :accountable
+= table.field :number
+= table.date :date
+= table.field :subject
+= table.boolean :permanent
+= table.field :keepr_debit_postings do |resource|
+  - capture_haml do
+    - resource.keepr_postings.debits.all.each do |posting|
+      %span.badge.badge-primary= posting.human
+= table.field :separator, title: false do |resource|
+  - capture_haml do
+    %i.fas.fa-arrow-down
+= table.field :keepr_credit_postings do |resource|
+  - capture_haml do
+    - resource.keepr_postings.credits.all.each do |posting|
+      %span.badge.badge-primary= posting.human
+= table.field :note

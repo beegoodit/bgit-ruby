@@ -11,7 +11,7 @@ module Bgit
         end
 
         def human_value_name(attribute_name)
-          human_value_name(attribute_name, send(attribute_name))
+          self.class.human_value_name(attribute_name, send(attribute_name))
         end
       end
     end

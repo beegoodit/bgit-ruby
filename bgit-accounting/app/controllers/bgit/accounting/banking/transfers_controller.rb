@@ -12,6 +12,10 @@ module Bgit
 
         private
 
+        def query_allowed_scopes
+          %i[unchecked]
+        end
+
         def permitted_params
           params.require(:banking_transfer).permit(
             :amount,

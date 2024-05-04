@@ -1,0 +1,6 @@
+= table.field :id
+= table.association :parent, label_method: :human, link_to: ->(r) { url_for(r.parent.becomes(resource_class)) }
+= table.field :number
+= table.field :name
+= table.field :target
+= table.boolean :is_result

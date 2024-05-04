@@ -47,15 +47,17 @@ module Bgit
 
       def build_account(group, attributes)
         say "Creating account #{attributes["number"]} - #{attributes["name"]}" do
-          @result.accounts << Keepr::Account.build(attributes).tap { |account| account.keepr_group = group }
+          @result.accounts << Keepr::Account.new(attributes).tap { |account| account.keepr_group = group }
         end
       end
 
       def build_group(attributes, parent_group = nil)
-        name = [attributes["number"], attributes["name"]].compact.join(" - ")
-        say "Creating group #{name}" do
-          Keepr::Group.new(name: name, target: attributes["target"]).tap do |group|
-            group.parent = parent_group
+        parent_group&.save!
+        say "Creating group #{attributes["name"]}" do
+          (parent_group.present? ? parent_group.children.build : Keepr::Group.new).tap do |group|
+            group.number = attributes["number"]
+            group.name = attributes["name"]
+            group.target = attributes["target"]
             attributes["accounts"]&.each do |account|
               build_account(group, account)
             end

@@ -1,0 +1,20 @@
+= table.id
+= table.association :contact, label_method: :human, link_to: ->(r) { url_for(r.contact) }
+= table.field :kind
+= table.field :number
+= table.date :issue_date
+= table.date :due_date
+= table.field :keepr_debit_postings do |resource|
+  - capture_haml do
+    - resource.postings.debits.all.each do |posting|
+      %span.badge.badge-primary= posting.human
+= table.money :amount do |resource|
+  - capture_haml do
+    %i.fas.fa-arrow-down
+    = humanized_money_with_symbol(resource.amount)
+= table.field :keepr_credit_postings do |resource|
+  - capture_haml do
+    - resource.postings.credits.all.each do |posting|
+      %span.badge.badge-primary= posting.human
+= table.field :note
+= table.timestamps

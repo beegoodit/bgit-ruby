@@ -1,0 +1,4 @@
+= form.association :keepr_account, label_method: :human
+= form.association :keepr_journal, label_method: :human
+= form.association :keepr_cost_center, label_method: :human
+= form.input :accountable, as: :polymorphic_association, classes: instance_exec(&Bgit::Accounting::Configuration.accountable_classes), label_method: :human

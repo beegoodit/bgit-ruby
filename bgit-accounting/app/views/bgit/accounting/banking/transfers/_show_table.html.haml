@@ -1,0 +1,10 @@
+= table.id sort: true
+= table.association :sender_bank_account, label_method: :human
+= table.association :recipient_bank_account, label_method: :human
+= table.association :journal, label_method: :human, link_to: ->(resource) { url_for(resource.journal.becomes(Bgit::Accounting::Accounting::Journal)) }
+= table.timestamp :transaction_at
+= table.timestamp :value_at
+= table.money :amount
+= table.field :purpose
+= table.field :digest
+= table.timestamps sort: true

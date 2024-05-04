@@ -1,5 +1,5 @@
 = table.id sort: true
-= table.association :parent, label_method: :human
+= table.association :parent, label_method: :human, link_to: ->(r) { url_for(r.becomes(Bgit::Accounting::Accounting::Group)) }, sort: true
 = table.field :number, sort: true
 = table.field :name, sort: true do |resource|
   - resource.name.truncate(32)

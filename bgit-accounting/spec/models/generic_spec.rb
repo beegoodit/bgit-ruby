@@ -23,6 +23,7 @@ RSpec.describe "ActiveRecord::Base models", type: :model do
     Bgit::Accounting::Contacts::Person => {},
     Bgit::Accounting::Contacts::PhoneNumber => {},
     Bgit::Accounting::Contacts::Role => {},
+    Bgit::Accounting::Vouchers::Voucher => {},
     Keepr::Account => {factory_name: :account},
     Keepr::CostCenter => {factory_name: :cost_center},
     Keepr::Group => {factory_name: :group},

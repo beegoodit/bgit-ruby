@@ -1,0 +1,8 @@
+= table.association :parent, label_method: :human # , link_to: ->(r) { url_for(r.parent) }
+= table.association :keepr_group, label_method: :human # , link_to: ->(r) { url_for(r.keepr_group) }
+= table.association :accountable, label_method: :human
+= table.association :keepr_tax, label_method: :human # , link_to: ->(r) { url_for(r.keepr_tax) }
+= table.field :number
+= table.field :name
+= table.field :kind
+= table.timestamps

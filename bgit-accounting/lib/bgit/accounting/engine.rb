@@ -6,6 +6,8 @@ module Bgit
       config.to_prepare do
         Keepr::Account.send(:include, Bgit::Accounting::Model::KeeprAccountExtensionsConcern)
         Keepr::Posting.send(:include, Bgit::Accounting::Model::KeeprPostingExtensionsConcern)
+        Keepr::Group.send(:include, Bgit::Accounting::Model::KeeprGroupExtensionsConcern)
+        Keepr::Journal.send(:include, Bgit::Accounting::Model::KeeprJournalExtensionsConcern)
       end
 
       config.generators do |g|
