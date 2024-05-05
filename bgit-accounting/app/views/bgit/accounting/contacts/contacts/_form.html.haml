@@ -1,0 +1,54 @@
+.row
+  .col-12
+    .btn-group.w-100.mb-4
+      .btn.btn-primary#type-company
+        = Bgit::Accounting::Contacts::Company.model_name.human
+      .btn.btn-primary#type-person
+        = Bgit::Accounting::Contacts::Person.model_name.human
+
+.row
+  .col-12
+    = form.input :name
+
+
+#company-fields{ class: form.object.new_record? || form.object.company.present? ? '' : 'd-none' }
+  - form.object.new_record? ? form.object.build_company : nil
+  = form.simple_fields_for :company do |cf|
+    .row
+      .col-12.col-md-6
+        = cf.input :tax_number
+      .col-12.col-md-6
+        = cf.input :vat_identifier
+
+    = render partial: "/bgit/accounting/add_association_fields", locals: { form: cf, association_name: :addresses, association_class: Bgit::Accounting::Contacts::Address }
+    = render partial: "/bgit/accounting/add_association_fields", locals: { form: cf, association_name: :contact_people, association_class: Bgit::Accounting::Contacts::ContactPerson }
+    = render partial: "/bgit/accounting/add_association_fields", locals: { form: cf, association_name: :email_addresses, association_class: Bgit::Accounting::Contacts::EmailAddress }
+    = render partial: "/bgit/accounting/add_association_fields", locals: { form: cf, association_name: :phone_numbers, association_class: Bgit::Accounting::Contacts::PhoneNumber }
+
+#person-fields{ class: form.object.person.present? ? '' : 'd-none' }
+  - form.object.new_record? ? form.object.build_person : nil
+  = form.simple_fields_for :person do |pf|
+    .row
+      .col-12.col-md-2
+        = pf.input :salutation
+      .col-12.col-md-5
+        = pf.input :firstname
+      .col-12.col-md-5
+        = pf.input :lastname
+
+.row
+  .col-12
+    = form.input :note
+
+:javascript
+  // show either company or person fields
+  $(document).ready(function() {
+    $('#type-company').click(function() {
+      $('#company-fields').removeClass('d-none');
+      $('#person-fields').addClass('d-none');
+    });
+    $('#type-person').click(function() {
+      $('#company-fields').addClass('d-none');
+      $('#person-fields').removeClass('d-none');
+    });
+  });

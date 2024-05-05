@@ -12,8 +12,17 @@ RSpec.describe "ActiveRecord::Base models", type: :model do
   # rubocop:enable Lint/ConstantDefinitionInBlock
 
   {
-    Bgit::Accounting::BankAccount => {},
-    Bgit::Accounting::Transfer => {},
+    Bgit::Accounting::Accounting::Account => {},
+    Bgit::Accounting::Banking::Account => {},
+    Bgit::Accounting::Banking::Transfer => {},
+    Bgit::Accounting::Contacts::Address => {},
+    Bgit::Accounting::Contacts::Company => {},
+    Bgit::Accounting::Contacts::ContactPerson => {},
+    Bgit::Accounting::Contacts::Contact => {},
+    Bgit::Accounting::Contacts::EmailAddress => {},
+    Bgit::Accounting::Contacts::Person => {},
+    Bgit::Accounting::Contacts::PhoneNumber => {},
+    Bgit::Accounting::Contacts::Role => {},
     Keepr::Account => {factory_name: :account},
     Keepr::CostCenter => {factory_name: :cost_center},
     Keepr::Group => {factory_name: :group},
@@ -30,37 +39,48 @@ RSpec.describe "ActiveRecord::Base models", type: :model do
 
     describe model do
       if specs.include?(:is_an_active_record)
-        it "is an ActiveRecord::Base" do
-          expect(ActiveRecord::Base.descendants).to include(model)
+        describe "is an ActiveRecord::Base" do
+          it do
+            expect(ActiveRecord::Base.descendants).to include(model)
+          end
         end
       end
 
       if specs.include?(:is_instanciable)
-        it "is instanciable" do
-          instance = model.new
-          expect(instance).to be_a(model)
+        describe "is instanciable" do
+          it do
+            instance = model.new
+            expect(instance).to be_a(model)
+          end
         end
       end
 
       if specs.include?(:valid_with_correct_attributes)
-        it "is valid with correct attribute values" do
-          instance = build(factory_name)
-          expect(instance.errors.full_messages).to eq([])
+        describe "is valid with correct attribute values" do
+          it do
+            instance = build(factory_name)
+            instance.valid?
+            expect(instance.errors.full_messages).to eq([])
+          end
         end
       end
 
       if specs.include?(:not_valid_with_empty_attributes)
-        it "is not valid with empty attributes" do
-          instance = model.new
-          expect(instance).not_to be_valid
+        describe "is not valid with empty attributes" do
+          it do
+            instance = model.new
+            expect(instance).not_to be_valid
+          end
         end
       end
 
       if specs.include?(:saves_with_valid_attributes)
-        it "saves with valid attributes" do
-          instance = build(factory_name)
-          expect(instance.save).to be_truthy
-          expect(instance).to be_persisted
+        describe "saves with valid attributes" do
+          it do
+            instance = build(factory_name)
+            expect(instance.save).to be_truthy
+            expect(instance).to be_persisted
+          end
         end
       end
     end

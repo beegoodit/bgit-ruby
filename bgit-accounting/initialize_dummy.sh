@@ -65,6 +65,9 @@ sed -i "2i\  resources :users do" config/routes.rb
 sed -i "3i\    get :autocomplete, on: :collection" config/routes.rb
 sed -i "4i\  end" config/routes.rb
 
+# add create user statement to seeds.rb
+echo "User.create!(email: 'buchhaltung@tfc-frankfurt.de')" >> db/seeds.rb
+
 # Setup administrador
 rails generate administrador:install
 

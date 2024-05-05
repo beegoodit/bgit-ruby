@@ -12,7 +12,7 @@ module Bgit
             @values[key]
           end
 
-          define_singleton_method("#{key}=") do |value|
+          define_singleton_method(:"#{key}=") do |value|
             @values[key] = value
           end
         end
@@ -26,18 +26,24 @@ module Bgit
 
       define_option :resources_controllers, default: -> {
                                                        [
-                                                         Bgit::Accounting::AccountsController,
-                                                         Bgit::Accounting::CostCentersController,
-                                                         Bgit::Accounting::GroupsController,
-                                                         Bgit::Accounting::JournalsController,
-                                                         Bgit::Accounting::PostingsController,
-                                                         Bgit::Accounting::TaxesController,
-                                                         Bgit::Accounting::BankAccountsController,
-                                                         Bgit::Accounting::TransfersController
+                                                         Bgit::Accounting::Accounting::AccountsController,
+                                                         Bgit::Accounting::Accounting::CostCentersController,
+                                                         Bgit::Accounting::Accounting::GroupsController,
+                                                         Bgit::Accounting::Accounting::GroupsController,
+                                                         Bgit::Accounting::Accounting::JournalsController,
+                                                         Bgit::Accounting::Accounting::PostingsController,
+                                                         Bgit::Accounting::Accounting::TaxesController,
+                                                         Bgit::Accounting::Banking::AccountsController,
+                                                         Bgit::Accounting::Banking::TransfersController
                                                        ]
                                                      }
       define_option :resource_controllers, default: -> { [] }
-      define_option :service_controllers, default: -> { [Bgit::Accounting::ImportN26StatementsServicesController] }
+      define_option :service_controllers, default: -> {
+                                                     [
+                                                       Bgit::Accounting::ImportN26StatementsServicesController,
+                                                       Bgit::Accounting::SeedServicesController
+                                                     ]
+                                                   }
       define_option :sidebar_controllers, default: -> { [] }
       define_option :accountable_classes, default: -> { {} }
       define_option :accountable_factory_name, default: :user

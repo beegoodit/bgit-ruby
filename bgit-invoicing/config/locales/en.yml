@@ -44,6 +44,9 @@ en:
       bgit/invoicing/invoice:
         one: "Invoice"
         other: "Invoices"
+      bgit/invoicing/number_range:
+        one: "Number range"
+        other: "Number ranges"
     attributes:
       defaults: &defaults
         description: "Description"
@@ -54,6 +57,7 @@ en:
         created_at: "Created at"
         updated_at: "Updated at"
       bgit/invoicing/billed_item:
+        <<: *defaults
         line_item: "Line item"
         line_item_id: "Line item"
         billable: "Billable item"
@@ -64,6 +68,8 @@ en:
         billing_actions: "Billing actions"
         billing_state: "Billing state"
         from: "From"
+        invoice_number: "Invoice number"
+        invoice_date: "Invoice date"
         line_items_count: "Item count"
         owner: "Owner"
         owner_id: "Owner"
@@ -82,23 +88,22 @@ en:
         gross_amount: "Gross amount"
         invoice_id: "Invoice"
         invoice: "Invoice"
-        invoiceable_id: "Invoiceable"
-        invoiceable_type: "Invoiceable type"
-        invoiceable: "Invoiceable"
         net_amount_cents: "Net amount (cents)"
         net_amount: "Net amount"
         owner: "Owner"
-        price_cents: "Price (cents)"
-        price: "Price"
         quantity: "Quantity"
-        resource: "Resource"
         tax_amount_cents: "Tax (cents)"
         tax_amount: "Tax"
         tax_rate_percentage: "Tax rate (%)"
-        tier: "Tier"
         unit_name: "Unit name"
         unit_net_amount_cents: "Unit net amount (cents)"
         unit_net_amount: "Unit net amount"
+      bgit/invoicing/number_range:
+        <<: *defaults
+        format: "Format"
+        minimum_length: "Minimum length"
+        next_value: "Next value"
+        prefix: "Prefix"
   bgit:
     invoicing:
       invoices:

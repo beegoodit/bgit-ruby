@@ -1,0 +1,562 @@
+0 Anlagevermögen
+
+Entgeltlich erworbene Konzessionen, gewerbliche Schutzrechte und ähnliche Rechte und Werte sowie Lizenzen an solchen Rechten und Werten 
+
+0100 0 Entgeltlich erworbene Konzessionen, gewerbliche Schutzrechte und ähnliche Rechte und Werte sowie Lizenzen an solchen Rechten und Werten
+0110 0 Konzessionen
+0120 0 Gewerbliche Schutzrechte
+0130 0 Ähnliche Rechte und Werte
+0135 0 EDV-Software
+0140 0 Lizenzen an gewerblichen Schutzrechten und ähnlichen Rechten und Werten
+
+Geschäfts- oder Firmenwert 
+
+0150 0 Geschäfts- oder Firmenwert
+R 0160 0
+-0169 9
+0170 0 Geleistete Anzahlungen auf immaterielle Vermögensgegenstände
+0179 0 Anzahlungen auf Geschäfts- oder Firmenwert
+
+Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken 
+
+0200 0 Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken
+0210 0 Grundstücksgleiche Rechte ohne Bauten
+0215 0 Unbebaute Grundstücke
+0220 0 Grundstücksgleiche Rechte (Erbbaurecht, Dauerwohnrecht, unbebaute Grundstücke)
+0225 0 Grundstücke mit Substanzverzehr
+0230 0 Bauten auf eigenen Grundstücken und grundstücksgleichen Rechten
+0235 0 Grundstückswerte eigener bebauter Grundstücke
+0240 0 Geschäftsbauten
+0241 0 Gebäude
+0243 0 Hallen
+0244 0 Gaststätte
+0250 0 Fabrikbauten
+0260 0 Andere Bauten
+0270 0 Garagen
+0280 0 Außenanlagen
+0285 0 Hof- und Wegebefestigungen
+0290 0 Einrichtungen für Geschäfts- und andere Bauten
+0300 0 Wohnbauten
+0305 0 Garagen
+0310 0 Außenanlagen
+0315 0 Hof- und Wegebefestigungen
+0320 0 Einrichtungen für Wohnbauten
+0330 0 Bauten auf fremden Grundstücken
+0340 0 Geschäftsbauten
+0350 0 Fabrikbauten
+0360 0 Wohnbauten
+0370 0 Andere Bauten
+0380 0 Garagen
+0390 0 Außenanlagen
+0395 0 Hof- und Wegebefestigungen
+0398 0 Einrichtungen für Geschäfts-, Wohn- und andere Bauten
+
+Technische Anlagen und Maschinen 
+
+0400 0 Technische Anlagen und Maschinen
+0420 0 Technische Anlagen
+0440 0 Maschinen
+0450 0 Transportanlagen und Ähnliches
+0460 0 Maschinengebundene Werkzeuge
+0470 0 Betriebsvorrichtungen
+
+Andere Anlagen, Betriebsund Geschäftsausstattung
+
+0500 0 Andere Anlagen, Betriebs- und Geschäftsausstattung
+0510 0 Andere Anlagen
+0520 0 Pkw
+0525 0 Kraftfahrzeug-Anhänger
+0540 0 Lkw
+0560 0 Sonstige Transportmittel
+0570 0 Pflegemaschinen
+0620 0 Werkzeuge
+0630 0 Betriebsausstattung
+0631 0 Kleidung
+0632 0 Geräte
+0635 0 Geschäftsausstattung
+0640 0 Ladeneinrichtung
+0650 0 Büroeinrichtung
+0660 0 Gerüst- und Schalungsmaterial
+0670 0 Geringwertige Wirtschaftsgüter
+0675 0 Wirtschaftsgüter (Sammelposten)
+0680 0 Einbauten in fremde Grundstücke
+0690 0 Sonstige Betriebs- und Geschäftsausstattung
+
+Geleistete Anzahlungen und Anlagen im Bau
+
+0700 0 Geleistete Anzahlungen und Anlagen im Bau
+0705 0 Anzahlungen auf Grund und Boden
+0710 0 Geschäfts-, Fabrik- und andere Bauten im Bau auf eigenen Grundstücken
+0720 0 Anzahlungen auf Geschäfts-, Fabrik- und andere Bauten auf eigenen Grundstücken
+0725 0 Wohnbauten im Bau auf eigenen Grundstücken
+0735 0 Anzahlungen auf Wohnbauten auf eigenen Grundstücken
+0740 0 Geschäfts-, Fabrik- und andere Bauten im Bau auf fremden Grundstücken
+0750 0 Anzahlungen auf Geschäfts-, Fabrik- und andere Bauten auf fremden Grundstücken
+0755 0 Wohnbauten im Bau auf fremden Grundstücken
+0765 0 Anzahlungen auf Wohnbauten auf fremden Grundstücken
+0770 0 Technische Anlagen und Maschinen im Bau
+0780 0 Anzahlungen auf technische Anlagen und Maschinen
+0785 0 Andere Anlagen, Betriebs- und Geschäftsausstattung im Bau
+0795 0 Anzahlungen auf andere Anlagen, Betriebs- und Geschäftsausstattung
+
+Anteile an verbundenen Unternehmen
+
+0800 0 Anteile an verbundenen Unternehmen (Anlagevermögen)
+0803 0 Anteile an verbundenen Unternehmen, Personengesellschaften
+0804 0 Anteile an verbundenen Unternehmen, Kapitalgesellschaften
+0805 0 Anteile an herrschender oder mehrheitlich beteiligter Gesellschaft, Personengesellschaften
+0808 0 Anteile an herrschender oder mehrheitlich beteiligter Gesellschaft, Kapitalgesellschaften
+0809 0 Anteile an herrschender oder mit Mehrheit beteiligter Gesellschaft
+
+Ausleihungen an verbundene Unternehmen
+
+0810 0 Ausleihungen an verbundene Unternehmen
+0813 0 Ausleihungen an verbundene Unternehmen, Personengesellschaften
+0814 0 Ausleihungen an verbundene Unternehmen, Kapitalgesellschaften
+0815 0 Ausleihungen an verbundene Unternehmen, Einzelunternehmen
+
+Beteiligungen
+
+0820 0 Beteiligungen
+0830 0 Typisch stille Beteiligungen
+0840 0 Atypisch stille Beteiligungen
+0850 0 Beteiligungen an Kapitalgesellschaften
+0860 0 Beteiligungen an Personengesellschaften
+
+Ausleihungen an Unternehmen, mit denen ein Beteiligungsverhältnis besteht
+
+0880 0 Ausleihungen an Unternehmen, mit denen ein Beteiligungsverhältnis besteht
+0883 0 Ausleihungen an Unternehmen, mit denen ein Beteiligungsverhältnis besteht, Personengesellschaften
+0885 0 Ausleihungen an Unternehmen, mit denen ein Beteiligungsverhältnis besteht, Kapitalgesellschaften 
+
+Wertpapiere des Anlagevermögens
+
+0900 0 Wertpapiere des Anlagevermögens
+0910 0 Wertpapiere mit Gewinnbeteiligungsansprüchen, die dem Teileinkünfteverfahren unterliegen
+0920 0 Festverzinsliche Wertpapiere
+
+Sonstige Ausleihungen 
+
+0930 0 Übrige sonstige Ausleihungen
+0935 0 Sonstige Ausleihungen - geleistete Kautionen
+0940 0 Darlehen
+
+Genossenschaftsanteile
+
+0980 0 Genossenschaftsanteile zum langfristigen Verbleib
+
+Rückdeckungsansprüche aus Lebensversicherungen
+
+0990 0 Rückdeckungsansprüche aus Lebensversicherungen zum langfristigen Verbleib
+
+1 Umlaufvermögenskonten
+
+Roh-, Hilfs- und Betriebsstoffe 
+
+1000 0 Roh-, Hilfs- und Betriebsstoffe
+-1039 9 (Bestand)
+
+Unfertige Erzeugnisse, unfertige Leistungen
+
+1040 0 Unfertige Erzeugnisse, unfertige
+-1049 9 Leistungen (Bestand)
+
+Fertige Erzeugnisse und Waren
+
+1110 0 Fertige Erzeugnisse (Bestand)
+-1139 9
+
+Geleistete Anzahlungen
+
+1180 0 Geleistete Anzahlungen auf Vorräte
+ R 1180 1
+-1180 9
+ AV 1181 0 Geleistete Anzahlungen 7 %
+Vorsteuer
+ R 1181 1
+-1181 9
+ AV 1182 0 Geleistete Anzahlungen 5 %
+Vorsteuer
+ R 1182 1
+-1183 9
+ AV 1184 0 Geleistete Anzahlungen 16 %
+Vorsteuer
+ R 1184 1
+-1185 9
+ AV 1186 0 Geleistete Anzahlungen 19 %
+Vorsteuer
+ R 1186 1
+-1189 9
+
+Erhaltene Anzahlungen
+
+1190 0 Erhaltene Anzahlungen auf Bestellungen (von Vorräten offen abgesetzt)
+
+Einnahmen
+
+S 1200 0 Forderungen aus Lieferungen und Leistungen
+R 1200 1
+-1206 9
+F 1210 0 Forderungen aus Lieferungen und
+-1214 9 Leistungen ohne Kontokorrent
+F 1215 0 Forderungen aus Lieferungen und Leistungen zum allgemeinen Umsatzsteuersatz oder eines Kleinunternehmers (EÜR)
+F 1216 0 Forderungen aus Lieferungen und Leistungen zum ermäßigten Umsatzsteuersatz (EÜR)
+F 1217 0 Forderungen aus steuerfreien oder nicht steuerbaren Lieferungen und Leistungen (EÜR)
+F 1218 0 Forderungen aus Lieferungen und Leistungen nach Durchschnittssätzen nach § 24 UStG (EÜR)
+F 1219 0 Gegenkonto 1215 0 - 1218 9 bei Aufteilung der Forderungen nach Steuersätzen (EÜR)
+
+Forderungen nach § 11 Abs. 1 S. 2 EStG für § 4 Abs. 3 EStG 
+
+F 1220 0 Forderungen nach § 11 Abs. 1 S. 2 EStG für § 4 Abs. 3 EStG 
+
+Einnahmen
+
+F 1221 0 Forderungen aus Lieferungen und Leistungen ohne Kontokorrent - Restlaufzeit bis 1 Jahr
+ F 1225 0 - Restlaufzeit größer 1 Jahr
+ F 1230 0 Wechsel aus Lieferungen und Leistungen 12)
+ F 1231 0 - Restlaufzeit bis 1 Jahr 12)
+ F 1232 0 - Restlaufzeit größer 1 Jahr 12)
+ F 1235 0 Wechsel aus Lieferungen und Leistungen, bundesbankfähig 12)
+ F 1240 0 Zweifelhafte Forderungen
+ F 1241 0 - Restlaufzeit bis 1 Jahr
+ F 1242 0 - Restlaufzeit größer 1 Jahr  1259 0 Gegenkonto 1221 0 - 1229 9, 1240 0 - 1245 9, 1270 0 - 1275 9, 1290 0 - 1297 9 bei Aufteilung Debitorenkonto 
+
+Forderungen gegen verbundene Unternehmen
+
+1260 0 Forderungen gegen verbundene Unternehmen
+ 1261 0 - Restlaufzeit bis 1 Jahr
+ 1262 0 - Restlaufzeit größer 1 Jahr
+ 1266 0 Besitzwechsel gegen verbundene Unternehmen 12)
+ 1267 0 - Restlaufzeit bis 1 Jahr 12)
+ 1268 0 - Restlaufzeit größer 1 Jahr 12)
+ 1269 0 Besitzwechsel gegen verbundene Unternehmen, bundesbankfähig 12)
+
+ Einnahmen
+
+F 1270 0 Forderungen aus Lieferungen und Leistungen gegen verbundene Unternehmen
+F 1271 0 - Restlaufzeit bis 1 Jahr
+F 1272 0 - Restlaufzeit größer 1 Jahr 
+
+Forderungen gegen Unternehmen, mit denen ein Beteiligungsverhältnis besteht
+
+1280 0 Forderungen gegen Unternehmen, mit denen ein Beteiligungsverhältnis besteht
+ 1281 0 - Restlaufzeit bis 1 Jahr
+ 1282 0 - Restlaufzeit größer 1 Jahr
+ 1286 0 Besitzwechsel gegen Unternehmen, mit denen ein Beteiligungsverhältnis besteht 12)
+ 1287 0 - Restlaufzeit bis 1 Jahr 12)
+ 1288 0 - Restlaufzeit größer 1 Jahr 12)
+ 1289 0 Besitzwechsel gegen Unternehmen, mit denen ein Beteiligungsverhältnis besteht, bundesbankfähig 12)
+
+Einnahmen
+
+F 1290 0 Forderungen aus Lieferungen und Leistungen gegen Unternehmen, mit denen ein Beteiligungsverhältnis besteht
+ F 1291 0 - Restlaufzeit bis 1 Jahr
+ F 1292 0 - Restlaufzeit größer 1 Jahr 
+
+Sonstige Vermögensgegenstände
+
+1300 0 Sonstige Vermögensgegenstände
+ 1301 0 - Restlaufzeit bis 1 Jahr
+ 1302 0 - Restlaufzeit größer 1 Jahr
+1310 0 Forderungen gegen Vorstandsmitglieder und Geschäftsführer
+ 1311 0 - Restlaufzeit bis 1 Jahr
+ 1312 0 - Restlaufzeit größer 1 Jahr
+1320 0 Forderungen gegen Aufsichtsratsund Beiratsmitglieder
+ 1321 0 - Restlaufzeit bis 1 Jahr
+ 1322 0 - Restlaufzeit größer 1 Jahr
+1340 0 Forderungen gegen Personal aus
+Lohn- und Gehaltsabrechnung
+ 1341 0 - Restlaufzeit bis 1 Jahr
+ 1342 0 - Restlaufzeit größer 1 Jahr 
+ 1350 0 Kautionen
+ 1351 0 - Restlaufzeit bis 1 Jahr
+ 1352 0 - Restlaufzeit größer 1 Jahr 1360 0 Darlehen
+ 1361 0 - Restlaufzeit bis 1 Jahr
+ 1362 0 - Restlaufzeit größer 1 Jahr
+ 1365 0 Forderungen aus Gewerbesteuerüberzahlungen
+ 1366 0 Körperschaftsteuerrückforderung 
+
+ Neutrale Einnahmen
+
+ F 1367 0 Forderungen an das Finanzamt aus abgeführtem Bauabzugsbetrag
+
+ Löhne und Gehälter
+
+ 1368 0 Forderungen gegenüber Bundesagentur für Arbeit 
+
+ Neutrale Einnahmen
+
+ 1370 0 Durchlaufende Posten
+ F 1372 0 Geldtransit
+ 1374 0 Fremdgeld
+ 1375 0 Agenturwarenabrechnung
+ 1390 0 GmbH-Anteile zum kurzfristigen Verbleib 
+
+ Vorsteuer
+
+ S 1400 0 Abziehbare Vorsteuer
+ R 1400 1
+-1400 9
+ S 1401 0 Abziehbare Vorsteuer 7 %
+ R 1401 1
+ -1405 9
+ S 1406 0 Abziehbare Vorsteuer 19 %
+ R 1406 1
+-1409 9 
+
+Vorsteuer aus innergemeinschaftlichem Erwerb und Vorsteuer nach §§ 13a, 13b UStG und Vorsteuer aus Dreiecksgeschäft 
+
+S 1410 0 Abziehbare Vorsteuer nach
+§ 13b UStG
+ R 1410 1
+ -1415 9
+ S 1416 0 Abziehbare Vorsteuer nach
+§ 13b UStG 19 %
+ R 1416 1
+-1419 9
+ S 1420 0 Abziehbare Vorsteuer aus innergemeinschaftlichem Erwerb
+ R 1420 1
+-1425 9
+ S 1426 0 Abziehbare Vorsteuer aus innergemeinschaftlichem Erwerb 19 %
+ R 1426 1
+-1428 9
+ S 1429 0 Abziehbare Vorsteuer aus innergemeinschaftlichem Erwerb von Neufahrzeugen von Lieferanten ohne Umsatzsteuer-Identifikationsnummer
+ R 1429 1
+-1429 9
+
+Sonstige Vermögensgegenstände
+
+S 1430 0 Aufzuteilende Vorsteuer
+ R 1430 1
+-1430 9
+ S 1431 0 Aufzuteilende Vorsteuer 7 %
+ R 1431 1
+ -1435 9
+ S 1436 0 Aufzuteilende Vorsteuer 19 %
+ R 1436 1
+-1436 9
+ S 1440 0 Aufzuteilende Vorsteuer nach §§ 13a und 13b UStG
+ R 1440 1
+ -1445 9 
+ S 1446 0 Aufzuteilende Vorsteuer nach §§ 13a und 13b UStG 19 %
+ R 1446 1
+-1449 9
+ S 1450 0 Aufzuteilende Vorsteuer aus innergemeinschaftlichem Erwerb
+ R 1450 1
+-1455 9
+ S 1456 0 Aufzuteilende Vorsteuer aus innergemeinschaftlichem Erwerb 19 %
+ R 1456 1
+-1458 9 
+
+Vorsteuer aus innergemeinschaftlichem Erwerb und Vorsteuer nach §§ 13a, 13b UStG und Vorsteuer aus Dreiecksgeschäft 
+
+S 1459 0 Vorsteuer aus Erwerb als letzter Abnehmer innerhalb eines Dreiecksgeschäfts
+ R 1459 1
+-1460 9 
+
+UmsatzsteuerErstattungen oder Umsatzsteuer-Zahlung
+
+1461 0 Forderungen aus UmsatzsteuerVorauszahlungen
+ 1462 0 Umsatzsteuerforderungen Vorjahr
+ 1463 0 Umsatzsteuerforderungen frühere Jahre 
+
+ Vorsteuer
+ F 1464 0 Nachträglich abziehbare Vorsteuer nach § 15a Abs. 2 UStG
+ R 1464 1
+-1468 9 
+
+Sonstige Erlöse 
+
+1469 0 Steuererstattungsansprüche gegenüber anderen Ländern 
+
+Vorsteuer
+
+F 1470 0 Nachträglich abziehbare Vorsteuer nach § 15a Abs. 1 UStG, bewegliche
+Wirtschaftsgüter
+ R 1470 1
+-1470 9
+ F 1471 0 Nachträglich abziehbare Vorsteuer nach § 15a Abs. 1 UStG, unbewegliche Wirtschaftsgüter
+ R 1471 1
+-1471 9
+ F 1472 0 Zurückzuzahlende Vorsteuer nach § 15a Abs. 1 UStG, bewegliche
+Wirtschaftsgüter
+ R 1472 1
+-1472 9
+ F 1473 0 Zurückzuzahlende Vorsteuer nach § 15a Abs. 1 UStG, unbewegliche Wirtschaftsgüter
+ R 1473 1
+-1473 9
+ F 1474 0 Zurückzuzahlende Vorsteuer nach § 15a Abs. 2 UStG
+ R 1474 1
+-1479 9
+
+Vorsteuer aus innergemeinschaftlichem Erwerb und Vorsteuer nach §§ 13a, 13b UStG und Vorsteuer aus Dreiecksgeschäft
+
+S 1480 0 Abziehbare Vorsteuer aus der Auslagerung von Gegenständen aus
+einem Umsatzsteuerlager
+ R 1480 1
+-1480 9 
+
+Vorsteuer
+
+F 1481 0 Entstandene Einfuhrumsatzsteuer
+ R 1481 1
+-1481 9 
+
+Roh-, Hilfs- und Betriebsstoffe und bezogene Waren 
+
+1482 0 Vorsteuer in Folgeperiode/im
+Folgejahr abziehbar
+ R 1482 1
+-1482 9 
+
+Vorsteuer
+
+1483 0 Gegenkonto Vorsteuer § 4 Abs. 3 EStG
+ 1484 0 Auflösung Vorsteuer aus Vorjahr § 4 Abs. 3 EStG 
+
+ Sonstige Vermögensgegenstände 
+
+ 1485 0 Vorsteuer aus Investitionen § 4 Abs. 3 EStG 
+
+ Vorsteuer
+
+ 1486 0 Gegenkonto für Vorsteuer nach Durchschnittssatz nach § 23a UStG für § 4 Abs. 3 EStG8)
+ F 1487 0 Vorsteuer nach Durchschnittssatz nach § 23a UStG8)
+ R 1487 1
+-1492 9 
+
+Sonstige Vermögensgegenstände 
+
+F 1493 0 Verrechnungskonto Gewinnermittlung § 4 Abs. 3 EStG, nicht ergebniswirksam 
+
+Wirtschaftsgüter des Umlaufvermögens nach § 4 Abs. 3 S. 4 EStG 
+
+1494 0 Wirtschaftsgüter des Umlaufvermögens nach § 4 Abs. 3 S. 4 EStG 
+
+Sonstige Vermögensgegenstände 
+
+F 1495 0 Verrechnungskonto Ist-Versteuerung 
+
+Sonstige Erlöse
+
+F 1496 0 Neutralisierung ertragswirksamer Sachverhalte für § 4 Abs. 3 EStG 
+
+Einnahmen
+
+F 1497 0 Verrechnungskonto erhaltene Anzahlungen bei Buchung über Debitorenkonto 
+
+Sonstige Vermögensgegenstände 
+
+Anteile an verbundenen Unternehmen
+
+1500 0 Anteile an verbundenen Unternehmen (Umlaufvermögen) 
+
+Sonstige Wertpapiere 
+
+1510 0 Sonstige Wertpapiere
+ 1520 0 Finanzwechsel 12) 
+
+ Kassenbestand, Bundesbankguthaben, Guthaben bei Kreditinstituten und Schecks 
+
+ F 1550 0 Schecks
+F 1600 0 Kasse
+ F 1610 0 Nebenkasse 1
+ F 1620 0 Nebenkasse 2
+ F 1700 0 Bank (Postbank)
+ F 1710 0 Bank (Postbank 1)
+ F 1720 0 Bank (Postbank 2)
+ F 1730 0 Bank (Postbank 3)
+ F 1780 0 LZB-Guthaben
+ F 1790 0 Bundesbankguthaben
+ F 1800 0 Bank
+ F 1810 0 Bank 1
+ F 1820 0 Bank 2
+ F 1830 0 Bank 3
+ F 1840 0 Bank 4
+ F 1850 0 Bank 5
+ R 1889 0
+-1889 9
+ 1890 0 Finanzmittelanlagen im Rahmen der kurzfristigen Finanzdisposition (nicht im Finanzmittelfonds enthalten) 
+
+ Verbindlichkeiten gegenüber Kreditinstituten 
+
+ 1895 0 Verbindlichkeiten gegenüber Kreditinstituten (nicht im Finanzmittelfonds enthalten) 
+
+ Rechnungsabgrenzungsposten 
+
+ 1900 0 Aktive Rechnungsabgrenzung
+ 1940 0 Damnum/Disagio 
+
+ 2  Eigenkapitalkonten / Fremdkapitalkonten 
+
+ Gebundene Rücklage 
+
+ 2000 0 Gebundene Rücklagen nach § 62 Abs. 1 Nr. 1 AO
+ 2080 0 Wiederbeschaffungsrücklage
+ 2090 0 Betriebsmittelrücklage 
+
+ Freie Rücklage
+
+ 2100 0 Freie Rücklagen nach § 62 Abs. 1 Nr. 3 AO 
+
+ Sonstige Gewinnrücklagen / Sonstige Ergebnisrücklagen 
+
+ 2200 0 Rücklage aus sonstigen zeitnah zu verwendenden Mitteln
+ 2250 0 Rücklagen zum Erwerb von Gesellschaftsrechten nach § 62 Abs. 1 Nr. 4 AO 
+
+ Nutzungsgebundenes Kapital 
+
+ 2300 0 Nutzungsgebundenes Kapital (Eigenkapitalausweis) 
+
+ Umschichtungsergebnisse 
+
+ 2400 0 Ergebnisse Vermögensumschichtung 
+
+ Vereinskapital / Sonstige nicht zeitnah zu verwendende Mittel (Stiftung) 
+
+ 2500 0 Vereinskapital / sonstige nicht zeitnah zu verwendende Mittel nach § 62 Abs. 3 AO 
+
+ Errichtungskapital 
+
+ 2600 0 Errichtungskapital 
+
+ Zustiftungskapital
+
+2650 0 Zustiftungskapital
+Zuführung aus Ergebnisrücklagen
+
+2700 0 Zuführung aus Ergebnisrücklagen
+
+Kapitalerhaltungsrücklage
+
+2750 0 Kapitalerhaltungsrücklage
+
+Ansparrücklage
+
+2800 0 Ansparrücklage nach § 62 Abs. 4 AO
+
+Sonstige Ergebnisrücklagen (Stiftung)
+
+2850 0 Sonstige Ergebnisrücklagen
+
+Kapitalrücklage
+
+2920 0 Kapitalrücklage
+
+Ergebnisvortrag
+
+2970 0 Gewinnvortrag / Ergebnisvortrag vor Verwendung
+ 2978 0 Verlustvortrag / Ergebnisvortrag vor Verwendung andere Sonderposten
+2981 0 Steuerfreie Rücklagen nach § 6b EStG
+ 2982 0 Rücklage für Ersatzbeschaffung
+ 2983 0 Rücklage für Zuschüsse
+ 2985 0 Ausgleichsposten bei Entnahmen § 4g EStG Sonderposten für Zuschüsse Dritter
+2988 0 Sonderposten für Zuschüsse Nutzungsgebundenes Kapital
+2995 0 Nutzungsgebundenes Kapital Längerfristig gebundene Spenden
+2996 0 Längerfristig gebundene Spenden 
+
+Noch nicht satzungsgemäß verwendete Spenden 
+
+2997 0 Noch nicht satzungsgemäß verwendete Spenden
+
+3 Fremdkapitalkonten

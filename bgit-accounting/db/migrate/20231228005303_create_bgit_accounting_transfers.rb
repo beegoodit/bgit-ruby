@@ -1,8 +1,10 @@
 class CreateBgitAccountingTransfers < ActiveRecord::Migration[7.0]
   def change
-    create_table :bgit_accounting_transfers do |t|
-      t.references :recipient_bank_account, null: false, foreign_key: {to_table: :bgit_accounting_bank_accounts}
-      t.references :sender_bank_account, null: false, foreign_key: {to_table: :bgit_accounting_bank_accounts}
+    create_table :bgit_accounting_banking_transfers do |t|
+      t.references :recipient_bank_account, null: false, foreign_key: {to_table: :bgit_accounting_banking_accounts},
+        index: {name: "index_bgit_accounting_banking_transfers_on_recipient_bank_acc_id"}
+      t.references :sender_bank_account, null: false, foreign_key: {to_table: :bgit_accounting_banking_accounts},
+        index: {name: "index_bgit_accounting_banking_transfers_on_sender_bank_acc_id"}
       t.timestamp :transaction_at
       t.timestamp :value_at
       t.integer :amount_cents

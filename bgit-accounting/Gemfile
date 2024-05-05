@@ -26,6 +26,7 @@ end
 
 git "https://github.com/rails-add-ons/rao" do
   gem "rao-resources_controller" # , path: "~/projects/gems/rao/rao-resources_controller"
+  gem "rao-component", path: "~/projects/gems/rao/rao-component"
 end
 
 git "https://github.com/robotex82/keepr", branch: "feature/optimize-associations-and-validations" do

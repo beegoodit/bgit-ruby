@@ -1,0 +1,20 @@
+.nested-fields.mb-4
+  .row
+    .col-12
+      = f.input :role,
+        collection: Bgit::Accounting::Contacts::Address::ROLES.map { |r| [Bgit::Accounting::Contacts::Address.human_value_name(:role, r), r] },
+        input_html: { class: "form-control" }
+    .col-12
+      = f.input :supplement
+    .col-12
+      = f.input :street
+    .col-12.col-md-4
+      = f.input :zip_code
+    .col-12.col-md-8
+      = f.input :city
+    .col-12
+      = f.input :country_code, as: :string
+    
+    .col-12
+      = link_to_remove_association t(".remove", model_name: Bgit::Accounting::Contacts::Address.model_name.human), f, class: "btn btn-danger"
+      %hr
