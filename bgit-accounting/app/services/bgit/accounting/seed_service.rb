@@ -47,7 +47,7 @@ module Bgit
 
       def build_account(group, attributes)
         say "Creating account #{attributes["number"]} - #{attributes["name"]}" do
-          @result.accounts << Keepr::Account.build(attributes).tap { |account| account.keepr_group = group }
+          @result.accounts << Keepr::Account.new(attributes).tap { |account| account.keepr_group = group }
         end
       end
 
