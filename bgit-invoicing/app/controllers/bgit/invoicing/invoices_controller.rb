@@ -13,6 +13,10 @@ module Bgit
 
       private
 
+      def load_collection_scope
+        super.order(shipping_date: :desc)
+      end
+
       def permitted_params
         params.require(:invoice).permit(:owner_type, :owner_id, :shipping_date, :shipping_end_date, :invoice_date, :invoice_number)
       end
